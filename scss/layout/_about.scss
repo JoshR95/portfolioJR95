@@ -1,0 +1,121 @@
+// removes the global 'space-between' set on the scroll down by the hero-container class
+.hero-container-about{
+    justify-content: normal;
+}
+
+.about-picture-wrapper {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    height: 100%; 
+    width: 100%; 
+    z-index: -1;
+}
+
+.about-picture {
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover;
+    filter: brightness(95%);
+}
+
+.about-text-container{
+    background: linear-gradient(to bottom right, $fourth-color, $second-color );
+}
+
+#about-text{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $white;
+    overflow: hidden; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    width: 100%; 
+    max-width: 1200px;
+    margin: 0 auto; 
+    height: auto;
+    h2,
+    p{
+        margin: 0px;
+        padding: 20px 0 20px 20px
+    }
+    h2{
+        font-size: 2.2rem;
+    }
+    p{
+        font-size: 1.4rem;
+    }
+    ul{
+        font-size: 1.5rem;
+        text-align: left;
+        li{
+            padding-left: 10px;
+        }
+    }
+}
+
+.about-bottom-scroll{
+    text-decoration: none;
+    color: $white;
+    font-size: 1.7rem;
+    margin-top: 70px;
+}
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/// MEDIA QUERIES
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media(max-width: 575px){
+    .about-title{
+        h1{
+            font-size: 2.8rem;
+        }
+    }
+}
+
+@media(min-width: 576px) and (max-width: 767px){
+    .about-title{
+        h1{
+            font-size: 4rem;
+        }
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1099px){
+    .about-title{
+        h1{
+            font-size: 5rem;
+        }
+    }
+}
+
+@media(min-width: 1100px) and (max-width: 1299px){
+    .about-title{
+        h1{
+            font-size: 6rem;
+        }
+    }
+}
+
+@media(min-width: 1300px) and (max-width: 1499px){
+    .about-title{
+        h1{
+            font-size: 7rem;
+        }
+    }
+}
+
+@media(min-width: 1500px) {
+
+    .about-title{
+        h1{
+            font-size: 8rem;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+////////////////////////////////////////////////////////////////////
+/// HOVER-MOVE (MAKES AN ELEMENT MOVE UP 10PX'S WHEN HOVERED OVER)
+////////////////////////////////////////////////////////////////////
+
+
+// the top needs to have a relative postioning so the top: 0 can work
+// the two arguments in parenthesis is what moves it when hovered 
+@mixin hover-move($hover-distance: -10px, $transition-time: 0.5s) {
+    position: relative;
+    top: 0;
+    transition: top $transition-time ease;
+    text-decoration: none;
+
+    &:hover {
+        top: $hover-distance;
+        transition: top $transition-time ease;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////
+/// COLOR SHIFT FOR TITLES
+//////////////////////////////////////////////////////////////////////////
+
+@mixin color-gradient(){
+    background: -webkit-linear-gradient(45deg, $white, $second-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

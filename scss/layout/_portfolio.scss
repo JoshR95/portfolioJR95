@@ -1,0 +1,272 @@
+
+
+#portfolio{
+    background: linear-gradient(to bottom right, $fourth-color, $primary-color );
+}
+
+#portfolio h2 {
+    text-align: center;
+    color: $white;
+    font-size: 2.2rem;
+    text-decoration: underline;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    max-width: 450px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px $white;
+    cursor: pointer;
+    @include hover-move;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: filter 0.3s ease;
+    }
+
+    .hover-tag{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 5px;
+        right: 0;
+        bottom: 0;
+        width: 100px;
+        height: 30px;
+        padding: 1px;
+        font-size: .78rem;
+        color: $white;
+        background-color: $second-color;
+
+    }
+
+    // here we are creating the content overlay that is insitally invisible
+    .project-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        background-color: rgba($primary-color, 0.7);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        .project-content-flip-text{
+            font-size: .9rem;
+        }
+    }
+
+    // this is the code that changes the opacity when hovered so the content/text is then visible
+    &:hover {
+        img {
+            filter: brightness(0.3);
+        }
+
+        .project-content {
+            opacity: 1;
+        }
+    }
+
+    h3{
+        color: $white;
+        font-size: 1.2rem; 
+        margin: 3px;
+        text-decoration: underline;
+    } 
+    
+    p {
+        color: $white;
+        font-size: 1rem;
+        margin: 3px;
+    }
+
+    a {
+        background-color: $fourth-color;
+        box-shadow: inset 0 0 5px $primary-color;
+        color: $white;
+        font-size: .8rem;
+        border: 2px solid $second-color;
+        border-radius: 5px;
+        padding: 5px 10px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $primary-color-dark;
+            box-shadow: inset 0 0 5px $fourth-color;
+        }
+
+        &:active,
+        &.clicked {
+            color: $white;
+            background-color: $primary-color;
+            box-shadow: inset 0 0 5px $fourth-color;
+        }
+    }
+
+}
+
+.project-links {
+    display: flex;
+    gap: 10px; /* Adjust this value to control space between buttons */
+  }
+
+.hidden {
+    display: none;
+  }
+
+
+// this is setting the grid for item allignment
+.portfolio-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 1fr; //
+    justify-items: center;
+    align-items: stretch; // Change this line
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/// MEDIA QUERIES
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+@media(min-width: 500px) and (max-width: 767px){
+    .project-item{
+
+        h3 {
+            font-size: 1.8rem;
+        }
+        
+        p {
+            font-size: 1.2rem;
+        }
+
+        a {
+            font-size: 1.2rem;
+        }
+
+    }
+
+}
+
+
+@media(min-width: 768px) and (max-width: 991px){
+
+
+    .portfolio-grid{
+        // can turn this back on when more projects are added to make the layout look nicer, at the minute 
+        // with three projects it looks weird with 2 columns
+        // grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+    }
+    
+    .project-item{
+        h3 {
+            font-size: 1.8rem;
+        }
+        
+        p {
+            font-size: 1.2rem;
+        }
+
+        a {
+            font-size: .9rem;
+        }
+    
+    }
+      
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px){
+
+    
+    #portfolio h2 {
+        font-size: 2.6rem;
+    }
+
+    // this shows the 5th and 6th child in portfolio-grid. i have set these unshown items 
+    // to dislay none with the .hidden class to allow this to work
+    .portfolio-grid .project-item:nth-child(n+5):nth-child(-n+6) {
+      display: flex; 
+    }
+
+    .portfolio-grid{
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: 1fr;
+    }
+
+    .project-item{
+
+        h3 {
+            font-size: 1.8rem;
+        }
+        
+        p {
+            font-size: 1.2rem;
+        }
+
+        a {
+            font-size: .9rem;
+        }
+    }
+
+  }
+
+  @media(min-width: 1100px){
+    #portfolio h2 {
+        font-size: 2.6rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+
+    // this shows the children elements from the 5th to the 9th
+    .portfolio-grid .project-item.hidden:nth-child(n+5):nth-child(-n+9) {
+      display: flex; 
+    }
+
+    .portfolio-grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+    }
+
+
+    .project-item{
+
+        h3 {
+            font-size: 2rem;
+        }
+        
+        p {
+            font-size: 1.4rem;
+        }
+
+        a{
+            font-size: 1.2rem;
+        }
+    }
+  }
+
+  @media (min-width: 1660px){
+    .portfolio-grid{
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+    }
+  }

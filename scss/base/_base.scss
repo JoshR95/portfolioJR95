@@ -1,0 +1,99 @@
+
+html {
+    scroll-behavior: smooth;
+  }
+
+
+html{
+    font-size: 16px;
+    line-height: 1.42857143;
+    font-family: $primary-font--family;
+    font-weight: $primary-font--weight; 
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0; 
+}
+
+
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+body{
+    // im setting the body to grid to make it easier to layout my content sections
+    display: flex;
+    flex-direction: column;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+///  MOVING BACKGROUND GLOBAL STYLE FOR HEADERS WITH ID OF MOVING-BACKGROUND
+////////////////////////////////////////////////////////////////////////////////////////////
+
+#moving-background {
+    background-image: 
+    url('https://joshr95.github.io/myPortfolio/images/network-4851119_1920.jpg'), // Main background 
+    url('../../images/network-4851119_1920.jpg'); // Fallback for local 
+    background-size:cover;
+        -webkit-animation: slidein 25s;
+        animation: slidein 25s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:2600px; }
+to {background-position: -100px 0px;background-size:3200px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:2600px; }
+to {background-position: -100px 0px;background-size:3200px;}
+
+}
+
+// @-webkit-keyframes slidein {
+//     from {background-position: top; background-size:3000px; }
+//     to {background-position: -100px 0px;background-size:3250px;}
+//     }
+    
+//     @keyframes slidein {
+//     from {background-position: top;background-size:3000px; }
+//     to {background-position: -100px 0px;background-size:3250px;}
+    
+//     }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/// MEDIA QUERIES
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// This taking off the navs width from the main-container which most of my content is in, it then shifts it right by 200px
+// so its center aligned 
+@media(min-width: 768px){
+    .main-container {
+        width: calc(100% - 200px);
+        margin-left: 200px; 
+    }
+}

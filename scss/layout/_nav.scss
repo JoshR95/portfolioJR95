@@ -1,0 +1,218 @@
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary-color;
+    box-shadow: inset 0 0 30px $fourth-color; 
+    // height: 100%;
+    width: 200px
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// aligns the initials 
+.nav-initials a{
+    text-align: center;
+    font-size: 3rem;
+    // brings the links closer to the initials 
+    margin-bottom: -20px;
+    color: $white;
+    text-decoration: none;
+    // gives the initials a slight shadow
+    text-shadow: 1px 1px 0 black, 
+                -1px -1px 0 black,
+                1px -1px 0 black,
+                -1px 1px 0 black;
+                
+    // this changes the initals colour when clicked 
+    h1:active,
+    h1.clicked {
+        color: $primary-color-dark;
+    }
+
+    h1 {
+        transition: transform 0.3s ease, filter 0.3s ease;
+        &:hover {
+            transform: scale(1.3);  // This slightly increase size on hover
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));  // This adds a glowing effect
+        }
+    }
+}
+
+// here im having the links visibility: hidden until the burger is clicked and the js will then add a is-active class to show it 
+// ive also added a transition so it slows comes down
+.links-container {
+    visibility: hidden;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    // this is saying how quickly to change the height, opacity and visability, this for the menu going up/disappearing
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, visibility 0s 0.5s;
+    padding-left: 0px;
+}
+
+.links-container.is-active {
+    visibility: visible;
+    max-height: 500px;
+    opacity: 1;
+    // only change here is instant visibility for screen reader and immediate interaction. this for the menu coming down
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, visibility 0s;
+}
+
+// removes weird defualt padding
+.pages-links{
+    padding-left: 0;
+}
+
+
+.pages-links li{
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    width: 140px;
+    background-color: $second-color;
+    border-radius: 5%;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+
+    // Make the entire li clickable
+    a {
+        display: block;
+        padding: 5px;
+        color: $white;
+        text-decoration: none;
+    }
+
+    // this darkens the background on hover so you can tell your hovering over it
+    &:hover{
+        background-color: $second-color-dark;
+    }
+
+    // this changes the li's background color when clicked 
+    &:active,
+    &.clicked {
+        color: $white; 
+        background-color: $primary-color;
+        box-shadow: inset 0 0 5px $fourth-color; 
+    }
+}
+
+.nav-socials{
+    text-align: center;
+    padding-bottom: 10px;
+    a{
+        font-size: 2rem;
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+
+// HAMBURGER ICON 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.hamburger{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 35px;
+    margin: 30px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+// this is using after and before to add lines above and below the main .bar line
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+
+.hamburger.is-active{
+
+    // these three bits of code make the hamburger menu form a J when active
+    .bar {
+        transform: rotate(90deg) translate(0, 0);
+        opacity: 1;
+        border-radius: 3px;
+    }
+
+    &:before {
+        transform: translate(0, -10px);
+        width: 100%;
+        border-radius: 3px;
+    }
+
+    &:after {
+        transform: translate(0, 6px);
+        width: 55%;
+        border-radius: 3px;
+    }
+
+    
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/// MEDIA QUERIES
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media(max-width: 767px){
+
+    // this allows the nav to stretch to 100% when the navs at the top
+    nav{
+        width: 100%
+    }
+
+
+    .nav-container .nav-initials,
+    .nav-socials{
+        display: none;
+    }
+
+
+}
+
+
+// this is making nav show up and just take up 1 column on the left side at 768px and up
+@media(min-width: 768px){
+
+    nav{
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100vh;
+        position: fixed;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .links-container {
+        visibility: visible; // we have to set it to visible or it wouldnt show 
+        max-height: none; // this stops the container being restricted in height
+        opacity: 1; // we have to set an opacity value or it wouldnt show because of how weve coded the dropdown bar to appear
+        transition: none; // this line stops there being any transition like when the drop down comes down
+    }
+
+    .nav-initials{
+        margin-bottom: 75px;
+    }
+    
+
+}

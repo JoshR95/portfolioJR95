@@ -1,0 +1,159 @@
+
+
+
+// this is setting the container height and the way things are positioned within the container
+.hero-container {
+    position: relative;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 100vh; 
+}
+
+.hero-title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: $white;
+    z-index: 1;
+    h1{
+        margin-bottom: -10px;
+        
+    }
+
+}
+
+.main-title{
+    h1{
+        font-family: $title-font--family;
+        font-weight: $title-font--weight;
+        // this mixin makes the colour shift from white to second color
+        @include color-gradient;
+    }
+}
+
+.hero-scroll{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $white;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    z-index: 1;
+    p{
+        margin-bottom: 0;
+    }
+    .icon-arrow-down{
+        font-size: 2rem;
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/// MEDIA QUERIES
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media(max-width: 767px){
+    
+    // this is taking of the height of the nav bar in mobile viewports so the header and nav combined are 100vh
+    // header{
+    //     height: calc(100vh - 76px);
+    // }
+
+
+    // this is here so we can see the scroll down and arrow in the mobile view view without scrolling
+    .hero-scroll{
+        margin-bottom: 100px;
+    }
+
+}
+
+@media(max-width: 575px){
+    .main-title{
+        h1{
+            font-size: 4rem;
+        }
+        h2{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media(min-width: 576px) and (max-width: 767px){
+    .main-title{
+        h1{
+            font-size: 5.5rem;
+        }
+        h2{
+            font-size: 2rem;
+        }
+    }
+    .hero-scroll{
+        font-size: 1.7rem;
+        .icon-arrow-down{
+            font-size: 2rem;
+        }
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1099px){
+    .main-title{
+        h1{
+            font-size: 7rem;
+        }
+        h2{
+            font-size: 2.5rem;
+        }
+    }
+    .hero-scroll{
+        font-size: 1.7rem;
+        .icon-arrow-down{
+            font-size: 2rem;
+        }
+    }
+}
+
+@media(min-width: 1100px) and (max-width: 1299px){
+    .main-title{
+        h1{
+            font-size: 7rem;
+        }
+        h2{
+            font-size: 2.5rem;
+        }
+    }
+    .hero-scroll{
+        font-size: 1.9rem;
+        .icon-arrow-down{
+            font-size: 2.2rem;
+        }
+    }
+}
+
+@media(min-width: 1300px) and (max-width: 1499px){
+    .main-title{
+        h1{
+            font-size: 9rem;
+        }
+        h2{
+            font-size: 3rem;
+        }
+    }
+}
+
+@media(min-width: 1500px) {
+
+    .main-title{
+        h1{
+            font-size: 11rem;
+        }
+        h2{
+            font-size: 3.5rem;
+        }
+    }
+}

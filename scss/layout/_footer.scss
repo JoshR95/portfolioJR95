@@ -1,0 +1,21 @@
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: $primary-color;
+    box-shadow: inset 0 0 30px $fourth-color; 
+    color: $white;
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/// MEDIA QUERIES
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media(min-width: 768px){
+    footer{
+        p{
+            margin-left: 200px;
+        }
+    }
+}
