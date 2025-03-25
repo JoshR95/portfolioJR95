@@ -1,6 +1,7 @@
 // removes the global 'space-between' set on the scroll down by the hero-container class
 .hero-container-about{
     justify-content: normal;
+    background-color: $second-color;
 }
 
 .about-picture-wrapper {

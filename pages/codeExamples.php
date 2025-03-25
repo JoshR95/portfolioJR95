@@ -21,7 +21,7 @@
 
     <?php require_once '../includes/nav_CE.php'; ?> 
     
-    <header id="moving-background">
+    <header id="">
       <div class="main-container code-example-main-container">
         <div class="hero-title code-example-title">
           <h1>CODE EXAMPLES</h1>

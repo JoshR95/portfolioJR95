@@ -1,7 +1,7 @@
 
 
 #portfolio{
-    background: linear-gradient(to bottom right, $fourth-color, $primary-color );
+    background: linear-gradient(to bottom right, $fifth-color, $second-color );
 }
 
 #portfolio h2 {
@@ -44,7 +44,7 @@
         padding: 1px;
         font-size: .78rem;
         color: $white;
-        background-color: $second-color;
+        background-color: $fifth-color;
 
     }
 
@@ -61,7 +61,7 @@
         align-items: center;
         text-align: center;
         padding: 10px;
-        background-color: rgba($primary-color, 0.7);
+        background-color: rgba($fourth-color, 0.7);
         opacity: 0;
         transition: opacity 0.3s ease;
         .project-content-flip-text{
@@ -72,7 +72,7 @@
     // this is the code that changes the opacity when hovered so the content/text is then visible
     &:hover {
         img {
-            filter: brightness(0.3);
+            filter: brightness(0.1);
         }
 
         .project-content {
@@ -95,7 +95,7 @@
 
     a {
         background-color: $fourth-color;
-        box-shadow: inset 0 0 5px $primary-color;
+        box-shadow: inset 0 0 5px $fifth-color;
         color: $white;
         font-size: .8rem;
         border: 2px solid $second-color;
@@ -105,14 +105,14 @@
         transition: background-color 0.3s ease;
 
         &:hover {
-            background-color: $primary-color-dark;
+            background-color: $second-color-dark;
             box-shadow: inset 0 0 5px $fourth-color;
         }
 
         &:active,
         &.clicked {
             color: $white;
-            background-color: $primary-color;
+            background-color: $fifth-color;
             box-shadow: inset 0 0 5px $fourth-color;
         }
     }
@@ -269,4 +269,5 @@
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: 1fr;
     }
+
   }

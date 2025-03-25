@@ -64,8 +64,8 @@
 // this colours the input fields background colour and the text when typed into it 
 .colored-input,
 textarea.colored-input {
-    background-color: $primary-color;
-    color: $white;
+    background-color: $second-color;
+    color: $fifth-color;
     &:focus {
         outline: none;
         border-color: $white;
@@ -78,7 +78,7 @@ input::placeholder,
 textarea::placeholder {
     font-family: $primary-font--family;
     font-weight: $primary-font--weight;
-    color: $white;
+    color: $fifth-color;
     opacity: 1;
 }
 
@@ -88,12 +88,12 @@ textarea::placeholder {
     padding: 10px 20px;
     border-radius: 5px;
     color: $white;
-    background-color: $primary-color;
-    box-shadow: inset 0 0 5px $fourth-color;
-    border: 3px solid $second-color;
+    background-color: $third-color;
+    box-shadow: inset 0 0 5px $third-color;
+    border: 3px solid $fifth-color;
     cursor: pointer;
     &:hover {
-        background-color: $primary-color-dark;
+        background-color: $fourth-color;
         box-shadow: inset 0 0 5px $fourth-color;
     }
 }

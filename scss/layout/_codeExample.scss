@@ -1,12 +1,14 @@
 
 .code-example-main-container {
     min-height: 100vh; // This ensures it takes at least the full viewport height
+    background-color: $second-color;
 }
 
 .code-example-title{
     h1{
         // this mixin makes the colour shift from white to second color
-        @include color-gradient;
+        // @include color-gradient;
+        color: $fourth-color;
         margin-bottom: 30px;
     }
 }

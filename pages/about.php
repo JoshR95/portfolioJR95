@@ -26,7 +26,7 @@
     <div class="main-container">
       <header>
         <div class="container hero-container hero-container-about">
-          <picture class="about-picture-wrapper">
+          <!-- <picture class="about-picture-wrapper">
             <source 
               media="(min-width: 1200px)"
               srcset="../images/me_12_main.jpg">
@@ -39,7 +39,7 @@
               class="about-picture" 
               src="../images/me_12_main.jpg" 
               alt="image of josh rickards skiing">
-          </picture>
+          </picture> -->
           <div class="hero-title about-title">
               <h1>ABOUT ME</h1>
           </div>

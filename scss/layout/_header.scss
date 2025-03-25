@@ -31,19 +31,20 @@
         font-family: $title-font--family;
         font-weight: $title-font--weight;
         // this mixin makes the colour shift from white to second color
-        @include color-gradient; 
+        // @include color-gradient; 
+        color: white;
     }
 
 }
 
-.main-title{
-    h1{
-        font-family: $title-font--family;
-        font-weight: $title-font--weight;
-        // this mixin makes the colour shift from white to second color
-        @include color-gradient;
-    }
-}
+// .main-title{
+//     h1{
+//         font-family: $title-font--family;
+//         font-weight: $title-font--weight;
+//         // this mixin makes the colour shift from white to second color
+//         @include color-gradient;
+//     }
+// }
 
 .hero-scroll-container{
     z-index: 10;

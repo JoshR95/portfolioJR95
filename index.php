@@ -37,7 +37,7 @@
       <header>
         
         <div class="container hero-container">
-          <div id="particles-js"></div>  <!-- Add this line -->
+          <div id="particles-js"></div>
           <div class="hero-title main-title">
               <h1 >Josh Rickards</h1>
               <h2 id="typewriter">I'm a Web Developer</h2>
