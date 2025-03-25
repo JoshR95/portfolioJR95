@@ -97,16 +97,22 @@
               </div>
             </div>
             <div class="project-item">
-              <img src="./images/coming-3605857_1920.jpg" alt="coming soon project image ">
+              <img src="./images/laravel_admin_assessment.png" alt="coming soon project image ">
               <div class="hover-tag">hover for details</div>
               <div class="project-content">
-                <h3>Example Project</h3>
-                <p class="project-content-flip-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                <h3>Admin management system</h3>
+                <p class="project-content-flip-text">
+                  This project is an admin management system that enables companies to manage their organizational structure and employee information through a secure, user-friendly interface.
+                </p>
+                <p class="project-content-flip-text">
+                  It uses laravel, PHP, HTML and CSS. It handles user authentication with a secure log in. It allows maintenance of a database of company records with full CRUD operations.
+                  It uses a SQLite database for efficient data storage and retrieval. It Implements Blade for dynamic content rendering. It also Utilizes Tailwind CSS for modern, responsive styling.
+                </p>
                 <div class="project-links">
-                  <a href="#" target="_blank">
+                  <a href="http://laravel.joshua-rickards.netmatters-scs.co.uk/login" target="_blank">
                     <span>View project</span>
                   </a>
-                  <a href="#" target="_blank">
+                  <a href="https://github.com/JoshR95/laravel_nm_project" target="_blank">
                     <span>View code</span>
                   </a>
                 </div>
