@@ -842,7 +842,18 @@ textarea::placeholder {
   -webkit-box-pack: normal;
       -ms-flex-pack: normal;
           justify-content: normal;
-  background-color: #b7b7b7;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
 }
 
 .about-picture-wrapper {
@@ -864,8 +875,8 @@ textarea::placeholder {
 }
 
 .about-text-container {
-  background: -webkit-gradient(linear, left top, right bottom, from(#595959), to(#b7b7b7));
-  background: linear-gradient(to bottom right, #595959, #b7b7b7);
+  background: -webkit-gradient(linear, left top, right bottom, from(#2e2e2e), to(#595959));
+  background: linear-gradient(to bottom right, #2e2e2e, #595959);
 }
 
 #about-text {
@@ -955,7 +966,7 @@ textarea::placeholder {
 }
 
 .code-example-title h1 {
-  color: #595959;
+  color: #2e2e2e;
   margin-bottom: 30px;
 }
 

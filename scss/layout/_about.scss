@@ -1,7 +1,12 @@
 // removes the global 'space-between' set on the scroll down by the hero-container class
 .hero-container-about{
     justify-content: normal;
-    background-color: $second-color;
+    position: relative;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 100vh; 
+    // background-color: $second-color;
 }
 
 .about-picture-wrapper {
@@ -21,7 +26,7 @@
 }
 
 .about-text-container{
-    background: linear-gradient(to bottom right, $fourth-color, $second-color );
+    background: linear-gradient(to bottom right, $fifth-color, $fourth-color );
 }
 
 #about-text{
