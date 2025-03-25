@@ -21,6 +21,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
     <link rel="stylesheet" href="./css/application.css">
     <link rel="stylesheet" href="./images/icomoon-main/style.css">
 
@@ -32,13 +34,15 @@
     <?php require_once 'includes/nav_home.php'; ?> 
 
     <div class="main-container">
-      <header id="moving-background">
+      <header>
+        
         <div class="container hero-container">
+          <div id="particles-js"></div>  <!-- Add this line -->
           <div class="hero-title main-title">
               <h1 >Josh Rickards</h1>
               <h2 id="typewriter">I'm a Web Developer</h2>
           </div>
-          <div>
+          <div class="hero-scroll-container">
             <a href="#portfolio" class="hero-scroll">
               <p>SCROLL DOWN</p>
               <span class="icon-arrow-down"></span>
