@@ -29,39 +29,6 @@
     background: linear-gradient(to bottom right, $fifth-color, $fourth-color );
 }
 
-#about-text{
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: $white;
-    overflow: hidden; 
-    padding: 20px; 
-    box-sizing: border-box; 
-    width: 100%; 
-    max-width: 1200px;
-    margin: 0 auto; 
-    height: auto;
-    h2,
-    p{
-        margin: 0px;
-        padding: 20px 0 20px 20px
-    }
-    h2{
-        font-size: 2.2rem;
-    }
-    p{
-        font-size: 1.4rem;
-    }
-    ul{
-        font-size: 1.5rem;
-        text-align: left;
-        li{
-            padding-left: 10px;
-        }
-    }
-}
 
 .about-bottom-scroll{
     text-decoration: none;

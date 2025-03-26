@@ -52,6 +52,37 @@
       </header>
 
       <main>
+        
+        <div id="about-me-main">
+          <div class="about-me-main-text">
+            <div id="about-text">
+              <div class="about-text-header">
+                <span class="icon-user"></span>
+                <h2>Im <span class="about-text-highlight">Josh</span></h2>
+              </div>
+              <p>I am a trainee web developer with knowledge of HTML, CSS, SASS, javaScript, SQL, PHP, Laravel and Python.</p>
+              <p>
+                I am fully committed to the philosophy of being a life long learner. I am passionate about expanding my knowledge and adding to the ever evolving world of web development.
+                With a keen eye for detail and a strong problem-solving mindset, I enjoy building intuitive, user-friendly websites and applications.
+              </p>
+            </div>
+          </div>
+          <div class="language-logos-container">
+            <div class="about-me-lang-rows">
+              <img src="./images/jsLogo.png">
+              <img src="./images/htmlLogo.png">
+            </div>
+            <div class="about-me-lang-rows">
+              <img src="./images/cssLogo.png">
+              <img src="./images/gitLogo.png">
+              <img src="./images/sassLogo.png">
+            </div>
+            <div class="about-me-lang-rows">
+              <img src="./images/phpLogo.png">
+              <img src="./images/laravelLogo.png">
+            </div>
+          </div>
+        </div>
         <!--PORTFOLIO-->
         <div id="portfolio" class="container">
           <h2>MY PROJECTS</h2>
