@@ -504,6 +504,9 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .about-text-header .icon-user {
   padding: 0 20px 0 20px;
@@ -547,6 +550,79 @@ footer {
   .language-logos-container img {
     height: 100px;
     width: 100px;
+  }
+}
+@media (min-width: 1000px) {
+  #about-me-main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 100px 30px 100px 100px;
+  }
+  .about-text-header {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .about-me-main-text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .language-logos-container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .language-logos-container {
+    margin: 0;
+  }
+  .language-logos-container img {
+    height: 70px;
+    width: 70px;
+  }
+}
+@media (min-width: 1460px) {
+  #about-me-main {
+    padding: 150px 30px 150px 100px;
+  }
+  #about-text h2 {
+    font-size: 3rem;
+  }
+  .about-text-highlight {
+    font-size: 4.5rem;
+  }
+  .language-logos-container img {
+    height: 100px;
+    width: 100px;
+  }
+}
+@media (min-width: 2000px) {
+  #about-text h2 {
+    font-size: 3rem;
+  }
+  #about-text p {
+    font-size: 1.8rem;
+  }
+  #about-text ul {
+    font-size: 1.8rem;
+  }
+  #about-text ul li {
+    padding-left: 10px;
+  }
+  #about-me-main {
+    padding: 200px 30px 200px 150px;
+  }
+  .language-logos-container img {
+    height: 130px;
+    width: 130px;
   }
 }
 #portfolio {

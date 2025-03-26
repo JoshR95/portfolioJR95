@@ -53,6 +53,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     .icon-user{
         padding: 0 20px 0 20px;
         font-size: 3rem;
@@ -98,6 +99,89 @@
         img{
             height: 100px;
             width: 100px;
+        }
+    }
+}
+
+@media(min-width: 1000px){
+
+    #about-me-main{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        // ive added more padding on the left side to push the text over more to look more centered
+        padding: 100px 30px 100px 100px;
+    }
+    .about-text-header{
+        justify-content: left;
+    }
+    
+    // these flex settings make the two flex items in about me to take up equal space
+    .about-me-main-text {
+        flex: 1
+    }
+    .language-logos-container {
+        flex: 1; 
+    }
+
+    .language-logos-container{
+        margin: 0;
+        img {
+            height: 70px;
+            width: 70px;
+        }
+    }
+}
+
+@media(min-width: 1460px){
+    #about-me-main{
+        // ive added more padding on the left side to push the text over more to look more centered
+        padding: 150px 30px 150px 100px;
+    }
+
+    #about-text{
+        h2{
+            font-size: 3rem;
+        }
+    }
+
+    .about-text-highlight{
+        font-size: 4.5rem;
+    }
+
+    .language-logos-container{
+        img {
+            height: 100px;
+            width: 100px;
+        }
+    }
+}
+
+@media(min-width: 2000px){
+    #about-text{
+        h2{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 1.8rem;
+        }
+        ul{
+            font-size: 1.8rem;
+            li{
+                padding-left: 10px;
+            }
+        }
+    }
+
+    #about-me-main{
+        // ive added more padding on the left side to push the text over more to look more centered
+        padding: 200px 30px 200px 150px;
+    }
+
+    .language-logos-container{
+        img {
+            height: 130px;
+            width: 130px;
         }
     }
 }
