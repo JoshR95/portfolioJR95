@@ -91,14 +91,14 @@ nav{
 
     // this darkens the background on hover so you can tell your hovering over it
     &:hover{
-        background-color: $second-color;
+        background-color: $third-color-light;
     }
 
     // this changes the li's background color when clicked 
     &:active,
     &.clicked {
         color: $white; 
-        background-color: $primary-color;
+        background-color: $fifth-color;
         box-shadow: inset 0 0 5px $fourth-color; 
     }
 }

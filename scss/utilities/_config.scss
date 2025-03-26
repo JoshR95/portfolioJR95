@@ -7,15 +7,17 @@
 $primary-color: #ced0d6;
 $primary-color-dark: darken($primary-color, 10%);
 
-$second-color: #b7b7b7;
+$second-color: #252b3c;
 $second-color-dark: darken($second-color, 10%);
+$second-color-light: lighten($second-color, 40%);
 
-$third-color: #888888;
+$third-color: #293043;
+$third-color-light: lighten($third-color, 20%);
 
-$fourth-color: #595959;
+$fourth-color: #151821;
 $fourth-color-light: lighten($fourth-color, 20%);
 
-$fifth-color: #2e2e2e;
+$fifth-color: #0d0f15;
 
 //////////////////////////////////////
 

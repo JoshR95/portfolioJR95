@@ -3,11 +3,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: $second-color;
+    background-color: $fifth-color;
 }
 
 .scsScheme-header{
-    background-color: $fifth-color;
+    background-color: $white;
 }
 
 .scs-scheme{
@@ -24,7 +24,7 @@
 .scs-scheme-element {
     width: 100%;
     font-size: 1rem;
-    background: linear-gradient(to bottom right, $fifth-color, $fourth-color );
+    background: linear-gradient(to bottom right, $third-color, $fourth-color );
     box-shadow: 0 5px 10px $white; 
     text-align: center;
     margin: 20px 0;

@@ -97,7 +97,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100vh;
-  background-color: #2e2e2e;
+  background-color: #0d0f15;
 }
 
 .hero-title {
@@ -242,7 +242,7 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #595959;
+  background-color: #151821;
   width: 200px;
 }
 
@@ -315,7 +315,7 @@ nav {
   padding: 0;
   margin-bottom: 20px;
   width: 140px;
-  background-color: #888888;
+  background-color: #293043;
   border-radius: 5%;
   -webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
@@ -327,13 +327,13 @@ nav {
   text-decoration: none;
 }
 .pages-links li:hover {
-  background-color: #b7b7b7;
+  background-color: #505d82;
 }
 .pages-links li:active, .pages-links li.clicked {
   color: white;
-  background-color: #ced0d6;
-  -webkit-box-shadow: inset 0 0 5px #595959;
-          box-shadow: inset 0 0 5px #595959;
+  background-color: #0d0f15;
+  -webkit-box-shadow: inset 0 0 5px #151821;
+          box-shadow: inset 0 0 5px #151821;
 }
 
 .nav-socials {
@@ -433,8 +433,8 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: -webkit-gradient(linear, left top, right bottom, from(#2e2e2e), to(black));
-  background: linear-gradient(to bottom right, #2e2e2e, black);
+  background: -webkit-gradient(linear, left top, right bottom, from(#0d0f15), to(black));
+  background: linear-gradient(to bottom right, #0d0f15, black);
   color: white;
 }
 
@@ -444,8 +444,8 @@ footer {
   }
 }
 #portfolio {
-  background: -webkit-gradient(linear, left top, right bottom, from(#2e2e2e), to(#b7b7b7));
-  background: linear-gradient(to bottom right, #2e2e2e, #b7b7b7);
+  background: -webkit-gradient(linear, left top, right bottom, from(#0d0f15), to(#252b3c));
+  background: linear-gradient(to bottom right, #0d0f15, #252b3c);
 }
 
 #portfolio h2 {
@@ -507,7 +507,7 @@ footer {
   padding: 1px;
   font-size: 0.78rem;
   color: white;
-  background-color: #2e2e2e;
+  background-color: #0d0f15;
 }
 .project-item .project-content {
   position: absolute;
@@ -530,7 +530,7 @@ footer {
           align-items: center;
   text-align: center;
   padding: 10px;
-  background-color: rgba(89, 89, 89, 0.7);
+  background-color: rgba(21, 24, 33, 0.7);
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -557,12 +557,12 @@ footer {
   margin: 3px;
 }
 .project-item a {
-  background-color: #595959;
-  -webkit-box-shadow: inset 0 0 5px #2e2e2e;
-          box-shadow: inset 0 0 5px #2e2e2e;
+  background-color: #293043;
+  -webkit-box-shadow: inset 0 0 5px #0d0f15;
+          box-shadow: inset 0 0 5px #0d0f15;
   color: white;
   font-size: 0.8rem;
-  border: 2px solid #b7b7b7;
+  border: 2px solid #252b3c;
   border-radius: 5px;
   padding: 5px 10px;
   text-decoration: none;
@@ -570,15 +570,15 @@ footer {
   transition: background-color 0.3s ease;
 }
 .project-item a:hover {
-  background-color: #9e9e9e;
-  -webkit-box-shadow: inset 0 0 5px #595959;
-          box-shadow: inset 0 0 5px #595959;
+  background-color: #505d82;
+  -webkit-box-shadow: inset 0 0 5px #151821;
+          box-shadow: inset 0 0 5px #151821;
 }
 .project-item a:active, .project-item a.clicked {
   color: white;
-  background-color: #2e2e2e;
-  -webkit-box-shadow: inset 0 0 5px #595959;
-          box-shadow: inset 0 0 5px #595959;
+  background-color: #0d0f15;
+  -webkit-box-shadow: inset 0 0 5px #151821;
+          box-shadow: inset 0 0 5px #151821;
 }
 
 .project-links {
@@ -699,7 +699,7 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  background-color: #2e2e2e;
+  background-color: #0d0f15;
 }
 #contact-me h2 {
   color: white;
@@ -726,7 +726,7 @@ footer {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 2px solid #888888;
+  border: 2px solid #293043;
   border-radius: 5px;
 }
 
@@ -756,8 +756,8 @@ footer {
 
 .colored-input,
 textarea.colored-input {
-  background-color: #b7b7b7;
-  color: #2e2e2e;
+  background-color: white;
+  color: #0d0f15;
 }
 .colored-input:focus,
 textarea.colored-input:focus {
@@ -768,28 +768,28 @@ textarea.colored-input:focus {
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #2e2e2e;
+  color: #0d0f15;
   opacity: 1;
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #2e2e2e;
+  color: #0d0f15;
   opacity: 1;
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #2e2e2e;
+  color: #0d0f15;
   opacity: 1;
 }
 
 input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #2e2e2e;
+  color: #0d0f15;
   opacity: 1;
 }
 
@@ -797,7 +797,7 @@ input::placeholder,
 textarea::placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #2e2e2e;
+  color: #0d0f15;
   opacity: 1;
 }
 
@@ -807,16 +807,22 @@ textarea::placeholder {
   padding: 10px 20px;
   border-radius: 5px;
   color: white;
-  background-color: #888888;
-  -webkit-box-shadow: inset 0 0 5px #888888;
-          box-shadow: inset 0 0 5px #888888;
-  border: 3px solid #2e2e2e;
+  background-color: #293043;
+  -webkit-box-shadow: inset 0 0 5px #293043;
+          box-shadow: inset 0 0 5px #293043;
+  border: 3px solid #0d0f15;
   cursor: pointer;
 }
 .contact-me-submit:hover {
-  background-color: #595959;
-  -webkit-box-shadow: inset 0 0 5px #595959;
-          box-shadow: inset 0 0 5px #595959;
+  background-color: #505d82;
+  -webkit-box-shadow: inset 0 0 5px #151821;
+          box-shadow: inset 0 0 5px #151821;
+}
+.contact-me-submit.clicked {
+  color: white;
+  background-color: #7e8baf;
+  -webkit-box-shadow: inset 0 0 5px #151821;
+          box-shadow: inset 0 0 5px #151821;
 }
 
 .large-input {
@@ -875,8 +881,8 @@ textarea::placeholder {
 }
 
 .about-text-container {
-  background: -webkit-gradient(linear, left top, right bottom, from(#2e2e2e), to(#595959));
-  background: linear-gradient(to bottom right, #2e2e2e, #595959);
+  background: -webkit-gradient(linear, left top, right bottom, from(#0d0f15), to(#151821));
+  background: linear-gradient(to bottom right, #0d0f15, #151821);
 }
 
 #about-text {
@@ -962,11 +968,11 @@ textarea::placeholder {
 }
 .code-example-main-container {
   min-height: 100vh;
-  background-color: #b7b7b7;
+  background-color: #0d0f15;
 }
 
 .code-example-title h1 {
-  color: #2e2e2e;
+  color: white;
   margin-bottom: 30px;
 }
 
@@ -1023,8 +1029,8 @@ textarea::placeholder {
   border-radius: 5%;
   -webkit-box-shadow: 0 5px 20px white;
           box-shadow: 0 5px 20px white;
-  background: -webkit-gradient(linear, left top, right bottom, from(#2e2e2e), to(#595959));
-  background: linear-gradient(to bottom right, #2e2e2e, #595959);
+  background: -webkit-gradient(linear, left top, right bottom, from(#293043), to(#151821));
+  background: linear-gradient(to bottom right, #293043, #151821);
   cursor: pointer;
   position: relative;
   top: 0;
@@ -1083,7 +1089,7 @@ textarea::placeholder {
   padding: 1px;
   font-size: 0.78rem;
   color: white;
-  background-color: #b7b7b7;
+  background-color: #252b3c;
 }
 
 .large-image-container {
@@ -1184,11 +1190,11 @@ textarea::placeholder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #b7b7b7;
+  background-color: #0d0f15;
 }
 
 .scsScheme-header {
-  background-color: #2e2e2e;
+  background-color: white;
 }
 
 .scs-scheme {
@@ -1213,8 +1219,8 @@ textarea::placeholder {
 .scs-scheme-element {
   width: 100%;
   font-size: 1rem;
-  background: -webkit-gradient(linear, left top, right bottom, from(#2e2e2e), to(#595959));
-  background: linear-gradient(to bottom right, #2e2e2e, #595959);
+  background: -webkit-gradient(linear, left top, right bottom, from(#293043), to(#151821));
+  background: linear-gradient(to bottom right, #293043, #151821);
   -webkit-box-shadow: 0 5px 10px white;
           box-shadow: 0 5px 10px white;
   text-align: center;
@@ -1226,14 +1232,14 @@ textarea::placeholder {
   padding-bottom: 10px;
 }
 .scs-scheme-element a {
-  color: #888888;
+  color: #293043;
 }
 .scs-scheme-element a:active,
 .scs-scheme-element a.clicked {
   color: white;
   background-color: #ced0d6;
-  -webkit-box-shadow: inset 0 0 5px #595959;
-          box-shadow: inset 0 0 5px #595959;
+  -webkit-box-shadow: inset 0 0 5px #151821;
+          box-shadow: inset 0 0 5px #151821;
 }
 
 .scs-right-element ul {
