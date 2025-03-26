@@ -1023,7 +1023,8 @@ textarea::placeholder {
   border-radius: 5%;
   -webkit-box-shadow: 0 5px 20px white;
           box-shadow: 0 5px 20px white;
-  background-color: #595959;
+  background: -webkit-gradient(linear, left top, right bottom, from(#2e2e2e), to(#595959));
+  background: linear-gradient(to bottom right, #2e2e2e, #595959);
   cursor: pointer;
   position: relative;
   top: 0;
@@ -1183,6 +1184,7 @@ textarea::placeholder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #b7b7b7;
 }
 
 .scsScheme-header {
@@ -1211,7 +1213,8 @@ textarea::placeholder {
 .scs-scheme-element {
   width: 100%;
   font-size: 1rem;
-  background-color: #b2b5bf;
+  background: -webkit-gradient(linear, left top, right bottom, from(#2e2e2e), to(#595959));
+  background: linear-gradient(to bottom right, #2e2e2e, #595959);
   -webkit-box-shadow: 0 5px 10px white;
           box-shadow: 0 5px 10px white;
   text-align: center;

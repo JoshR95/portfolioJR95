@@ -35,7 +35,7 @@
 }
 
 .code-example-pic {
-    position: relative; // Add this lines
+    position: relative;
     width: 100%;
     max-width: 500px;
     height: auto;
@@ -54,7 +54,7 @@
     padding: 30px;
     border-radius: 5%;
     box-shadow: 0 5px 20px $white;
-    background-color: $fourth-color;
+    background: linear-gradient(to bottom right, $fifth-color, $fourth-color );
     cursor: pointer;
     @include hover-move;
     // this div is so the tag has a relative position to be adujsted to as the ce tag is absolute it positions of the next
