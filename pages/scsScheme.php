@@ -22,8 +22,9 @@
 
     <?php require_once '../includes/nav_scsScheme.php'; ?>
      
-    <header id="moving-background">
+    <header>
         <div class="main-container scs-scheme-main-container container">
+          <!-- <div id="particles-js"></div> -->
           <div class="scs-scheme">
             <div class="scs-scheme-element scs-left-element">
               <h2>Introduction to Scion Coalition Scheme</h2>

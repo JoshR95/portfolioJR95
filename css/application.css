@@ -97,7 +97,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100vh;
-  background-color: #595959;
+  background-color: #2e2e2e;
 }
 
 .hero-title {
@@ -242,7 +242,7 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #2e2e2e;
+  background-color: #595959;
   width: 200px;
 }
 
@@ -699,7 +699,7 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  background-color: #595959;
+  background-color: #2e2e2e;
 }
 #contact-me h2 {
   color: white;
@@ -1183,6 +1183,10 @@ textarea::placeholder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.scsScheme-header {
+  background-color: #2e2e2e;
 }
 
 .scs-scheme {

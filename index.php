@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
 
     <link rel="stylesheet" href="./css/application.css">
     <link rel="stylesheet" href="./images/icomoon-main/style.css">
@@ -273,6 +273,7 @@
     
 
     <?php include_once 'includes/footer.php'; ?>
+    <script src="./js/particles.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 
