@@ -256,7 +256,7 @@
         <div id="contact-me" class="container">
           <h2>GET IN CONTACT</h2>
           <p>If you'd like to contact me please use the form below </p>
-          <span class="icon-arrow-down"></span>
+          <!-- <span class="icon-arrow-down"></span> -->
 
           <form id= "contact-form" class="contact-form" method="POST" action="/submit-form">
             <div class="input-control">

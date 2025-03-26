@@ -2,6 +2,7 @@
 
 #portfolio{
     background: $fifth-color;
+    padding: 50px;
 }
 
 #portfolio h2 {
@@ -165,9 +166,14 @@
 
 }
 
+@media(min-width: 768px){
+
+    #portfolio{
+        padding: 100px 0;
+    }
+}
 
 @media(min-width: 768px) and (max-width: 991px){
-
 
     .portfolio-grid{
         // can turn this back on when more projects are added to make the layout look nicer, at the minute 
@@ -230,6 +236,10 @@
   }
 
   @media(min-width: 1100px){
+    #portfolio{
+        padding: 200px 0;
+    }
+
     #portfolio h2 {
         font-size: 2.6rem;
     }
@@ -270,4 +280,10 @@
         grid-auto-rows: 1fr;
     }
 
+  }
+
+  @media(min-width: 2000px){
+    #portfolio{
+        padding: 300px 0;
+    }
   }

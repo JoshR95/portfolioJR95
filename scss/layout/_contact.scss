@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 100px 0;
     background: linear-gradient(
         to bottom,
         $fifth-color 0%,
@@ -118,6 +119,7 @@ textarea::placeholder {
     color: $white;
     font-size: 1.7rem;
     margin-bottom: 20px;
+    margin-top: 100px;
     p {
         margin-bottom: 0;
     }
@@ -132,3 +134,15 @@ textarea::placeholder {
         font-size: 2.6rem;
     }
 }
+
+@media(min-width: 1460px){
+    #contact-me {
+        padding: 250px 0;
+    }
+}
+
+@media(min-width: 2000px){
+    #contact-me{
+        padding: 300px 0;
+    }
+  }
