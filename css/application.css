@@ -96,6 +96,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   height: 100vh;
   background-color: #0d0f15;
 }
@@ -116,7 +122,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 150px;
-  font-size: 1rem;
   color: white;
   z-index: 1;
 }
@@ -124,16 +129,30 @@ body {
   margin-bottom: -10px;
   font-family: "Bebas Neue", serif;
   font-weight: 800;
+  font-style: italic;
   color: white;
+}
+.hero-title h1 .header-text-highlight {
+  position: relative;
+  font-size: 1.2em;
+  letter-spacing: 5px;
+  font-style: normal;
+  padding-left: 10px;
 }
 .hero-title h2 {
   margin: 0;
+  font-style: italic;
+  font-weight: 800;
 }
 
 .hero-scroll-container {
+  max-width: 350px;
+  border: 3px #cca463 solid;
+  margin-top: 30px;
   z-index: 10;
 }
 .hero-scroll-container .hero-scroll {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,20 +169,30 @@ body {
           justify-content: center;
   text-decoration: none;
   color: white;
-  margin-bottom: 20px;
   font-size: 1.5rem;
-  z-index: 10;
+  z-index: 1000;
+  cursor: pointer;
+  pointer-events: auto;
 }
 .hero-scroll-container .hero-scroll p {
-  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  margin: 0;
+  color: #cca463;
 }
-.hero-scroll-container .hero-scroll .icon-arrow-down {
-  font-size: 2rem;
+.hero-scroll-container .hero-scroll p span {
+  padding: 0 5px;
 }
 
-@media (max-width: 767px) {
-  .hero-scroll {
-    margin-bottom: 100px;
+@media (min-width: 450px) {
+  .hero-title h1 .header-text-highlight {
+    font-size: 1.5em;
+    padding-left: 20px;
   }
 }
 @media (max-width: 575px) {
@@ -183,33 +212,15 @@ body {
   .main-title h2 {
     font-size: 2rem;
   }
-  .hero-scroll {
-    font-size: 1.7rem;
-  }
-  .hero-scroll .icon-arrow-down {
-    font-size: 2rem;
-  }
 }
 @media (min-width: 768px) and (max-width: 1099px) {
   .main-title h2 {
     font-size: 2.5rem;
   }
-  .hero-scroll {
-    font-size: 1.7rem;
-  }
-  .hero-scroll .icon-arrow-down {
-    font-size: 2rem;
-  }
 }
 @media (min-width: 1100px) and (max-width: 1299px) {
   .main-title h2 {
     font-size: 2.5rem;
-  }
-  .hero-scroll {
-    font-size: 1.9rem;
-  }
-  .hero-scroll .icon-arrow-down {
-    font-size: 2.2rem;
   }
 }
 @media (min-width: 1300px) and (max-width: 1499px) {
@@ -1132,9 +1143,13 @@ textarea::placeholder {
   background-color: #0d0f15;
 }
 
+.code-example-title {
+  text-align: center;
+}
 .code-example-title h1 {
   color: white;
-  margin-bottom: 30px;
+  margin: 0 0 50px 0;
+  padding-top: 50px;
 }
 
 .code-example-container {

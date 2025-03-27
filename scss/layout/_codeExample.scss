@@ -5,11 +5,14 @@
 }
 
 .code-example-title{
+    text-align: center;
     h1{
         // this mixin makes the colour shift from white to second color
         // @include color-gradient;
         color: $white;
-        margin-bottom: 30px;
+        margin: 0 0 50px 0;
+        padding-top: 50px;
+        
     }
 }
 

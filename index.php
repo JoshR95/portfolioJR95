@@ -16,10 +16,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     
     <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
 
@@ -39,15 +37,14 @@
         <div class="container hero-container">
           <div id="particles-js"></div>
           <div class="hero-title main-title">
-              <h1 >Hello, Im Josh</h1>
+              <h1 >HELLO, IM <span class="header-text-highlight">JOSH</span></h1>
               <h2 id="typewriter">I'm a Web Developer</h2>
           </div>
           <div class="hero-scroll-container">
-            <a href="#portfolio" class="hero-scroll">
-              <p>view my work</p>
-              <span class="icon-arrow-down"></span>
+            <a href="#about-me-main" class="hero-scroll">
+              <p><span class="icon-arrow-down"></span>explore my portfolio<span class="icon-arrow-down"></span></p>
             </a>
-          <div>
+          </div>
         </div>
       </header>
 
@@ -65,6 +62,9 @@
                 I am fully committed to the philosophy of being a life long learner. I am passionate about expanding my knowledge and adding to the ever evolving world of web development.
                 With a keen eye for detail and a strong problem-solving mindset, I enjoy building intuitive, user-friendly websites and applications.
               </p>
+              <a href="#portfolio" class="about-me-scroll">
+                <p><span class="icon-arrow-down"></span>explore my portfolio<span class="icon-arrow-down"></span></p>
+              </a>
             </div>
           </div>
           <div class="language-logos-container">
