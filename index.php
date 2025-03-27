@@ -39,12 +39,12 @@
         <div class="container hero-container">
           <div id="particles-js"></div>
           <div class="hero-title main-title">
-              <h1 >Josh Rickards</h1>
+              <h1 >Hello, Im Josh</h1>
               <h2 id="typewriter">I'm a Web Developer</h2>
           </div>
           <div class="hero-scroll-container">
             <a href="#portfolio" class="hero-scroll">
-              <p>SCROLL DOWN</p>
+              <p>view my work</p>
               <span class="icon-arrow-down"></span>
             </a>
           <div>
