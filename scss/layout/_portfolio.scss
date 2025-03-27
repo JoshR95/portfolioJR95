@@ -10,6 +10,8 @@
     color: $white;
     font-size: 2.2rem;
     text-decoration: underline;
+    text-decoration-color: $primary-color;
+    text-underline-offset: 10px;
     margin-top: 0;
     padding-top: 20px;
 }
@@ -140,6 +142,15 @@
     gap: 20px;
     width: 100%;
     padding: 20px;
+}
+
+.portfolio-scroll-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .portfolio-scroll-button{
+        @include scroll-button;
+    }
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////

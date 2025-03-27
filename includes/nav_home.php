@@ -13,7 +13,7 @@
     <div class="links-container">
       <ul class="pages-links"> 
         <!--Portfolio is homepage -->
-        <li class="btn-one"><a href="./pages/about.php"><span>ABOUT ME</span></a></li>    
+        <!-- <li class="btn-one"><a href="./pages/about.php"><span>ABOUT ME</span></a></li>     -->
         <li><a href="#portfolio"><span>MY PORTFOLIO</span></a></li>
         <li><a href="./pages/codeExamples.php"><span>CODE EXAMPLES</span></a></li>
         <li><a href="./pages/scsScheme.php"><span>SCS SCHEME</span></a></li>
