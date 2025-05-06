@@ -23,7 +23,7 @@
     
     <header id="moving-background">
       <div class="main-container code-example-main-container">
-        <div class="hero-title code-example-title">
+        <div class="code-example-title">
           <h1>CODE EXAMPLES</h1>
         </div>
         <div class="container code-example-container">

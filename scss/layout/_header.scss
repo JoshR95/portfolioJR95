@@ -13,6 +13,8 @@
     display: flex; 
     flex-direction: column; 
     justify-content: space-between; 
+    align-items: center;
+    justify-content: flex-start;
     height: 100vh; 
     background-color: $fifth-color;
 }
@@ -24,19 +26,28 @@
     align-items: center;
     justify-content: center;
     margin-top: 150px;
-    font-size: 1rem;
     color: $white;
     z-index: 1;
     h1{
         margin-bottom: -10px;
         font-family: $title-font--family;
         font-weight: $title-font--weight;
-        // this mixin makes the colour shift from white to second color
-        // @include color-gradient; 
+        // letter-spacing: 5px;
+        // added this to make my name stand out in the title 
+        font-style: italic;
         color: white;
+        .header-text-highlight{
+            position: relative;
+            font-size: 1.2em;
+            letter-spacing: 5px;
+            font-style: normal;
+            padding-left: 10px;
+        }
     }
     h2{
         margin: 0;
+        font-style: italic;
+        font-weight: 800;
     }
 
 }
@@ -51,25 +62,7 @@
 // }
 
 .hero-scroll-container{
-    z-index: 10;
-    .hero-scroll{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        color: $white;
-        margin-bottom: 20px;
-        font-size: 1.5rem;
-        z-index: 10;
-        p{
-            margin-bottom: 0;
-        }
-        .icon-arrow-down{
-            font-size: 2rem;
-        }
-    }
+    @include scroll-button
 }
 
 
@@ -78,19 +71,16 @@
 /// MEDIA QUERIES
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@media(max-width: 767px){
+@media(min-width: 450px){
     
-    // this is taking of the height of the nav bar in mobile viewports so the header and nav combined are 100vh
-    // header{
-    //     height: calc(100vh - 76px);
-    // }
-
-
-    // this is here so we can see the scroll down and arrow in the mobile view view without scrolling
-    .hero-scroll{
-        margin-bottom: 100px;
+    .hero-title{
+        h1{
+            .header-text-highlight{
+                font-size: 1.5em;
+                padding-left: 20px;
+            }
+        }
     }
-
 }
 
 @media(max-width: 575px){
@@ -117,12 +107,12 @@
             font-size: 2rem;
         }
     }
-    .hero-scroll{
-        font-size: 1.7rem;
-        .icon-arrow-down{
-            font-size: 2rem;
-        }
-    }
+    // .hero-scroll{
+    //     font-size: 1.7rem;
+    //     .icon-arrow-down{
+    //         font-size: 2rem;
+    //     }
+    // }
 }
 
 @media(min-width: 768px) and (max-width: 1099px){
@@ -134,12 +124,12 @@
             font-size: 2.5rem;
         }
     }
-    .hero-scroll{
-        font-size: 1.7rem;
-        .icon-arrow-down{
-            font-size: 2rem;
-        }
-    }
+    // .hero-scroll{
+    //     font-size: 1.7rem;
+    //     .icon-arrow-down{
+    //         font-size: 2rem;
+    //     }
+    // }
 }
 
 @media(min-width: 1100px) and (max-width: 1299px){
@@ -151,12 +141,12 @@
             font-size: 2.5rem;
         }
     }
-    .hero-scroll{
-        font-size: 1.9rem;
-        .icon-arrow-down{
-            font-size: 2.2rem;
-        }
-    }
+    // .hero-scroll{
+    //     font-size: 1.9rem;
+    //     .icon-arrow-down{
+    //         font-size: 2.2rem;
+    //     }
+    // }
 }
 
 @media(min-width: 1300px) and (max-width: 1499px){

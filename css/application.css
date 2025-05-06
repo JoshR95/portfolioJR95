@@ -96,6 +96,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   height: 100vh;
   background-color: #0d0f15;
 }
@@ -116,7 +122,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 150px;
-  font-size: 1rem;
   color: white;
   z-index: 1;
 }
@@ -124,16 +129,30 @@ body {
   margin-bottom: -10px;
   font-family: "Bebas Neue", serif;
   font-weight: 800;
+  font-style: italic;
   color: white;
+}
+.hero-title h1 .header-text-highlight {
+  position: relative;
+  font-size: 1.2em;
+  letter-spacing: 5px;
+  font-style: normal;
+  padding-left: 10px;
 }
 .hero-title h2 {
   margin: 0;
+  font-style: italic;
+  font-weight: 800;
 }
 
 .hero-scroll-container {
+  max-width: 350px;
+  border: 3px #cca463 solid;
+  margin-top: 30px;
   z-index: 10;
 }
-.hero-scroll-container .hero-scroll {
+.hero-scroll-container a {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,20 +169,30 @@ body {
           justify-content: center;
   text-decoration: none;
   color: white;
-  margin-bottom: 20px;
   font-size: 1.5rem;
-  z-index: 10;
+  z-index: 1000;
+  cursor: pointer;
+  pointer-events: auto;
 }
-.hero-scroll-container .hero-scroll p {
-  margin-bottom: 0;
+.hero-scroll-container a p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  margin: 0;
+  color: #cca463;
 }
-.hero-scroll-container .hero-scroll .icon-arrow-down {
-  font-size: 2rem;
+.hero-scroll-container a p span {
+  padding: 0 5px;
 }
 
-@media (max-width: 767px) {
-  .hero-scroll {
-    margin-bottom: 100px;
+@media (min-width: 450px) {
+  .hero-title h1 .header-text-highlight {
+    font-size: 1.5em;
+    padding-left: 20px;
   }
 }
 @media (max-width: 575px) {
@@ -183,33 +212,15 @@ body {
   .main-title h2 {
     font-size: 2rem;
   }
-  .hero-scroll {
-    font-size: 1.7rem;
-  }
-  .hero-scroll .icon-arrow-down {
-    font-size: 2rem;
-  }
 }
 @media (min-width: 768px) and (max-width: 1099px) {
   .main-title h2 {
     font-size: 2.5rem;
   }
-  .hero-scroll {
-    font-size: 1.7rem;
-  }
-  .hero-scroll .icon-arrow-down {
-    font-size: 2rem;
-  }
 }
 @media (min-width: 1100px) and (max-width: 1299px) {
   .main-title h2 {
     font-size: 2.5rem;
-  }
-  .hero-scroll {
-    font-size: 1.9rem;
-  }
-  .hero-scroll .icon-arrow-down {
-    font-size: 2.2rem;
   }
 }
 @media (min-width: 1300px) and (max-width: 1499px) {
@@ -543,13 +554,66 @@ footer {
   background-color: white;
 }
 
-@media (min-width: 600px) {
+.about-me-scroll-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.about-me-scroll-container .about-me-scroll-button {
+  margin-left: 40px;
+  max-width: 350px;
+  border: 3px #cca463 solid;
+  margin-top: 30px;
+  z-index: 10;
+}
+.about-me-scroll-container .about-me-scroll-button a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  z-index: 1000;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.about-me-scroll-container .about-me-scroll-button a p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  margin: 0;
+  color: #cca463;
+}
+.about-me-scroll-container .about-me-scroll-button a p span {
+  padding: 0 5px;
+}
+
+@media (min-width: 450px) {
   .language-logos-container img {
     height: 100px;
     width: 100px;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
   #about-me-main {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -561,22 +625,49 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 100px 30px 100px 100px;
+    padding: 100px 30px 100px 0px;
   }
   .about-text-header {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
   }
+  .about-text-header .icon-user {
+    padding: 0 20px 0 20px;
+    font-size: 2rem;
+  }
+  .about-text-highlight {
+    font-size: 2.8rem;
+  }
   .about-me-main-text {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
   }
+  .about-me-scroll-container {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
   .language-logos-container {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+  .language-logos-container {
+    margin: 0;
+  }
+  .language-logos-container img {
+    height: 70px;
+    width: 70px;
+  }
+}
+@media (min-width: 1000px) {
+  #about-me-main {
+    padding: 100px 30px 100px 100px;
+  }
+  .about-text-highlight {
+    font-size: 3.5rem;
   }
   .language-logos-container {
     margin: 0;
@@ -632,6 +723,8 @@ footer {
   color: white;
   font-size: 2.2rem;
   text-decoration: underline;
+  text-decoration-color: #cca463;
+  text-underline-offset: 10px;
   margin-top: 0;
   padding-top: 20px;
 }
@@ -784,6 +877,61 @@ footer {
   padding: 20px;
 }
 
+.portfolio-scroll-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.portfolio-scroll-container .portfolio-scroll-button {
+  max-width: 350px;
+  border: 3px #cca463 solid;
+  margin-top: 30px;
+  z-index: 10;
+}
+.portfolio-scroll-container .portfolio-scroll-button a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  z-index: 1000;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.portfolio-scroll-container .portfolio-scroll-button a p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  margin: 0;
+  color: #cca463;
+}
+.portfolio-scroll-container .portfolio-scroll-button a p span {
+  padding: 0 5px;
+}
+
 @media (min-width: 500px) and (max-width: 767px) {
   .project-item h3 {
     font-size: 1.8rem;
@@ -899,11 +1047,13 @@ footer {
   color: white;
   font-size: 2.2rem;
   text-decoration: underline;
-  margin-bottom: -10px;
+  text-decoration-color: #cca463;
+  text-underline-offset: 10px;
 }
-#contact-me p {
+#contact-me .contact-me-sub-heading {
   font-size: 1.3rem;
   color: white;
+  margin-bottom: 50px;
 }
 #contact-me .icon-arrow-down {
   font-size: 2rem;
@@ -1023,15 +1173,57 @@ textarea::placeholder {
   height: 150px;
 }
 
-.bottom-scroll {
+.contact-scroll-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 75px;
+}
+.contact-scroll-container .contact-scroll-button {
+  max-width: 350px;
+  border: 3px #cca463 solid;
+  margin-top: 30px;
+  z-index: 10;
+}
+.contact-scroll-container .contact-scroll-button a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-decoration: none;
   color: white;
-  font-size: 1.7rem;
-  margin-bottom: 20px;
-  margin-top: 100px;
+  font-size: 1.5rem;
+  z-index: 1000;
+  cursor: pointer;
+  pointer-events: auto;
 }
-.bottom-scroll p {
-  margin-bottom: 0;
+.contact-scroll-container .contact-scroll-button a p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  margin: 0;
+  color: #cca463;
+}
+.contact-scroll-container .contact-scroll-button a p span {
+  padding: 0 5px;
 }
 
 @media (min-width: 1100px) {
@@ -1132,9 +1324,14 @@ textarea::placeholder {
   background-color: #0d0f15;
 }
 
+.code-example-title {
+  text-align: center;
+}
 .code-example-title h1 {
   color: white;
-  margin-bottom: 30px;
+  margin: 0 0 50px 0;
+  padding-top: 50px;
+  margin-top: 0;
 }
 
 .code-example-container {

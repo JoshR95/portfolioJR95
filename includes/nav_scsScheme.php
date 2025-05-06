@@ -14,7 +14,7 @@
         <ul class="pages-links"> 
             <li><a href="../index.php">MAIN PAGE</a></li>    
             <li><a href="../index.php#portfolio">MY PORTFOLIO</a></li>
-            <li><a href="../pages/about.php">ABOUT ME</a></li>
+            <!-- <li><a href="../pages/about.php">ABOUT ME</a></li> -->
             <li><a href="../pages/codeExamples.php">CODE EXAMPLES</a></li>
             <li><a href="../index.php#contact-me">CONTACT ME</a></li>
         </ul>

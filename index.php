@@ -16,10 +16,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     
     <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
 
@@ -39,15 +37,14 @@
         <div class="container hero-container">
           <div id="particles-js"></div>
           <div class="hero-title main-title">
-              <h1 >Hello, Im Josh</h1>
+              <h1 >HELLO, IM <span class="header-text-highlight">JOSH</span></h1>
               <h2 id="typewriter">I'm a Web Developer</h2>
           </div>
           <div class="hero-scroll-container">
-            <a href="#portfolio" class="hero-scroll">
-              <p>view my work</p>
-              <span class="icon-arrow-down"></span>
+            <a href="#about-me-main" class="hero-scroll">
+              <p><span class="icon-arrow-down"></span>learn about me<span class="icon-arrow-down"></span></p>
             </a>
-          <div>
+          </div>
         </div>
       </header>
 
@@ -65,6 +62,13 @@
                 I am fully committed to the philosophy of being a life long learner. I am passionate about expanding my knowledge and adding to the ever evolving world of web development.
                 With a keen eye for detail and a strong problem-solving mindset, I enjoy building intuitive, user-friendly websites and applications.
               </p>
+            </div>
+            <div class="about-me-scroll-container">
+              <div class="about-me-scroll-button">
+                  <a href="#portfolio" class="hero-scroll">
+                    <p><span class="icon-arrow-down"></span>explore my projects<span class="icon-arrow-down"></span></p>
+                  </a>
+              </div>
             </div>
           </div>
           <div class="language-logos-container">
@@ -250,12 +254,19 @@
               </div>
             </div > -->
           </div>
+          <div class="portfolio-scroll-container">
+            <div class="portfolio-scroll-button">
+                <a href="#contact-me" class="hero-scroll">
+                  <p><span class="icon-arrow-down"></span>get in contact<span class="icon-arrow-down"></span></p>
+                </a>
+            </div>
+          </div>
         </div>
 
         <!--CONTACT ME-->
         <div id="contact-me" class="container">
           <h2>GET IN CONTACT</h2>
-          <p>If you'd like to contact me please use the form below </p>
+          <p class="contact-me-sub-heading">If you'd like to contact me please use the form below </p>
           <!-- <span class="icon-arrow-down"></span> -->
 
           <form id= "contact-form" class="contact-form" method="POST" action="/submit-form">
@@ -294,10 +305,13 @@
               <button id="contact-submit-box" class="contact-me-submit" type="submit">Submit</button>
             </div>
           </form>
-          <a href="#" class="bottom-scroll">
-            <p>BACK TO THE TOP</p>
-            <span class="icon-arrow-up2"></span>
-          </a>
+          <div class="contact-scroll-container">
+            <div class="contact-scroll-button">
+                <a href="#" class="hero-scroll">
+                  <p><span class="icon-arrow-up2"></span>back to the top<span class="icon-arrow-up2"></span></p>
+                </a>
+            </div>
+          </div>
         </div>
       </main>
     </div>
