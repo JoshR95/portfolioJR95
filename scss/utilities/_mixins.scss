@@ -54,6 +54,20 @@
       z-index: 1000;
       cursor: pointer;
       pointer-events: auto;
+
+      // stlying for button on hover
+      &:hover{
+        background-color: $primary-color;
+        color: $fifth-color;
+        border-color: $fifth-color;
+        p {
+          color: $fifth-color;
+        }
+      }
+      // styling for button on click
+      &:active{
+        background-color: darken($primary-color, 20%);
+      }
       
       p {
         display: flex;
@@ -67,4 +81,4 @@
         }
       }
     }
-  }
+}

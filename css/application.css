@@ -174,6 +174,17 @@ body {
   cursor: pointer;
   pointer-events: auto;
 }
+.hero-scroll-container a:hover {
+  background-color: #cca463;
+  color: #0d0f15;
+  border-color: #0d0f15;
+}
+.hero-scroll-container a:hover p {
+  color: #0d0f15;
+}
+.hero-scroll-container a:active {
+  background-color: #977132;
+}
 .hero-scroll-container a p {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -592,6 +603,17 @@ footer {
   cursor: pointer;
   pointer-events: auto;
 }
+.about-me-scroll-container .about-me-scroll-button a:hover {
+  background-color: #cca463;
+  color: #0d0f15;
+  border-color: #0d0f15;
+}
+.about-me-scroll-container .about-me-scroll-button a:hover p {
+  color: #0d0f15;
+}
+.about-me-scroll-container .about-me-scroll-button a:active {
+  background-color: #977132;
+}
 .about-me-scroll-container .about-me-scroll-button a p {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -917,6 +939,17 @@ footer {
   cursor: pointer;
   pointer-events: auto;
 }
+.portfolio-scroll-container .portfolio-scroll-button a:hover {
+  background-color: #cca463;
+  color: #0d0f15;
+  border-color: #0d0f15;
+}
+.portfolio-scroll-container .portfolio-scroll-button a:hover p {
+  color: #0d0f15;
+}
+.portfolio-scroll-container .portfolio-scroll-button a:active {
+  background-color: #977132;
+}
 .portfolio-scroll-container .portfolio-scroll-button a p {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1210,6 +1243,17 @@ textarea::placeholder {
   z-index: 1000;
   cursor: pointer;
   pointer-events: auto;
+}
+.contact-scroll-container .contact-scroll-button a:hover {
+  background-color: #cca463;
+  color: #0d0f15;
+  border-color: #0d0f15;
+}
+.contact-scroll-container .contact-scroll-button a:hover p {
+  color: #0d0f15;
+}
+.contact-scroll-container .contact-scroll-button a:active {
+  background-color: #977132;
 }
 .contact-scroll-container .contact-scroll-button a p {
   display: -webkit-box;
