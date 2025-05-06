@@ -82,9 +82,9 @@
         text-align: center;
 
     }
-    ul{
-        max-width: 60%;
-    }
+    // ul{
+    //     max-width: 60%;
+    // }
     li.ce-secondary-text{
         margin: 10px 10px;
         font-size: .9rem;
@@ -139,6 +139,14 @@
 /////////////////////////////////////////////////////////////////////////////////
 /// MEDIA QUERIES
 /////////////////////////////////////////////////////////////////////////////////
+
+@media(min-width: 600px){
+    .code-example-content{
+        ul{
+            max-width: 60%;
+        }
+    }
+}
 
 @media (min-width: 768px) {
     .code-example-container {

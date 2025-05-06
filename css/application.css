@@ -1418,9 +1418,6 @@ textarea::placeholder {
   color: white;
   text-align: center;
 }
-.code-example-content ul {
-  max-width: 60%;
-}
 .code-example-content li.ce-secondary-text {
   margin: 10px 10px;
   font-size: 0.9rem;
@@ -1472,6 +1469,11 @@ textarea::placeholder {
   max-height: 90%;
 }
 
+@media (min-width: 600px) {
+  .code-example-content ul {
+    max-width: 60%;
+  }
+}
 @media (min-width: 768px) {
   .code-example-container {
     grid-template-columns: repeat(1, 1fr);
