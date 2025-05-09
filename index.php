@@ -78,7 +78,7 @@
             </div>
             <div class="about-me-lang-rows">
               <img src="./images/cssLogo.png">
-              <img src="./images/gitLogo.png">
+              <img src="./images/gitLogo2.png">
               <img src="./images/sassLogo.png">
             </div>
             <div class="about-me-lang-rows">
