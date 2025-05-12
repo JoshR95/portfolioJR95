@@ -61,39 +61,30 @@
             </div> 
           </div>-->
           <div class="carousel">
-              <div>
-                  <h3>Slide 1</h3>
-                  <p>Test content 1</p>
+              <div class="carousel-slide">
+                  <div class="slide-content">
+                      <h3>Introduction to Scion Coalition Scheme</h3>
+                      <p>The Scion Coalition Scheme is an intensive, specially tailored training program run by Netmatters in order to give willing candidates the opportunity to enter the industry as web developers. Under the supervision of senior web developers, scions generally aim to complete training within six to nine months.</p>
+                  </div>
               </div>
-              <div>
-                  <h3>Slide 2</h3>
-                  <p>Test content 2</p>
+              <div class="carousel-slide">
+                  <div class="slide-content">
+                      <h3>About Netmatters</h3>
+                      <p>Established in 2008<br>
+                      Norfolk's leading technology company<br>
+                      Winner of the Princess Royal Training Award<br>
+                      80+ staff, 2 locations across Norfolk</p>
+                  </div>
               </div>
-              <div>
-                  <h3>Slide 3</h3>
-                  <p>Test content 3</p>
+              <div class="carousel-slide">
+                  <div class="slide-content">
+                      <h3>Treehouse</h3>
+                      <p>Treehouse is an online learning community, featuring videos covering a number of topics from basic HTML to C# programming, iOS development, data analysis, and more. By completing courses users can earn points, allowing them to track their progress.</p>
+                  </div>
               </div>
           </div>
         </div>
     </header>
-
-    <style>
-        .carousel {
-            width: 80%;
-            margin: 0 auto;
-        }
-        .carousel div {
-            padding: 20px;
-            text-align: center;
-            background: #f8f9fa;
-            margin: 0 10px;
-            border-radius: 8px;
-        }
-        .slick-prev:before,
-        .slick-next:before {
-            color: #333;
-        }
-    </style>
 
     <?php include_once '../includes/footer.php'; ?>
     

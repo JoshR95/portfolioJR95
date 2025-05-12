@@ -256,9 +256,9 @@ document.addEventListener('DOMContentLoaded', function() {
             speed: 300,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 3000,
-            arrows: true,
+            arrows: false,
             responsive: [
                 {
                     breakpoint: 768,
