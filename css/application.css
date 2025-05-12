@@ -1331,6 +1331,12 @@ textarea::placeholder {
   margin-top: 70px;
 }
 
+.me-icon {
+  padding-left: 20px;
+  max-width: 150px;
+  max-width: 150px;
+}
+
 @media (max-width: 575px) {
   .about-title h1 {
     font-size: 2.8rem;
