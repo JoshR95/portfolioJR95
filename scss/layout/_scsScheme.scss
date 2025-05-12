@@ -6,60 +6,8 @@
     background-color: $fifth-color;
 }
 
-.scsScheme-header{
-    background-color: $white;
-}
-
-.scs-scheme{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100%;
-    max-height: 100%;
-    color: $white;
-}
-
-// styling the content blocks, the width will change at higher viewports
-.scs-scheme-element {
-    width: 100%;
-    font-size: 1rem;
-    background: linear-gradient(to bottom right, $third-color, $fourth-color );
-    box-shadow: 0 5px 10px $white; 
-    text-align: center;
-    margin: 20px 0;
-    padding: 30px;
-    h2 {
-        text-decoration: underline;
-        padding-bottom: 10px;
-    }
-    a{
-        color: $third-color;
-    }
-    a:active,
-    a.clicked {
-        color: $white; 
-        background-color: $primary-color;
-        box-shadow: inset 0 0 5px $fourth-color; 
-    }
-}
-
-
-// this removes the bullet points
-.scs-right-element{
-    ul{
-        list-style-type: none;
-        padding-left: 0;
-    }
-    
-}
-
-.scs-scheme-element p,
-.scs-scheme-element ul,
-.scs-scheme-element h2 {
-    width: 100%;
-    margin: 0; 
-
+.carousel{
+    height: 80%;
 }
 
 
@@ -67,69 +15,132 @@
 /// MEDIA QUERIES
 /////////////////////////////////////////////////////////////////////////////////
 
-// ive given this a max-width of 450px as it looks weird with 100% and it breaks up the content a bit at lower viewports
-@media(max-width: 767px){
-    .scs-right-element{
-        max-width: 450px;
-    }
-
-}
-
-@media(min-width: 768px){
 
 
-    // this pushes the element to the right side
-    .scs-left-element {
-        align-self: flex-start; 
+// .scsScheme-header{
+//     background-color: $white;
+// }
 
-    }
+// .scs-scheme{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     min-height: 100%;
+//     max-height: 100%;
+//     color: $white;
+// }
 
-    // this pushes the element to the right side
-    .scs-right-element {
-        align-self: flex-end; 
-    }
+// // styling the content blocks, the width will change at higher viewports
+// .scs-scheme-element {
+//     width: 100%;
+//     font-size: 1rem;
+//     background: linear-gradient(to bottom right, $third-color, $fourth-color );
+//     box-shadow: 0 5px 10px $white; 
+//     text-align: center;
+//     margin: 20px 0;
+//     padding: 30px;
+//     h2 {
+//         text-decoration: underline;
+//         padding-bottom: 10px;
+//     }
+//     a{
+//         color: $third-color;
+//     }
+//     a:active,
+//     a.clicked {
+//         color: $white; 
+//         background-color: $primary-color;
+//         box-shadow: inset 0 0 5px $fourth-color; 
+//     }
+// }
 
-    .scs-scheme-element{
-        // this mixins makes the element move up when hovered over
-        @include hover-move;
-        max-width: 570px; 
-    }
 
-    .scs-scheme-main-container{
-        height: calc(100vh - 55px);
-    }
-
-}
-
-@media(min-wdith: 768px) and (max-width: 1400px){
-    .scs-scheme-element{
-        margin: 10px 0;
-    }
-}
-
-@media(min-width: 1400px){
-
-    .scs-scheme-element{
-        font-size: 1.2rem;
-        
-    }
+// // this removes the bullet points
+// .scs-right-element{
+//     ul{
+//         list-style-type: none;
+//         padding-left: 0;
+//     }
     
-    .scs-left-element{
-        max-width: 1000px;
-    }
+// }
 
-    .scs-right-element{
-        max-width: 1000px;
-    }
+// .scs-scheme-element p,
+// .scs-scheme-element ul,
+// .scs-scheme-element h2 {
+//     width: 100%;
+//     margin: 0; 
 
-}
+// }
 
-@media(min-width: 2200px){
-    .scs-left-element{
-        max-width: 1400px;
-    }
 
-    .scs-right-element{
-        max-width: 1400px;
-    }
-}
+// /////////////////////////////////////////////////////////////////////////////////
+// /// MEDIA QUERIES
+// /////////////////////////////////////////////////////////////////////////////////
+
+// // ive given this a max-width of 450px as it looks weird with 100% and it breaks up the content a bit at lower viewports
+// @media(max-width: 767px){
+//     .scs-right-element{
+//         max-width: 450px;
+//     }
+
+// }
+
+// @media(min-width: 768px){
+
+
+//     // this pushes the element to the right side
+//     .scs-left-element {
+//         align-self: flex-start; 
+
+//     }
+
+//     // this pushes the element to the right side
+//     .scs-right-element {
+//         align-self: flex-end; 
+//     }
+
+//     .scs-scheme-element{
+//         // this mixins makes the element move up when hovered over
+//         @include hover-move;
+//         max-width: 570px; 
+//     }
+
+//     .scs-scheme-main-container{
+//         height: calc(100vh - 55px);
+//     }
+
+// }
+
+// @media(min-wdith: 768px) and (max-width: 1400px){
+//     .scs-scheme-element{
+//         margin: 10px 0;
+//     }
+// }
+
+// @media(min-width: 1400px){
+
+//     .scs-scheme-element{
+//         font-size: 1.2rem;
+        
+//     }
+    
+//     .scs-left-element{
+//         max-width: 1000px;
+//     }
+
+//     .scs-right-element{
+//         max-width: 1000px;
+//     }
+
+// }
+
+// @media(min-width: 2200px){
+//     .scs-left-element{
+//         max-width: 1400px;
+//     }
+
+//     .scs-right-element{
+//         max-width: 1400px;
+//     }
+// }
