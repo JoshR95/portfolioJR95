@@ -63,9 +63,10 @@
           <div class="carousel">
               <div class="carousel-slide">
                   <div class="slide-content">
-                      <h3>Introduction to Scion Coalition Scheme</h3>
-                      <p>The Scion Coalition Scheme is an intensive, specially tailored training program run by Netmatters in order to give willing candidates the opportunity to enter the industry as web developers. Under the supervision of senior web developers, scions generally aim to complete training within six to nine months.</p>
+                    <h3>Introduction to Scion Coalition Scheme</h3>
+                    <p>The Scion Coalition Scheme is an intensive, specially tailored training program run by Netmatters in order to give willing candidates the opportunity to enter the industry as web developers. Under the supervision of senior web developers, scions generally aim to complete training within six to nine months.</p>
                   </div>
+                  <img src="../images/me-coding.png">
               </div>
               <div class="carousel-slide">
                   <div class="slide-content">
@@ -75,12 +76,14 @@
                       Winner of the Princess Royal Training Award<br>
                       80+ staff, 2 locations across Norfolk</p>
                   </div>
+                  <img src="../images/netmatters-logo.png">
               </div>
               <div class="carousel-slide">
                   <div class="slide-content">
                       <h3>Treehouse</h3>
                       <p>Treehouse is an online learning community, featuring videos covering a number of topics from basic HTML to C# programming, iOS development, data analysis, and more. By completing courses users can earn points, allowing them to track their progress.</p>
                   </div>
+                  <img src="../images/treehouse-logo.png">
               </div>
           </div>
         </div>

@@ -12,8 +12,15 @@
     margin: 0 auto;
     
     .carousel-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         height: 100%;
         padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         
         .slide-content {
             height: 100%;
@@ -21,12 +28,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: #f8f9fa;
             padding: 40px;
             margin: 0 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            width: 100%;
             
             h3 {
                 width: 100%;
@@ -43,6 +48,16 @@
                 text-align: left;
                 max-width: 800px;
             }
+        }
+        
+        img {
+            display: none;
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            margin-bottom: 50px;
+            padding: 20px;
+
         }
     }
 }
@@ -103,7 +118,54 @@
 /// MEDIA QUERIES
 /////////////////////////////////////////////////////////////////////////////////
 
+@media(min-width: 500px){
+    // this changes the text from align left to center to better match larger screens
+    .carousel {
+        .carousel-slide {
+            img {
+                display: block;
+            }
+        }
+    }
+}
 
+@media(min-width: 768px){
+    // this changes the text from align left to center to better match larger screens
+    .carousel {
+        .carousel-slide {
+            .slide-content {              
+                h3 {
+                    text-align: center;
+                }
+                
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 1250px) {   
+    .carousel {
+        .carousel-slide {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+            .slide-content {
+                width: 55%;
+                margin: 0;
+            }
+            
+            img {
+                width: 45%; // change to 40% to make img smaller
+                height: 100%;
+                margin: 0;
+            }
+        }
+    }
+}
 
 // .scsScheme-header{
 //     background-color: $white;
