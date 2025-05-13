@@ -2,7 +2,7 @@
   <div class="container nav-container">
     <div class="nav-initials">
       <a href="../index.php">
-        <h1>JR</h1>
+        <img class="page-logo" src="../images/me-coding-looking-right.png">
       </a>
     </div>
 
