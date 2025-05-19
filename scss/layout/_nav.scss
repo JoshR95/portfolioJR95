@@ -56,27 +56,27 @@ nav{
     
       .shape-1 { // top-left triangle
         top: 0; left: 0;
-        background: #fff;
+        background: $primary-color;
         clip-path: polygon(0 0, 100% 0, 0 100%);
       }
       .shape-2 { // bottom-right triangle
         top: 0; left: 0;
-        background: #888;
+        background: $primary-color;
         clip-path: polygon(100% 0, 100% 100%, 0 100%);
       }
       .shape-3 { // top-right triangle
         top: 0; left: 0;
-        background: #f39c12;
+        background: $third-color;
         clip-path: polygon(100% 0, 100% 100%, 0 0);
       }
       .shape-4 { // bottom-left triangle
         top: 0; left: 0;
-        background: #27ae60;
+        background: $second-color-light;
         clip-path: polygon(0 0, 0 100%, 100% 100%);
       }
       .shape-5 { // diamond in the center
         top: 0; left: 0;
-        background: #2980b9;
+        background: $fourth-color;
         clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
       }
 

@@ -321,35 +321,35 @@ nav {
 .nav-initials .shape-1 {
   top: 0;
   left: 0;
-  background: #fff;
+  background: #cca463;
   -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
           clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 .nav-initials .shape-2 {
   top: 0;
   left: 0;
-  background: #888;
+  background: #cca463;
   -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
           clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
 .nav-initials .shape-3 {
   top: 0;
   left: 0;
-  background: #f39c12;
+  background: #293043;
   -webkit-clip-path: polygon(100% 0, 100% 100%, 0 0);
           clip-path: polygon(100% 0, 100% 100%, 0 0);
 }
 .nav-initials .shape-4 {
   top: 0;
   left: 0;
-  background: #27ae60;
+  background: #7e8baf;
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
           clip-path: polygon(0 0, 0 100%, 100% 100%);
 }
 .nav-initials .shape-5 {
   top: 0;
   left: 0;
-  background: #2980b9;
+  background: #151821;
   -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
           clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
