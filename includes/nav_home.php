@@ -8,7 +8,7 @@
         <span class="shape shape-3"></span>
         <span class="shape shape-4"></span>
         <span class="shape shape-5"></span>
-        <span class="shape shape-6"></span>
+        <!-- <span class="shape shape-6"></span> -->
       </a>
     </div>
 

@@ -285,11 +285,14 @@ nav {
   position: relative;
 }
 .nav-initials .page-logo-background {
-  display: inline-block;
+  display: block;
   position: relative;
+  width: 135px;
+  height: 135px;
+  margin: 0 auto;
 }
 .nav-initials .page-logo {
-  position: relative;
+  position: absolute;
   z-index: 2;
   display: block;
   margin: 0 auto;
@@ -310,6 +313,8 @@ nav {
   width: 135px;
   height: 135px;
   margin-top: 50px;
+  top: 0;
+  left: 0;
   z-index: 1;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
@@ -319,64 +324,66 @@ nav {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-initials .shape-1 {
-  top: 0;
-  left: 0;
   background: #cca463;
-  -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 0 100%);
+  -webkit-clip-path: polygon(0 0, 60% 0, 40% 40%, 0 40%);
+          clip-path: polygon(0 0, 60% 0, 40% 40%, 0 40%);
 }
 .nav-initials .shape-2 {
-  top: 0;
-  left: 0;
-  background: #cca463;
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  background: #505d82;
+  -webkit-clip-path: polygon(60% 0, 100% 0, 100% 40%, 40% 40%);
+          clip-path: polygon(60% 0, 100% 0, 100% 40%, 40% 40%);
 }
 .nav-initials .shape-3 {
-  top: 0;
-  left: 0;
-  background: #293043;
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 0);
-          clip-path: polygon(100% 0, 100% 100%, 0 0);
+  background: #0d0f15;
+  -webkit-clip-path: polygon(0 40%, 40% 40%, 40% 100%, 0 100%);
+          clip-path: polygon(0 40%, 40% 40%, 40% 100%, 0 100%);
 }
 .nav-initials .shape-4 {
-  top: 0;
-  left: 0;
-  background: #7e8baf;
-  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
-          clip-path: polygon(0 0, 0 100%, 100% 100%);
+  background: #be8d3e;
+  -webkit-clip-path: polygon(40% 40%, 100% 40%, 100% 100%, 40% 100%);
+          clip-path: polygon(40% 40%, 100% 40%, 100% 100%, 40% 100%);
 }
 .nav-initials .shape-5 {
-  top: 0;
-  left: 0;
+  background: #293043;
+  -webkit-clip-path: polygon(0 0, 0 40%, 40% 40%);
+          clip-path: polygon(0 0, 0 40%, 40% 40%);
+}
+.nav-initials .shape-6 {
   background: #151821;
   -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
           clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  top: 0;
+  left: 0;
 }
 
 .page-logo-background:hover .shape-1 {
-  -webkit-transform: translate(-20px, -20px) scale(0.8);
-          transform: translate(-20px, -20px) scale(0.8);
+  -webkit-transform: translate(-30px, -30px) rotate(-10deg);
+          transform: translate(-30px, -30px) rotate(-10deg);
 }
 
 .page-logo-background:hover .shape-2 {
-  -webkit-transform: translate(20px, 20px) scale(0.8);
-          transform: translate(20px, 20px) scale(0.8);
+  -webkit-transform: translate(30px, -30px) rotate(8deg);
+          transform: translate(30px, -30px) rotate(8deg);
 }
 
-.nav-initials:hover .shape-3 {
-  -webkit-transform: translate(20px, -20px);
-          transform: translate(20px, -20px);
+.page-logo-background:hover .shape-3 {
+  -webkit-transform: translate(-30px, 30px) rotate(12deg);
+          transform: translate(-30px, 30px) rotate(12deg);
 }
 
-.nav-initials:hover .shape-4 {
-  -webkit-transform: translate(-20px, 20px);
-          transform: translate(-20px, 20px);
+.page-logo-background:hover .shape-4 {
+  -webkit-transform: translate(30px, 30px) rotate(-7deg);
+          transform: translate(30px, 30px) rotate(-7deg);
 }
 
-.nav-initials:hover .shape-5 {
-  -webkit-transform: scale(1.2) rotate(180deg);
-          transform: scale(1.2) rotate(180deg);
+.page-logo-background:hover .shape-5 {
+  -webkit-transform: translate(-40px, 0) rotate(-15deg);
+          transform: translate(-40px, 0) rotate(-15deg);
+}
+
+.page-logo-background:hover .shape-6 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .links-container {

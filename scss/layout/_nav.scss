@@ -20,14 +20,18 @@ nav{
 .nav-initials {
     position: relative;
 
+
     .page-logo-background {
-        display: inline-block;
+        display: block;
         position: relative;
-    }
+        width: 135px;
+        height: 135px;
+        margin: 0 auto;
+      }
                 
 
     .page-logo {
-        position: relative;
+        position: absolute;
         z-index: 2;
         display: block;
         margin: 0 auto;
@@ -45,51 +49,52 @@ nav{
     }
     .shape {
         position: absolute;
-        // keep the size the same as the logo 
         width: 135px;
         height: 135px;
         margin-top: 50px;
+        top: 0;
+        left: 0;
         z-index: 1;
         transform: translate(0, 0);
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       }
     
-      .shape-1 { // top-left triangle
-        top: 0; left: 0;
+      .shape-1 {
         background: $primary-color;
-        clip-path: polygon(0 0, 100% 0, 0 100%);
+        clip-path: polygon(0 0, 60% 0, 40% 40%, 0 40%);
       }
-      .shape-2 { // bottom-right triangle
-        top: 0; left: 0;
-        background: $primary-color;
-        clip-path: polygon(100% 0, 100% 100%, 0 100%);
+      .shape-2 {
+        background: $third-color-light;
+        clip-path: polygon(60% 0, 100% 0, 100% 40%, 40% 40%);
       }
-      .shape-3 { // top-right triangle
-        top: 0; left: 0;
+      .shape-3 {
+        background: $fifth-color;
+        clip-path: polygon(0 40%, 40% 40%, 40% 100%, 0 100%);
+      }
+      .shape-4 {
+        background: $primary-color-dark;
+        clip-path: polygon(40% 40%, 100% 40%, 100% 100%, 40% 100%);
+      }
+      .shape-5 {
         background: $third-color;
-        clip-path: polygon(100% 0, 100% 100%, 0 0);
+        clip-path: polygon(0 0, 0 40%, 40% 40%);
       }
-      .shape-4 { // bottom-left triangle
-        top: 0; left: 0;
-        background: $second-color-light;
-        clip-path: polygon(0 0, 0 100%, 100% 100%);
-      }
-      .shape-5 { // diamond in the center
-        top: 0; left: 0;
+      .shape-6 {
         background: $fourth-color;
         clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+        top: 0;
+        left: 0;
       }
 
 }
 
-// these two ccs styling for shape 1&2 make it spin and become slightly bigger, they get revelead on hover as the other shapes move away from the logo
-.page-logo-background:hover .shape-1 { transform: translate(-20px, -20px) scale(.8); }
-.page-logo-background:hover .shape-2 { transform: translate(20px, 20px) scale(.8); }
-// shape 3&4 move away at an angle on hover to reveal the background shapes
-.nav-initials:hover .shape-3 { transform: translate(20px, -20px); }
-.nav-initials:hover .shape-4 { transform: translate(-20px, 20px); }
-// this makes the diamond slightly larger on hover
-.nav-initials:hover .shape-5 { transform: scale(1.2) rotate(180deg); }
+// On hover, move each shape outward in a unique direction
+.page-logo-background:hover .shape-1 { transform: translate(-30px, -30px) rotate(-10deg); }
+.page-logo-background:hover .shape-2 { transform: translate(30px, -30px) rotate(8deg); }
+.page-logo-background:hover .shape-3 { transform: translate(-30px, 30px) rotate(12deg); }
+.page-logo-background:hover .shape-4 { transform: translate(30px, 30px) rotate(-7deg); }
+.page-logo-background:hover .shape-5 { transform: translate(-40px, 0) rotate(-15deg); }
+.page-logo-background:hover .shape-6 { transform: rotate(180deg); }
 
 // here im having the links visibility: hidden until the burger is clicked and the js will then add a is-active class to show it 
 // ive also added a transition so it slows comes down
