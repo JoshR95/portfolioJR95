@@ -6,6 +6,7 @@
 ///////////////////////////////////////
 $primary-color:     #cca463;
 $primary-color-dark: darken($primary-color, 10%);
+$primary-color-light: lighten($primary-color, 40%);
 
 $second-color: #252b3c;
 $second-color-dark: darken($second-color, 10%);
@@ -13,11 +14,14 @@ $second-color-light: lighten($second-color, 40%);
 
 $third-color: #293043;
 $third-color-light: lighten($third-color, 20%);
+$third-color-dark: darken($third-color, 10%);
 
 $fourth-color: #151821;
 $fourth-color-light: lighten($fourth-color, 20%);
 
 $fifth-color: #0d0f15;
+$fifth-color-dark: darken($fifth-color, 10%);
+$fifth-color-light: lighten($fifth-color, 40%);
 
 //////////////////////////////////////
 

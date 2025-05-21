@@ -1,135 +1,209 @@
 .scs-scheme-main-container {
-    min-height: 100vh;
+    min-height: 96vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: $fifth-color;
 }
 
-.scsScheme-header{
-    background-color: $white;
+.carousel {
+    width: 80%;
+    height: 800px;
+    margin: 0 auto;
+    
+    .carousel-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 20px;
+        background: linear-gradient(to bottom right, $third-color, $fourth-color );
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        
+        .slide-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            margin: 0 15px;
+            overflow: hidden;
+            width: 100%;
+            
+            h3 {
+                width: 100%;
+                margin-bottom: 20px;
+                font-size: 20px;
+                color: white;
+                text-align: left;
+                .scss-text-highlight{
+                    color: $primary-color;
+                    font-size: 1.3em;
+                }
+            }
+            
+            p {
+                font-size: 16px;
+                line-height: 1.6;
+                color: white;
+                text-align: left;
+                max-width: 800px;
+            }
+        }
+        
+        img {
+            display: none;
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            margin-bottom: 50px;
+            padding: 20px;
+
+        }
+    }
+}
+//////////////////////////////////
+//// SLICK SPECIFIC OVERIDES
+//////////////////////////////////
+
+.slick-list,
+.slick-track {
+    height: 100% !important;
 }
 
-.scs-scheme{
+.slick-slide {
+    height: 100%;
+    
+    > div {
+        height: 100%;
+    }
+}
+
+.slick-prev,
+.slick-next {
+    z-index: 2;
+    width: 75px;
+    height: 100px;
+    background: linear-gradient(to bottom right, $third-color, $fourth-color );
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100%;
-    max-height: 100%;
-    color: $white;
-}
-
-// styling the content blocks, the width will change at higher viewports
-.scs-scheme-element {
-    width: 100%;
-    font-size: 1rem;
-    background: linear-gradient(to bottom right, $third-color, $fourth-color );
-    box-shadow: 0 5px 10px $white; 
-    text-align: center;
-    margin: 20px 0;
-    padding: 30px;
-    h2 {
-        text-decoration: underline;
-        padding-bottom: 10px;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+    &:before {
+        color: none;
+        font-size: 40px;
+        opacity: 1;
     }
-    a{
-        color: $third-color;
-    }
-    a:active,
-    a.clicked {
-        color: $white; 
-        background-color: $primary-color;
-        box-shadow: inset 0 0 5px $fourth-color; 
+    &:hover, &:focus {
+        background: linear-gradient(to bottom right, $third-color, $fourth-color );
+        outline: none;
     }
 }
+// have these values match the above width to keep the boxes on the edge of the content container
+.slick-prev {
+    left: -75px;
+}
+.slick-next {
+    right: -75px;
+}
 
+// styling for dots
+.slick-dots {
 
-// this removes the bullet points
-.scs-right-element{
-    ul{
-        list-style-type: none;
-        padding-left: 0;
+    li {
+        button:before {
+            margin-top: 30px;
+            color: white;
+            opacity: 0.5;
+            font-size: 12px;
+        }
+        
+        &.slick-active button:before {
+            color: white;
+            opacity: 1;
+        }
     }
-    
 }
-
-.scs-scheme-element p,
-.scs-scheme-element ul,
-.scs-scheme-element h2 {
-    width: 100%;
-    margin: 0; 
-
-}
-
 
 /////////////////////////////////////////////////////////////////////////////////
 /// MEDIA QUERIES
 /////////////////////////////////////////////////////////////////////////////////
 
-// ive given this a max-width of 450px as it looks weird with 100% and it breaks up the content a bit at lower viewports
-@media(max-width: 767px){
-    .scs-right-element{
-        max-width: 450px;
+@media(min-width: 500px){
+    // this changes the text from align left to center to better match larger screens
+    .carousel {
+        .carousel-slide {
+            img {
+                display: block;
+            }
+        }
     }
-
 }
 
 @media(min-width: 768px){
-
-
-    // this pushes the element to the right side
-    .scs-left-element {
-        align-self: flex-start; 
-
-    }
-
-    // this pushes the element to the right side
-    .scs-right-element {
-        align-self: flex-end; 
-    }
-
-    .scs-scheme-element{
-        // this mixins makes the element move up when hovered over
-        @include hover-move;
-        max-width: 570px; 
-    }
-
-    .scs-scheme-main-container{
-        height: calc(100vh - 55px);
-    }
-
-}
-
-@media(min-wdith: 768px) and (max-width: 1400px){
-    .scs-scheme-element{
-        margin: 10px 0;
+    // this changes the text from align left to center to better match larger screens
+    .carousel {
+        .carousel-slide {
+            .slide-content {              
+                h3 {
+                    text-align: center;
+                }
+                
+                p {
+                    text-align: center;
+                }
+            }
+        }
     }
 }
 
-@media(min-width: 1400px){
-
-    .scs-scheme-element{
-        font-size: 1.2rem;
-        
+@media (max-width: 768px) {
+    // has to be !important or doesnt work for some reason
+    // i hide the arrow blocks just to help with sizing issues in mobile
+    .slick-prev,
+    .slick-next {
+        display: none !important;
     }
-    
-    .scs-left-element{
-        max-width: 1000px;
-    }
-
-    .scs-right-element{
-        max-width: 1000px;
-    }
-
 }
 
-@media(min-width: 2200px){
-    .scs-left-element{
-        max-width: 1400px;
-    }
+@media(min-width: 1250px) {   
+    .carousel {
+        .carousel-slide {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+            .slide-content {
+                width: 55%;
+                margin: 0;
 
-    .scs-right-element{
-        max-width: 1400px;
+                h3 {
+                    font-size: 25px;
+                    margin-bottom: 50px;
+                    .scss-text-highlight{
+                        font-size: 1.5em;
+                    }
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+            
+            img {
+                width: 45%; // change to 40% to make img smaller
+                height: 100%;
+                margin: 0;
+            }
+            .scss-nm-image{
+                margin-right: 75px;
+            }
+        }
     }
 }
