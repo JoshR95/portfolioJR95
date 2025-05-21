@@ -258,12 +258,12 @@ document.addEventListener('DOMContentLoaded', function() {
             slidesToScroll: 1,
             autoplay: false,
             autoplaySpeed: 3000,
-            arrows: false,
+            arrows: true,
             responsive: [
                 {
                     breakpoint: 768,
                     settings: {
-                        arrows: false
+                        arrows: true
                     }
                 }
             ]
