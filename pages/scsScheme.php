@@ -76,14 +76,14 @@
                       Winner of the Princess Royal Training Award<br>
                       80+ staff, 2 locations across Norfolk</p>
                   </div>
-                  <img src="../images/netmatters-logo.png">
+                  <img src="../images/nm-logo-white-med.png">
               </div>
               <div class="carousel-slide">
                   <div class="slide-content">
                       <h3>Treehouse</h3>
                       <p>Treehouse is an online learning community, featuring videos covering a number of topics from basic HTML to C# programming, iOS development, data analysis, and more. By completing courses users can earn points, allowing them to track their progress.</p>
                   </div>
-                  <img src="../images/treehouse-logo.png">
+                  <img src="../images/treehouse-logo2.png">
               </div>
           </div>
         </div>

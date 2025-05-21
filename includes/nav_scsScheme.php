@@ -1,8 +1,14 @@
 <nav id="nav">
   <div class="container nav-container">
     <div class="nav-initials">
-      <a href="../index.php">
+      <a class="page-logo-background" href="../index.php">
         <img class="page-logo" src="../images/me-coding-looking-right.png">
+        <span class="shape shape-1"></span>
+        <span class="shape shape-2"></span>
+        <span class="shape shape-3"></span>
+        <span class="shape shape-4"></span>
+        <span class="shape shape-5"></span>
+        <span class="shape shape-6"></span>
       </a>
     </div>
 

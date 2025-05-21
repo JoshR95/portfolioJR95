@@ -60,11 +60,11 @@ nav{
       }
     
       .shape-1 {
-        background: $primary-color;
+        background: $third-color-light;
         clip-path: polygon(0 0, 60% 0, 40% 40%, 0 40%);
       }
       .shape-2 {
-        background: $third-color-light;
+        background: $fifth-color;
         clip-path: polygon(60% 0, 100% 0, 100% 40%, 40% 40%);
       }
       .shape-3 {
@@ -72,7 +72,7 @@ nav{
         clip-path: polygon(0 40%, 40% 40%, 40% 100%, 0 100%);
       }
       .shape-4 {
-        background: $primary-color-dark;
+        background: $third-color;
         clip-path: polygon(40% 40%, 100% 40%, 100% 100%, 40% 100%);
       }
       .shape-5 {

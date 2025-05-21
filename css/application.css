@@ -324,12 +324,12 @@ nav {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-initials .shape-1 {
-  background: #cca463;
+  background: #505d82;
   -webkit-clip-path: polygon(0 0, 60% 0, 40% 40%, 0 40%);
           clip-path: polygon(0 0, 60% 0, 40% 40%, 0 40%);
 }
 .nav-initials .shape-2 {
-  background: #505d82;
+  background: #0d0f15;
   -webkit-clip-path: polygon(60% 0, 100% 0, 100% 40%, 40% 40%);
           clip-path: polygon(60% 0, 100% 0, 100% 40%, 40% 40%);
 }
@@ -339,7 +339,7 @@ nav {
           clip-path: polygon(0 40%, 40% 40%, 40% 100%, 0 100%);
 }
 .nav-initials .shape-4 {
-  background: #be8d3e;
+  background: #293043;
   -webkit-clip-path: polygon(40% 40%, 100% 40%, 100% 100%, 40% 100%);
           clip-path: polygon(40% 40%, 100% 40%, 100% 100%, 40% 100%);
 }
@@ -1702,7 +1702,8 @@ textarea::placeholder {
           justify-content: center;
   height: 100%;
   padding: 20px;
-  background: white;
+  background: -webkit-gradient(linear, left top, right bottom, from(#293043), to(#151821));
+  background: linear-gradient(to bottom right, #293043, #151821);
   border-radius: 8px;
   -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
