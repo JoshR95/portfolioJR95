@@ -181,13 +181,38 @@ document.addEventListener('DOMContentLoaded', function() {
                         body: formData
                     });
 
-                    const result = await response.json();
-                    
+                    const text = await response.text();
+                    console.log('Raw response:', text);
+                    let result;
+                    try {
+                        result = JSON.parse(text);
+                    } catch (e) {
+                        alert('Invalid JSON returned from server!');
+                        return;
+                    }
                     if (result.success) {
-                        alert('Form submitted successfully!');
+                        const successBox = document.getElementById('contact-success-message');
+                        if (successBox) {
+                            successBox.textContent = 'Form submitted successfully!';
+                            successBox.style.display = 'block';
+                            successBox.classList.remove('error-message');
+                            successBox.classList.add('success-message');
+                            setTimeout(() => {
+                                successBox.style.display = 'none';
+                            }, 4000);
+                        }
                         contactForm.reset();
                     } else {
-                        alert(result.message || 'Something went wrong');
+                        const successBox = document.getElementById('contact-success-message');
+                        if (successBox) {
+                            successBox.textContent = result.message || 'Something went wrong';
+                            successBox.style.display = 'block';
+                            successBox.classList.remove('success-message');
+                            successBox.classList.add('error-message');
+                            setTimeout(() => {
+                                successBox.style.display = 'none';
+                            }, 4000);
+                        }
                     }
                 } catch (error) {
                     console.error('Error:', error);

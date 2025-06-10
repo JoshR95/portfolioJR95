@@ -1,16 +1,21 @@
 <?php
+
+ob_start();
+
+// Composer autoload 
+require_once 'vendor/autoload.php';
+
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 // Enable error reporting for debugging
-error_reporting(E_ALL);
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
 ini_set('display_errors', 1);
 
 header('Content-Type: application/json');
 require_once 'includes/db_connect.php';  // Include database connection
-require_once 'vendor/autoload.php';      // Include PHPMailer
-
-// Import PHPMailer classes
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
 
 // Initialize response array
 $response = [
@@ -26,12 +31,12 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Sanitize and validate inputs
-$fname = filter_input(INPUT_POST, 'fname', FILTER_SANITIZE_STRING);
-$lname = filter_input(INPUT_POST, 'lname', FILTER_SANITIZE_STRING);
+$fname = filter_input(INPUT_POST, 'fname', FILTER_DEFAULT);
+$lname = filter_input(INPUT_POST, 'lname', FILTER_DEFAULT);
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-$phoneNumber = filter_input(INPUT_POST, 'phoneNumber', FILTER_SANITIZE_STRING);
-$subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_STRING);
-$message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+$phoneNumber = filter_input(INPUT_POST, 'phoneNumber', FILTER_DEFAULT);
+$subject = filter_input(INPUT_POST, 'subject', FILTER_DEFAULT);
+$message = filter_input(INPUT_POST, 'message', FILTER_DEFAULT);
 
 // Validate required fields
 if (empty($fname) || empty($lname) || empty($email) || empty($phoneNumber) || empty($subject) || empty($message)) {
@@ -143,9 +148,11 @@ try {
     $response['success'] = false;
     $response['message'] = 'An error occurred while processing your request';
     // Uncomment the line below for debugging
-    // $response['error'] = $e->getMessage();
+    $response['error'] = $e->getMessage();
 }
 
 // Send the JSON response back to the JavaScript
 echo json_encode($response);
+
+ob_end_flush();
 ?>

@@ -304,6 +304,7 @@
             <div>
               <button id="contact-submit-box" class="contact-me-submit" type="submit">Submit</button>
             </div>
+            <div id="contact-success-message" class="contact-success-message" style="display:none; margin-top:10px;"></div>
           </form>
           <div class="contact-scroll-container">
             <div class="contact-scroll-button">
