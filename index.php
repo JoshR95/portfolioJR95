@@ -300,10 +300,11 @@
               <textarea id="message" name="message" class="colored-input large-input" placeholder="Message"></textarea>
               <div class="error"></div>
             </div>
-
+            <div id="form-message-box" class="form-message-box" style="display:none; margin-top:10px;"></div>
             <div>
               <button id="contact-submit-box" class="contact-me-submit" type="submit">Submit</button>
             </div>
+            
           </form>
           <div class="contact-scroll-container">
             <div class="contact-scroll-button">

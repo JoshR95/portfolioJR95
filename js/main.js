@@ -169,29 +169,66 @@ document.addEventListener('DOMContentLoaded', function() {
         /// FORM SUBMISSION
         ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
+        // Helper function to show messages
+        function showFormMessage(message, isSuccess = true) {
+            //assings the form message box in the html to formMessageBox
+            const formMessageBox = document.getElementById('form-message-box');
+            if (formMessageBox) {
+                // here we set the content to the result from the code below, i.e showFormMessage(content)... gtes passed to the functions argument above
+                formMessageBox.textContent = message;
+                formMessageBox.style.display = 'block';
+                // removes any previous styling
+                formMessageBox.classList.remove('success-message', 'error-message');
+                // adds either the success or error class to the formMessageBox, uses ternary operator which is short hand if else, if isSuccess use 'success-message'
+                formMessageBox.classList.add(isSuccess ? 'success-message' : 'error-message');
+                // removes the message box after 3 seconds 
+                setTimeout(() => {
+                    formMessageBox.style.display = 'none';
+                }, 3000);
+            }
+        }
+        // listens for submit button press and stops form from doing a reload page
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
+            // calls validation checks and only continues if all are true
             if (validateInputs()) {
+                // creates a formData object from the form to send to php
                 const formData = new FormData(contactForm);
                 
+                // AJAX REQUEST 
                 try {
+                    // sends the form data to process_form using fetch
                     const response = await fetch('process_form.php', {
                         method: 'POST',
                         body: formData
                     });
 
-                    const result = await response.json();
-                    
-                    if (result.success) {
-                        alert('Form submitted successfully!');
-                        contactForm.reset();
-                    } else {
-                        alert(result.message || 'Something went wrong');
+                    // assigns response text from process_form
+                    const text = await response.text();
+                    // ** Uncomment the next line to debug raw server responses **
+                    // console.log('Raw response:', text);
+                    let result;
+
+                    // trys to parse to JSON, throws a specific JSON error if it fails
+                    try {
+                        result = JSON.parse(text);
+                    } catch (e) {
+                        showFormMessage('Invalid JSON returned from server!', false);
+                        return;
                     }
+                    // if successful it gives the showFormMessage its string argument and true boolean to display success message
+                    if (result.success) {
+                        showFormMessage('Form submitted successfully!', true);
+                        contactForm.reset();
+                    // does the same for fail but for fail message
+                    } else {
+                        showFormMessage(result.message || 'Something went wrong', false);
+                    }
+                // throws another type of fail if the process_form fails
                 } catch (error) {
                     console.error('Error:', error);
-                    alert('Something went wrong. Please try again.');
+                    showFormMessage('Something went wrong. Could not process form.', false);
                 }
             }
         });

@@ -1,2 +1,17 @@
 .env
 node_modules/
+vendor/
+includes/db_connect.php
+
+# Compiled CSS/JS
+css/*.css
+css/*.css.map
+scss/*.css
+scss/*.css.map
+scss/*-min.css
+js/*.min.js
+
+# Archives/Backups
+*.zip
+*.tar
+*.tar.gz
