@@ -1,16 +1,16 @@
 <?php
 // local host - uncomment when serving locally
-// $host = 'localhost';
-// $dbname = 'my_portfolio';  // Your database name
-// $username = 'root';        // Your database username
-// $password = '';           // Your database password
+$host = 'localhost';
+$dbname = 'my_portfolio';  // Your database name
+$username = 'root';        // Your database username
+$password = '';           // Your database password
 
 // C PANEL - un comment when on cpanel 
 
-$host = '127.0.0.1';
-$dbname = 'joshuarickards_portfolio';  // Your database name
-$username = 'joshuarickards_root';        // Your database username
-$password = 'Password_123.';           // Your database password
+// $host = '127.0.0.1';
+// $dbname = 'joshuarickards_portfolio';  // Your database name
+// $username = 'joshuarickards_root';        // Your database username
+// $password = 'Password_123.';           // Your database password
 
 
 try {
