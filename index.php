@@ -82,7 +82,7 @@
               <img src="./images/sassLogo.png">
             </div>
             <div class="about-me-lang-rows">
-              <img src="./images/phpLogo.png">
+              <img src="./images/phpLogo2.png">
               <img src="./images/laravelLogo.png">
             </div>
           </div>
@@ -92,17 +92,27 @@
           <h2>MY PROJECTS</h2>
           <div class="portfolio-grid">
             <div class="project-item">
-              <img src="./images/netmatters-homepage.png" alt="Netmatters homepage project image">
+              <img class="project-image" src="./images/netmatters-homepage.png" alt="Netmatters homepage project image">
               <div class="hover-tag">hover for details</div>
-              <div class="project-content">
-                <h3>Netmatters Homepage</h3>
-                <p class="project-content-flip-text">
+              <div class="project-on-hover">
+                <div class="project-title">
+                  <h3>Netmatters Homepage</h3>
+                </div>
+                <!-- <p class="project-content-flip-text">
                   This project recreates Netmatters homepage using HTML, CSS, SASS, javaScript and PHP.
                 </p>
                 <p class="project-content-flip-text">
                   The projects makes use of javaScript to add dynamic animations on the page such as the pop out sidemenu. This project also uses PHP to make us of include partials for things such as
                   the header, footer and nav. I have also implemented a dynamic news section where content is pulled from a MySQL database and rendered using PHP, allowing for easy content management and updates.
-                </p>
+                </p> -->
+                <div class="project-languages">
+                  <img src="./images/htmlLogo.png">
+                  <img src="./images/cssLogo.png">
+                  <img src="./images/sassLogo.png">
+                  <img src="./images/gitLogo2.png">
+                  <img src="./images/jsLogo.png">
+                  <img src="./images/phpLogo2.png">
+                </div>
                 <div class="project-links">
                   <a href="http://netmatters.joshua-rickards.netmatters-scs.co.uk/" target="_blank">
                     <span>View project</span>
@@ -110,21 +120,33 @@
                   <a href="https://github.com/JoshR95/netmatters_website" target="_blank">
                     <span>View code</span>
                   </a>
+                  <a href="" target="_blank">
+                    <span>Project details</span>
+                  </a>
                 </div>
               </div>
             </div>
             <div class="project-item">
               <img src="./images/js-array-project.png" alt="random image generator project image">
               <div class="hover-tag">hover for details</div>
-              <div class="project-content">
-                <h3>Random picture generator</h3>
-                <p class="project-content-flip-text">
+              <div class="project-on-hover">
+                <div class="project-title">
+                  <h3>Random picture generator</h3>
+                </div>
+                <!-- <p class="project-content-flip-text">
                   This project creates a random image and adds to collections. It uses HTML, CSS, SASS AND JS
                 </p>
                 <p class="project-content-flip-text">
                   The project makes use of an API to recieve the random images. It uses JS to added these images to a collection stored in local storage,
                   it then displays the collection for the associated email address. I also have email validation using regex validation.
-                </p>
+                </p> -->
+                <div class="project-languages">
+                  <img src="./images/htmlLogo.png">
+                  <img src="./images/cssLogo.png">
+                  <img src="./images/sassLogo.png">
+                  <img src="./images/gitLogo2.png">
+                  <img src="./images/jsLogo.png">
+                </div>
                 <div class="project-links">
                   <a href="http://js-array.joshua-rickards.netmatters-scs.co.uk/" target="_blank">
                     <span>View project</span>
@@ -132,27 +154,45 @@
                   <a href="https://github.com/JoshR95/js-array" target="_blank">
                     <span>View code</span>
                   </a>
+                  <a href="" target="_blank">
+                    <span>Project details</span>
+                  </a>
                 </div>
               </div>
             </div>
+
             <div class="project-item">
-              <img src="./images/laravel_admin_assessment.png" alt="coming soon project image ">
+              <img src="./images/laravel_admin_assessment.png" alt="laravel admin assessment project image">
               <div class="hover-tag">hover for details</div>
-              <div class="project-content">
-                <h3>Admin management system</h3>
-                <p class="project-content-flip-text">
+              <div class="project-on-hover">
+                <div class="project-title">
+                  <h3>Admin management system</h3>
+                </div>
+                <!-- <p class="project-content-flip-text">
                   This project is an admin management system that enables companies to manage their organizational structure and employee information through a secure, user-friendly interface.
                 </p>
                 <p class="project-content-flip-text">
                   It uses laravel, PHP, HTML and CSS. It handles user authentication with a secure log in. It allows maintenance of a database of company records with full CRUD operations.
                   It uses a SQLite database for efficient data storage and retrieval. It Implements Blade for dynamic content rendering. It also Utilizes Tailwind CSS for modern, responsive styling.
-                </p>
+                </p> -->
+                <div class="project-languages">
+                  <img src="./images/htmlLogo.png">
+                  <img src="./images/cssLogo.png">
+                  <img src="./images/sassLogo.png">
+                  <img src="./images/gitLogo2.png">
+                  <img src="./images/jsLogo.png">
+                  <img src="./images/phpLogo2.png">
+                  <img src="./images/laravelLogo.png">
+                </div>
                 <div class="project-links">
                   <a href="http://laravel.joshua-rickards.netmatters-scs.co.uk/login" target="_blank">
                     <span>View project</span>
                   </a>
                   <a href="https://github.com/JoshR95/laravel_nm_project" target="_blank">
                     <span>View code</span>
+                  </a>
+                  <a href="" target="_blank">
+                    <span>Project details</span>
                   </a>
                 </div>
               </div>
