@@ -574,13 +574,14 @@ footer {
   margin: 0 auto;
   height: auto;
 }
-#about-text h2,
+#about-text h2 {
+  font-size: 2.2rem;
+  padding: 0 0 0 20px;
+  margin-bottom: -20px;
+}
 #about-text p {
   margin: 0px;
   padding: 20px 0 20px 20px;
-}
-#about-text h2 {
-  font-size: 2.2rem;
 }
 #about-text p {
   font-size: 1.4rem;
@@ -600,12 +601,13 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 30px;
 }
 .about-text-header .icon-user {
   padding: 0 20px 0 20px;
@@ -630,17 +632,65 @@ footer {
           align-items: center;
   margin: 50px;
 }
+.language-logos-container .about-me-lang-rows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
 .language-logos-container .language-logo {
   font-size: 3rem;
   border: solid 3px black;
   padding: 5px;
   margin: 10px 5px;
 }
-.language-logos-container img {
+.language-logos-container .tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+.language-logos-container .tooltip-container .tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #293043;
+  color: #cca463;
+  border: 2px #cca463 solid;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  white-space: nowrap;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+.language-logos-container .tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.language-logos-container .tooltip-container img {
   height: 60px;
   width: 60px;
   padding: 5px;
   margin: 10px 5px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  cursor: pointer;
+}
+.language-logos-container .tooltip-container img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .about-me-scroll-container {
@@ -708,7 +758,7 @@ footer {
 }
 
 @media (min-width: 450px) {
-  .language-logos-container img {
+  .language-logos-container .tooltip-container img {
     height: 100px;
     width: 100px;
   }
@@ -757,9 +807,9 @@ footer {
   .language-logos-container {
     margin: 0;
   }
-  .language-logos-container img {
-    height: 70px;
-    width: 70px;
+  .language-logos-container .tooltip-container img {
+    height: 60px;
+    width: 60px;
   }
 }
 @media (min-width: 1000px) {
@@ -769,12 +819,9 @@ footer {
   .about-text-highlight {
     font-size: 3.5rem;
   }
-  .language-logos-container {
-    margin: 0;
-  }
-  .language-logos-container img {
-    height: 70px;
-    width: 70px;
+  .language-logos-container .tooltip-container img {
+    height: 80px;
+    width: 80px;
   }
 }
 @media (min-width: 1460px) {
@@ -787,9 +834,9 @@ footer {
   .about-text-highlight {
     font-size: 4.5rem;
   }
-  .language-logos-container img {
-    height: 100px;
-    width: 100px;
+  .language-logos-container .tooltip-container img {
+    height: 110px;
+    width: 110px;
   }
 }
 @media (min-width: 2000px) {
@@ -808,7 +855,7 @@ footer {
   #about-me-main {
     padding: 350px 30px 350px 150px;
   }
-  .language-logos-container img {
+  .language-logos-container .tooltip-container img {
     height: 130px;
     width: 130px;
   }
@@ -961,7 +1008,35 @@ footer {
   max-width: 80%;
   gap: 10px;
 }
-.project-item .project-languages img {
+.project-item .project-languages .tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+.project-item .project-languages .tooltip-container .tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #293043;
+  color: #cca463;
+  border: 2px #cca463 solid;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  white-space: nowrap;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+.project-item .project-languages .tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.project-item .project-languages .tooltip-container img {
   width: 50px;
   height: 50px;
   -o-object-fit: contain;
@@ -1100,9 +1175,12 @@ footer {
   .project-item .project-on-hover {
     padding: 20px;
   }
-  .project-item .project-languages img {
+  .project-item .project-languages .tooltip-container img {
     width: 75px;
     height: 75px;
+  }
+  .project-item .project-languages .tooltip-container .tooltip {
+    background-color: #0d0f15;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1147,7 +1225,7 @@ footer {
     height: 500px;
     max-width: 550px;
   }
-  .project-item .project-languages img {
+  .project-item .project-languages .tooltip-container img {
     width: 90px;
     height: 90px;
   }

@@ -117,11 +117,16 @@
         align-items: center;
         max-width: 80%;
         gap: 10px;
-        img{
-            width: 50px;
-            height: 50px;
-            // keeps images contained in the size specified
-            object-fit: contain;
+        
+        .tooltip-container {
+            @include tooltip;
+            
+            img {
+                width: 50px;
+                height: 50px;
+                // keeps images contained in the size specified
+                object-fit: contain;
+            }
         }
     }
 
@@ -220,9 +225,14 @@
         }
         // makes the project images bigger from this viewport
         .project-languages{
-            img{
-                width: 75px;
-                height: 75px;
+            .tooltip-container {
+                img{
+                    width: 75px;
+                    height: 75px;
+                }
+                .tooltip{
+                    background-color: $fifth-color;
+                }
             }
         }
     }
@@ -301,9 +311,11 @@
         max-width: 550px;
         // makes the project images bigger from this viewport
         .project-languages{
-            img{
-                width: 90px;
-                height: 90px;
+            .tooltip-container {
+                img{
+                    width: 90px;
+                    height: 90px;
+                }
             }
         }
         // .project-links {

@@ -30,13 +30,14 @@
     max-width: 1200px;
     margin: 0 auto; 
     height: auto;
-    h2,
+    h2{
+        font-size: 2.2rem;
+        padding: 0 0 0 20px;
+        margin-bottom: -20px;
+    }
     p{
         margin: 0px;
         padding: 20px 0 20px 20px
-    }
-    h2{
-        font-size: 2.2rem;
     }
     p{
         font-size: 1.4rem;
@@ -52,8 +53,9 @@
 .about-text-header{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    margin-bottom: 30px;
     .icon-user{
         padding: 0 20px 0 20px;
         font-size: 3rem;
@@ -71,7 +73,10 @@
     align-items: center;
     margin: 50px;
     .about-me-lang-rows{
-        // margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
     }
     .language-logo{
         font-size: 3rem;
@@ -79,13 +84,22 @@
         padding: 5px;
         margin: 10px 5px;
     }
-    img{
-        height: 60px;
-        width: 60px;
-        // border: solid 3px black;
-        padding: 5px;
-        margin: 10px 5px;
-        // background-color: white;
+    // ive made a mixin for the tool tips to be used anywhere on the page
+    .tooltip-container {
+        @include tooltip;
+        
+        img {
+            height: 60px;
+            width: 60px;
+            padding: 5px;
+            margin: 10px 5px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
     }
 }
 .about-me-scroll-container{
@@ -105,10 +119,11 @@
 
 @media(min-width: 450px){
     .language-logos-container{
-
-        img{
-            height: 100px;
-            width: 100px;
+        .tooltip-container {
+            img{
+                height: 100px;
+                width: 100px;
+            }
         }
     }
 }
@@ -152,10 +167,13 @@
 
     .language-logos-container{
         margin: 0;
-        img {
-            height: 70px;
-            width: 70px;
+        .tooltip-container {
+            img {
+                height: 60px;
+                width: 60px;
+            }
         }
+
     }
 
 
@@ -174,10 +192,11 @@
     }
 
     .language-logos-container{
-        margin: 0;
-        img {
-            height: 70px;
-            width: 70px;
+        .tooltip-container {
+            img {
+                height: 80px;
+                width: 80px;
+            }
         }
     }
 }
@@ -197,13 +216,15 @@
     .about-text-highlight{
         font-size: 4.5rem;
     }
-
     .language-logos-container{
-        img {
-            height: 100px;
-            width: 100px;
+        .tooltip-container {
+            img {
+                height: 110px;
+                width: 110px;
+            }
         }
     }
+
 }
 
 @media(min-width: 2000px){
@@ -228,9 +249,11 @@
     }
 
     .language-logos-container{
-        img {
-            height: 130px;
-            width: 130px;
+        .tooltip-container {
+            img {
+                height: 130px;
+                width: 130px;
+            }
         }
     }
 }

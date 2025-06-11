@@ -73,17 +73,38 @@
           </div>
           <div class="language-logos-container">
             <div class="about-me-lang-rows">
-              <img src="./images/jsLogo.png">
-              <img src="./images/htmlLogo.png">
+              <div class="tooltip-container">
+                <img src="./images/jsLogo.png">
+                <span class="tooltip">JavaScript</span>
+              </div>
+              <div class="tooltip-container">
+                <img src="./images/htmlLogo.png">
+                <span class="tooltip">HTML5</span>
+              </div>
             </div>
             <div class="about-me-lang-rows">
-              <img src="./images/cssLogo.png">
-              <img src="./images/gitLogo2.png">
-              <img src="./images/sassLogo.png">
+              <div class="tooltip-container">
+                <img src="./images/cssLogo.png">
+                <span class="tooltip">CSS3</span>
+              </div>
+              <div class="tooltip-container">
+                <img src="./images/gitLogo2.png">
+                <span class="tooltip">Git</span>
+              </div>
+              <div class="tooltip-container">
+                <img src="./images/sassLogo.png">
+                <span class="tooltip">Sass</span>
+              </div>
             </div>
             <div class="about-me-lang-rows">
-              <img src="./images/phpLogo2.png">
-              <img src="./images/laravelLogo.png">
+              <div class="tooltip-container">
+                <img src="./images/phpLogo2.png">
+                <span class="tooltip">PHP</span>
+              </div>
+              <div class="tooltip-container">
+                <img src="./images/laravelLogo.png">
+                <span class="tooltip">Laravel</span>
+              </div>
             </div>
           </div>
         </div>
@@ -106,12 +127,30 @@
                   the header, footer and nav. I have also implemented a dynamic news section where content is pulled from a MySQL database and rendered using PHP, allowing for easy content management and updates.
                 </p> -->
                 <div class="project-languages">
-                  <img src="./images/htmlLogo.png">
-                  <img src="./images/cssLogo.png">
-                  <img src="./images/sassLogo.png">
-                  <img src="./images/gitLogo2.png">
-                  <img src="./images/jsLogo.png">
-                  <img src="./images/phpLogo2.png">
+                  <div class="tooltip-container">
+                    <img src="./images/htmlLogo.png">
+                    <span class="tooltip">HTML5</span>
+                  </div>
+                  <div class="tooltip-container">
+                    <img src="./images/cssLogo.png">
+                    <span class="tooltip">CSS3</span>
+                  </div>
+                  <div class="tooltip-container">
+                    <img src="./images/sassLogo.png">
+                    <span class="tooltip">Sass</span>
+                  </div>
+                  <div class="tooltip-container">
+                    <img src="./images/gitLogo2.png">
+                    <span class="tooltip">Git</span>
+                  </div>
+                  <div class="tooltip-container">
+                    <img src="./images/jsLogo.png">
+                    <span class="tooltip">JavaScript</span>
+                  </div>
+                  <div class="tooltip-container">
+                    <img src="./images/phpLogo2.png">
+                    <span class="tooltip">PHP</span>
+                  </div>
                 </div>
                 <div class="project-links">
                   <a href="http://netmatters.joshua-rickards.netmatters-scs.co.uk/" target="_blank">
@@ -141,11 +180,26 @@
                   it then displays the collection for the associated email address. I also have email validation using regex validation.
                 </p> -->
                 <div class="project-languages">
-                  <img src="./images/htmlLogo.png">
-                  <img src="./images/cssLogo.png">
-                  <img src="./images/sassLogo.png">
-                  <img src="./images/gitLogo2.png">
-                  <img src="./images/jsLogo.png">
+                  <div class="tooltip-container">
+                    <img src="./images/htmlLogo.png">
+                    <span class="tooltip">HTML5</span>
+                  </div>
+                  <div class="tooltip-container">
+                    <img src="./images/cssLogo.png">
+                    <span class="tooltip">CSS3</span>
+                  </div>
+                  <div class="tooltip-container">
+                    <img src="./images/sassLogo.png">
+                    <span class="tooltip">Sass</span>
+                  </div>
+                  <div class="tooltip-container">
+                    <img src="./images/gitLogo2.png">
+                    <span class="tooltip">Git</span>
+                  </div>
+                  <div class="tooltip-container">
+                    <img src="./images/jsLogo.png">
+                    <span class="tooltip">JavaScript</span>
+                  </div>
                 </div>
                 <div class="project-links">
                   <a href="http://js-array.joshua-rickards.netmatters-scs.co.uk/" target="_blank">
@@ -176,13 +230,34 @@
                   It uses a SQLite database for efficient data storage and retrieval. It Implements Blade for dynamic content rendering. It also Utilizes Tailwind CSS for modern, responsive styling.
                 </p> -->
                 <div class="project-languages">
-                  <img src="./images/htmlLogo.png">
-                  <img src="./images/cssLogo.png">
-                  <img src="./images/sassLogo.png">
-                  <img src="./images/gitLogo2.png">
-                  <img src="./images/jsLogo.png">
-                  <img src="./images/phpLogo2.png">
-                  <img src="./images/laravelLogo.png">
+                  <div class="tooltip-container">
+                    <img src="./images/htmlLogo.png">
+                    <span class="tooltip">HTML5</span>
+                  </div>
+                  <div class="tooltip-container">
+                    <img src="./images/cssLogo.png">
+                    <span class="tooltip">CSS3</span>
+                  </div>
+                  <div class="tooltip-container">
+                    <img src="./images/sassLogo.png">
+                    <span class="tooltip">Sass</span>
+                  </div>
+                  <div class="tooltip-container">
+                    <img src="./images/gitLogo2.png">
+                    <span class="tooltip">Git</span>
+                  </div>
+                  <div class="tooltip-container">
+                    <img src="./images/jsLogo.png">
+                    <span class="tooltip">JavaScript</span>
+                  </div>
+                  <div class="tooltip-container">
+                    <img src="./images/phpLogo2.png">
+                    <span class="tooltip">PHP</span>
+                  </div>
+                  <div class="tooltip-container">
+                    <img src="./images/laravelLogo.png">
+                    <span class="tooltip">Laravel</span>
+                  </div>
                 </div>
                 <div class="project-links">
                   <a href="http://laravel.joshua-rickards.netmatters-scs.co.uk/login" target="_blank">

@@ -82,3 +82,59 @@
       }
     }
 }
+
+
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+// /// TURN-PICTURE-COLORED -  THIS SET THE PICTURES GREYSCALE TO 100% AND TURNS IT OFF WHEN HOVERED OVER
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// // this mixin sets all imgs 
+// @mixin turn-picture-colored {
+//   img {
+//     filter: grayscale(100%);
+//     transition: filter 0.3s ease;
+//   }
+
+//   &:hover img {
+//     filter: grayscale(0%);
+//   }
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// GLOW EFFECT FOR IMAGES
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// TOOLTIP MIXIN
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@mixin tooltip($tooltip-color: $primary-color, $tooltip-size: 16px, $tooltip-padding: 5px 10px) {
+    position: relative;
+    display: inline-block;
+    
+    .tooltip {
+        visibility: hidden;
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $third-color;
+        color: $tooltip-color;
+        border: 2px $tooltip-color solid;
+        text-align: center;
+        padding: $tooltip-padding;
+        border-radius: 4px;
+        font-size: $tooltip-size;
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1000;
+    }
+
+    &:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
