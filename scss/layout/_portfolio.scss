@@ -1,5 +1,3 @@
-
-
 #portfolio{
     background: $fifth-color;
     padding: 50px;
@@ -65,7 +63,7 @@
         text-align: center;
         justify-content: space-between;
         padding: 10px;
-        background-color: rgba($fourth-color, 0.9);
+        background-color: rgba($fifth-color, 1);
         opacity: 0;
         transition: opacity 0.3s ease;
         width: 100%;
@@ -74,6 +72,10 @@
             font-size: .9rem;
         }
     }
+
+    ///////////////////////////////////////////
+    /// ON HOVER STYLING 
+    ///////////////////////////////////////////
 
     .project-content {
         display: flex;
@@ -103,6 +105,8 @@
         font-size: 1.2rem; 
         margin: 3px;
         text-decoration: underline;
+        text-decoration-color: $primary-color;
+        text-underline-offset: 7px;
     } 
     
     p {
@@ -132,29 +136,12 @@
 
     .project-links {
         display: flex;
-        gap: 10px; /* Adjust this value to control space between buttons */
+        gap: 10px;
+
         a {
-            background-color: $third-color;
-            box-shadow: inset 0 0 5px $fifth-color;
-            color: $white;
+            @include page-button;
+            margin-top: 0;
             font-size: .8rem;
-            border: 2px solid $second-color;
-            border-radius: 5px;
-            padding: 10px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-
-            &:hover {
-                background-color: $third-color-light;
-                box-shadow: inset 0 0 5px $fourth-color;
-            }
-
-            &:active,
-            &.clicked {
-                color: $white;
-                background-color: $fifth-color;
-                box-shadow: inset 0 0 5px $fourth-color;
-            }
         }
     }
 
@@ -184,7 +171,26 @@
     align-items: center;
     margin-top: 100px;
     .portfolio-scroll-button{
-        @include scroll-button;
+        max-width: 350px;
+        position: relative;
+        
+        a {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        
+        p {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        
+        @include page-button;
     }
 }
 

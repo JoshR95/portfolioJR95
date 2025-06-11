@@ -61,8 +61,27 @@
 //     }
 // }
 
-.hero-scroll-container{
-    @include scroll-button
+.hero-scroll-container {
+    max-width: 350px;
+    position: relative;
+    
+    a {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    p {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    @include page-button;
 }
 
 

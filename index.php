@@ -117,7 +117,7 @@
               <div class="hover-tag">hover for details</div>
               <div class="project-on-hover">
                 <div class="project-title">
-                  <h3>Netmatters Homepage</h3>
+                  <h3>NETMATTERS HOMEPAGE</h3>
                 </div>
                 <!-- <p class="project-content-flip-text">
                   This project recreates Netmatters homepage using HTML, CSS, SASS, javaScript and PHP.
@@ -154,13 +154,13 @@
                 </div>
                 <div class="project-links">
                   <a href="http://netmatters.joshua-rickards.netmatters-scs.co.uk/" target="_blank">
-                    <span>View project</span>
+                    <p><span>View project</span></p>
                   </a>
                   <a href="https://github.com/JoshR95/netmatters_website" target="_blank">
-                    <span>View code</span>
+                    <p><span>View code</span></p>
                   </a>
                   <a href="" target="_blank">
-                    <span>Project details</span>
+                    <p><span>Project details</span></p>
                   </a>
                 </div>
               </div>
@@ -170,7 +170,7 @@
               <div class="hover-tag">hover for details</div>
               <div class="project-on-hover">
                 <div class="project-title">
-                  <h3>Random picture generator</h3>
+                  <h3>RANDOM PICTURE GENERATOR</h3>
                 </div>
                 <!-- <p class="project-content-flip-text">
                   This project creates a random image and adds to collections. It uses HTML, CSS, SASS AND JS
@@ -202,14 +202,14 @@
                   </div>
                 </div>
                 <div class="project-links">
-                  <a href="http://js-array.joshua-rickards.netmatters-scs.co.uk/" target="_blank">
-                    <span>View project</span>
+                  <a href="http://netmatters.joshua-rickards.netmatters-scs.co.uk/" target="_blank">
+                    <p><span>View project</span></p>
                   </a>
-                  <a href="https://github.com/JoshR95/js-array" target="_blank">
-                    <span>View code</span>
+                  <a href="https://github.com/JoshR95/netmatters_website" target="_blank">
+                    <p><span>View code</span></p>
                   </a>
                   <a href="" target="_blank">
-                    <span>Project details</span>
+                    <p><span>Project details</span></p>
                   </a>
                 </div>
               </div>
@@ -220,7 +220,7 @@
               <div class="hover-tag">hover for details</div>
               <div class="project-on-hover">
                 <div class="project-title">
-                  <h3>Admin management system</h3>
+                  <h3>ADMIN MANAGEMENT SYSTEM</h3>
                 </div>
                 <!-- <p class="project-content-flip-text">
                   This project is an admin management system that enables companies to manage their organizational structure and employee information through a secure, user-friendly interface.
@@ -260,14 +260,14 @@
                   </div>
                 </div>
                 <div class="project-links">
-                  <a href="http://laravel.joshua-rickards.netmatters-scs.co.uk/login" target="_blank">
-                    <span>View project</span>
+                  <a href="http://netmatters.joshua-rickards.netmatters-scs.co.uk/" target="_blank">
+                    <p><span>View project</span></p>
                   </a>
-                  <a href="https://github.com/JoshR95/laravel_nm_project" target="_blank">
-                    <span>View code</span>
+                  <a href="https://github.com/JoshR95/netmatters_website" target="_blank">
+                    <p><span>View code</span></p>
                   </a>
                   <a href="" target="_blank">
-                    <span>Project details</span>
+                    <p><span>Project details</span></p>
                   </a>
                 </div>
               </div>
