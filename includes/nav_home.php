@@ -18,19 +18,19 @@
 
     <div class="links-container">
       <ul class="pages-links"> 
-        <!--Portfolio is homepage -->
-        <!-- <li class="btn-one"><a href="./pages/about.php"><span>ABOUT ME</span></a></li>     -->
-        <li><a href="#portfolio"><span>MY PORTFOLIO</span></a></li>
-        <li><a href="./pages/codeExamples.php"><span>CODE EXAMPLES</span></a></li>
-        <li><a href="./pages/scsScheme.php"><span>SCS SCHEME</span></a></li>
-        <li><a href="#contact-me"><span>CONTACT ME</span></a></li>
+        <li><a href="../index.php" class="svg-animated-btn"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg><span class="icon-home"></span><span>MAIN PAGE</span></a></li>    
+        <li><a href="../index.php#portfolio" class="svg-animated-btn"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg><span class="icon-folder-open"></span><span>PORTFOLIO</span></a></li>
+        <li><a href="../pages/codeExamples.php" class="svg-animated-btn"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg><span class="icon-embed2"></span><span>DEMO CODE</span></a></li>
+        <li><a href="../pages/scsScheme.php" class="svg-animated-btn"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg><span class="icon-study"></span><span>SCS SCHEME</span></a></li>
+        <li><a href="../index.php#contact-me" class="svg-animated-btn"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg><span class="icon-chat"></span><span>CONTACT ME</span></a></li>
       </ul>
+      <div class="nav-socials">
+        <a href="https://github.com/JoshR95">
+          <span class="icon-github"></span>
+        </a>
+      </div>
     </div>
-
-    <div class="nav-socials">
-      <a href="https://github.com/JoshR95" target="_blank" rel="noopener noreferrer">
-        <span class="icon-github"></span>
-      </a>
-    </div>
+    
   </div>
 </nav>
+

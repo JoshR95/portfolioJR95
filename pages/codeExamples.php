@@ -19,7 +19,7 @@
 
   <body>
 
-    <?php require_once '../includes/nav_CE.php'; ?> 
+    <?php require_once '../includes/nav_home.php'; ?> 
     
     <header id="moving-background">
       <div class="main-container code-example-main-container">

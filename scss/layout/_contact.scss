@@ -95,7 +95,7 @@ textarea::placeholder {
     font-size: 16px;
     margin-top: 10px;
     padding: 10px 20px;
-    color: $primary-color;
+    color: $white;
     background-color: $third-color;
     border: 3px $primary-color solid;
     cursor: pointer;
@@ -134,7 +134,7 @@ textarea::placeholder {
     justify-content: center;
     margin-top: 75px;
     .contact-scroll-button{
-        @include scroll-button;
+        @include page-button;
     
     }
 }
@@ -180,3 +180,26 @@ textarea::placeholder {
         padding: 300px 0;
     }
   }
+
+.contact-scroll-button {
+    max-width: 350px;
+    position: relative;
+    
+    a {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    p {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    @include page-button;
+}

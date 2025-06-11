@@ -22,7 +22,7 @@
   </head>
 
   <body>
-    <?php require_once '../includes/nav_scsScheme.php'; ?>
+    <?php require_once '../includes/nav_home.php'; ?>
      
     <header>
         <div class="main-container scs-scheme-main-container container">

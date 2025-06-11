@@ -1,5 +1,3 @@
-
-
 #portfolio{
     background: $fifth-color;
     padding: 50px;
@@ -14,6 +12,7 @@
     text-underline-offset: 10px;
     margin-top: 0;
     padding-top: 20px;
+    margin-bottom: 100px;
 }
 
 .project-item {
@@ -52,7 +51,7 @@
     }
 
     // here we are creating the content overlay that is insitally invisible
-    .project-content {
+    .project-on-hover {
         position: absolute;
         top: 0;
         left: 0;
@@ -60,26 +59,44 @@
         bottom: 0;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
         text-align: center;
+        justify-content: space-between;
         padding: 10px;
-        background-color: rgba($fourth-color, 0.7);
+        background-color: rgba($fifth-color, 1);
         opacity: 0;
         transition: opacity 0.3s ease;
+        width: 100%;
+        height: 100%;
         .project-content-flip-text{
             font-size: .9rem;
         }
     }
 
+    ///////////////////////////////////////////
+    /// ON HOVER STYLING 
+    ///////////////////////////////////////////
+
+    .project-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // width: 100%;
+        // height: 100%;
+    }
+
     // this is the code that changes the opacity when hovered so the content/text is then visible
     &:hover {
-        img {
+        .project-image {
             filter: brightness(0.1);
         }
-
-        .project-content {
+        // this is what makes the content appear
+        .project-on-hover {
             opacity: 1;
+        }
+        // removes the hover tag on hover so it doesnt class with title
+        .hover-tag{
+            display: none;
         }
     }
 
@@ -88,6 +105,8 @@
         font-size: 1.2rem; 
         margin: 3px;
         text-decoration: underline;
+        text-decoration-color: $primary-color;
+        text-underline-offset: 7px;
     } 
     
     p {
@@ -95,37 +114,42 @@
         font-size: 1rem;
         margin: 3px;
     }
-
-    a {
-        background-color: $third-color;
-        box-shadow: inset 0 0 5px $fifth-color;
-        color: $white;
-        font-size: .8rem;
-        border: 2px solid $second-color;
-        border-radius: 5px;
-        padding: 5px 10px;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-            background-color: $third-color-light;
-            box-shadow: inset 0 0 5px $fourth-color;
+    .project-languages{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 80%;
+        gap: 10px;
+        
+        .tooltip-container {
+            @include tooltip;
+            
+            img {
+                width: 50px;
+                height: 50px;
+                // keeps images contained in the size specified
+                object-fit: contain;
+            }
         }
+    }
 
-        &:active,
-        &.clicked {
-            color: $white;
-            background-color: $fifth-color;
-            box-shadow: inset 0 0 5px $fourth-color;
+    .project-links {
+        display: flex;
+        gap: 10px;
+
+        a {
+            @include page-button;
+            margin-top: 0;
+            font-size: .8rem;
+            p{
+                padding: 5px;
+            }
         }
     }
 
 }
 
-.project-links {
-    display: flex;
-    gap: 10px; /* Adjust this value to control space between buttons */
-  }
 
 .hidden {
     display: none;
@@ -148,8 +172,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
     .portfolio-scroll-button{
-        @include scroll-button;
+        max-width: 350px;
+        position: relative;
+        
+        a {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        
+        p {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        
+        @include page-button;
     }
 }
 
@@ -182,6 +226,25 @@
     #portfolio{
         padding: 100px 0;
     }
+
+    .project-item{
+        // increase the padding of the project on hover content to just look a bit nicer
+        .project-on-hover{
+            padding: 20px;
+        }
+        // makes the project images bigger from this viewport
+        .project-languages{
+            .tooltip-container {
+                img{
+                    width: 75px;
+                    height: 75px;
+                }
+                .tooltip{
+                    background-color: $fifth-color;
+                }
+            }
+        }
+    }
 }
 
 @media(min-width: 768px) and (max-width: 991px){
@@ -194,6 +257,7 @@
     }
     
     .project-item{
+
         h3 {
             font-size: 1.8rem;
         }
@@ -202,8 +266,11 @@
             font-size: 1.2rem;
         }
 
-        a {
-            font-size: .9rem;
+        .project-links {
+            a{
+                font-size: .9rem;
+            }
+    
         }
     
     }
@@ -213,7 +280,6 @@
 
 @media (min-width: 992px) and (max-width: 1199px){
 
-    
     #portfolio h2 {
         font-size: 2.6rem;
     }
@@ -239,14 +305,37 @@
             font-size: 1.2rem;
         }
 
-        a {
-            font-size: .9rem;
+        .project-links {
+            a{
+                font-size: 1.1rem;
+            }
         }
     }
 
   }
 
-  @media(min-width: 1100px){
+@media(min-width: 1100px){
+    .project-item {
+        height: 500px;
+        max-width: 550px;
+        // makes the project images bigger from this viewport
+        .project-languages{
+            .tooltip-container {
+                img{
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+        }
+        // .project-links {
+            
+        //     a {
+        //         padding: 15px;
+        //     }
+        // }
+    }
+
+
     #portfolio{
         padding: 200px 0;
     }
@@ -254,13 +343,13 @@
     #portfolio h2 {
         font-size: 2.6rem;
     }
-  }
+}
 
-  @media (min-width: 1200px) {
+@media (min-width: 1200px) {
 
     // this shows the children elements from the 5th to the 9th
     .portfolio-grid .project-item.hidden:nth-child(n+5):nth-child(-n+9) {
-      display: flex; 
+        display: flex; 
     }
 
     .portfolio-grid{
@@ -279,22 +368,24 @@
             font-size: 1.4rem;
         }
 
-        a{
-            font-size: 1.2rem;
+        .project-links {
+            a{
+                font-size: 1.5rem;
+            }
         }
     }
-  }
+}
 
-  @media (min-width: 1660px){
+@media (min-width: 1660px){
     .portfolio-grid{
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: 1fr;
     }
 
-  }
+}
 
-  @media(min-width: 2000px){
+@media(min-width: 2000px){
     #portfolio{
         padding: 300px 0;
     }
-  }
+}

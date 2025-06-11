@@ -74,6 +74,9 @@ body {
     width: calc(100% - 200px);
     margin-left: 200px;
   }
+  .hero-scroll-container a {
+    font-size: 1.3rem;
+  }
 }
 #particles-js {
   position: absolute;
@@ -147,9 +150,17 @@ body {
 
 .hero-scroll-container {
   max-width: 350px;
+  position: relative;
   border: 3px #cca463 solid;
   margin-top: 30px;
   z-index: 10;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  z-index: 1000;
+  cursor: pointer;
+  pointer-events: auto;
+  gap: 5px;
 }
 .hero-scroll-container a {
   position: relative;
@@ -167,25 +178,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-decoration: none;
-  color: #cca463;
-  font-size: 1.5rem;
-  z-index: 1000;
-  cursor: pointer;
-  pointer-events: auto;
+  padding: 10px;
 }
-.hero-scroll-container a:hover {
-  background-color: #cca463;
-  color: #0d0f15;
-  border-color: #977132;
-}
-.hero-scroll-container a:hover p {
-  color: #0d0f15;
-}
-.hero-scroll-container a:active {
-  background-color: #977132;
-}
-.hero-scroll-container a p {
+.hero-scroll-container p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -193,10 +188,31 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
-  margin: 0;
-  color: #cca463;
 }
-.hero-scroll-container a p span {
+.hero-scroll-container, .hero-scroll-container a, .hero-scroll-container p, .hero-scroll-container span {
+  text-decoration: none;
+}
+.hero-scroll-container:hover {
+  background-color: #cca463;
+  color: white;
+  border-color: #977132;
+}
+.hero-scroll-container:hover p {
+  color: #0d0f15;
+}
+.hero-scroll-container:active {
+  background-color: #c69950;
+  border-color: #4b3718;
+}
+.hero-scroll-container:active p {
+  color: white;
+}
+.hero-scroll-container p {
+  margin: 0;
+  color: white;
+  padding: 3px;
+}
+.hero-scroll-container p span {
   padding: 0 5px;
 }
 
@@ -273,12 +289,12 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 180px;
+  margin: 0 10px 0 10px;
+  padding: 0 10px 0 10px;
 }
 
 .nav-initials {
@@ -414,7 +430,7 @@ nav {
   padding: 0;
   margin-bottom: 20px;
   width: 140px;
-  background-color: #293043;
+  background-color: transparent;
   border-radius: 5%;
   -webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
@@ -425,8 +441,8 @@ nav {
   color: white;
   text-decoration: none;
 }
-.pages-links li:hover {
-  background-color: #505d82;
+.pages-links li span {
+  padding: 0 2.5px 0 2.5px;
 }
 .pages-links li:active, .pages-links li.clicked {
   color: white;
@@ -435,9 +451,89 @@ nav {
           box-shadow: inset 0 0 5px #151821;
 }
 
+.pages-links li a.svg-animated-btn {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 160px;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: background 0.35s, color 0.35s, letter-spacing 0.35s;
+  transition: background 0.35s, color 0.35s, letter-spacing 0.35s;
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+.pages-links li a.svg-animated-btn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.pages-links li a.svg-animated-btn rect {
+  fill: none;
+  stroke: #cca463;
+  stroke-width: 2;
+  stroke-dasharray: 422, 0;
+  -webkit-transition: all 0.35s linear;
+  transition: all 0.35s linear;
+}
+.pages-links li a.svg-animated-btn span, .pages-links li a.svg-animated-btn .btn-text {
+  position: relative;
+  z-index: 2;
+  color: inherit;
+  font-weight: inherit;
+  -webkit-transition: color 0.35s, letter-spacing 0.35s;
+  transition: color 0.35s, letter-spacing 0.35s;
+}
+.pages-links li a.svg-animated-btn:hover {
+  background: transparent;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #cca463;
+}
+.pages-links li a.svg-animated-btn:hover rect {
+  stroke-width: 5;
+  stroke-dasharray: 15, 310;
+  stroke-dashoffset: 48;
+  -webkit-transition: all 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.pages-links li a.svg-animated-btn:active {
+  color: #fff;
+}
+.pages-links li a.svg-animated-btn:active svg rect {
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 422, 0;
+  stroke-dashoffset: 0;
+  -webkit-transition: none;
+  transition: none;
+}
+
 .nav-socials {
   text-align: center;
   padding-bottom: 10px;
+  margin-top: 50px;
 }
 .nav-socials a {
   font-size: 2rem;
@@ -511,15 +607,39 @@ nav {
     height: 100vh;
     position: fixed;
   }
+  .nav-container {
+    height: 100vh;
+  }
   .hamburger {
     display: none;
   }
   .links-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     visibility: visible;
     max-height: none;
+    width: 100%;
     opacity: 1;
     -webkit-transition: none;
     transition: none;
+    margin-top: 150px;
+  }
+  .links-container .pages-links {
+    width: 100%;
+  }
+  .links-container .pages-links li {
+    width: 100%;
+  }
+  .links-container .pages-links li a {
+    width: 100%;
   }
   .nav-initials {
     margin-bottom: 75px;
@@ -574,13 +694,14 @@ footer {
   margin: 0 auto;
   height: auto;
 }
-#about-text h2,
+#about-text h2 {
+  font-size: 2.2rem;
+  padding: 0 0 0 20px;
+  margin-bottom: -20px;
+}
 #about-text p {
   margin: 0px;
   padding: 20px 0 20px 20px;
-}
-#about-text h2 {
-  font-size: 2.2rem;
 }
 #about-text p {
   font-size: 1.4rem;
@@ -600,12 +721,13 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 30px;
 }
 .about-text-header .icon-user {
   padding: 0 20px 0 20px;
@@ -630,17 +752,65 @@ footer {
           align-items: center;
   margin: 50px;
 }
+.language-logos-container .about-me-lang-rows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
 .language-logos-container .language-logo {
   font-size: 3rem;
   border: solid 3px black;
   padding: 5px;
   margin: 10px 5px;
 }
-.language-logos-container img {
+.language-logos-container .tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+.language-logos-container .tooltip-container .tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #293043;
+  color: white;
+  border: 2px #cca463 solid;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  white-space: nowrap;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+.language-logos-container .tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.language-logos-container .tooltip-container img {
   height: 60px;
   width: 60px;
   padding: 5px;
   margin: 10px 5px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  cursor: pointer;
+}
+.language-logos-container .tooltip-container img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .about-me-scroll-container {
@@ -653,12 +823,59 @@ footer {
 }
 .about-me-scroll-container .about-me-scroll-button {
   margin-left: 40px;
-  max-width: 350px;
   border: 3px #cca463 solid;
   margin-top: 30px;
   z-index: 10;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  z-index: 1000;
+  cursor: pointer;
+  pointer-events: auto;
+  gap: 5px;
 }
-.about-me-scroll-container .about-me-scroll-button a {
+.about-me-scroll-container .about-me-scroll-button, .about-me-scroll-container .about-me-scroll-button a, .about-me-scroll-container .about-me-scroll-button p, .about-me-scroll-container .about-me-scroll-button span {
+  text-decoration: none;
+}
+.about-me-scroll-container .about-me-scroll-button:hover {
+  background-color: #cca463;
+  color: white;
+  border-color: #977132;
+}
+.about-me-scroll-container .about-me-scroll-button:hover p {
+  color: #0d0f15;
+}
+.about-me-scroll-container .about-me-scroll-button:active {
+  background-color: #c69950;
+  border-color: #4b3718;
+}
+.about-me-scroll-container .about-me-scroll-button:active p {
+  color: white;
+}
+.about-me-scroll-container .about-me-scroll-button p {
+  margin: 0;
+  color: white;
+  padding: 3px;
+}
+.about-me-scroll-container .about-me-scroll-button p span {
+  padding: 0 5px;
+}
+
+.about-me-scroll-button {
+  max-width: 350px;
+  position: relative;
+  border: 3px #cca463 solid;
+  margin-top: 30px;
+  z-index: 10;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  z-index: 1000;
+  cursor: pointer;
+  pointer-events: auto;
+  gap: 5px;
+}
+.about-me-scroll-button a {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -674,25 +891,9 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-decoration: none;
-  color: #cca463;
-  font-size: 1.5rem;
-  z-index: 1000;
-  cursor: pointer;
-  pointer-events: auto;
+  padding: 10px;
 }
-.about-me-scroll-container .about-me-scroll-button a:hover {
-  background-color: #cca463;
-  color: #0d0f15;
-  border-color: #977132;
-}
-.about-me-scroll-container .about-me-scroll-button a:hover p {
-  color: #0d0f15;
-}
-.about-me-scroll-container .about-me-scroll-button a:active {
-  background-color: #977132;
-}
-.about-me-scroll-container .about-me-scroll-button a p {
+.about-me-scroll-button p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -700,15 +901,36 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
-  margin: 0;
-  color: #cca463;
 }
-.about-me-scroll-container .about-me-scroll-button a p span {
+.about-me-scroll-button, .about-me-scroll-button a, .about-me-scroll-button p, .about-me-scroll-button span {
+  text-decoration: none;
+}
+.about-me-scroll-button:hover {
+  background-color: #cca463;
+  color: white;
+  border-color: #977132;
+}
+.about-me-scroll-button:hover p {
+  color: #0d0f15;
+}
+.about-me-scroll-button:active {
+  background-color: #c69950;
+  border-color: #4b3718;
+}
+.about-me-scroll-button:active p {
+  color: white;
+}
+.about-me-scroll-button p {
+  margin: 0;
+  color: white;
+  padding: 3px;
+}
+.about-me-scroll-button p span {
   padding: 0 5px;
 }
 
 @media (min-width: 450px) {
-  .language-logos-container img {
+  .language-logos-container .tooltip-container img {
     height: 100px;
     width: 100px;
   }
@@ -757,9 +979,9 @@ footer {
   .language-logos-container {
     margin: 0;
   }
-  .language-logos-container img {
-    height: 70px;
-    width: 70px;
+  .language-logos-container .tooltip-container img {
+    height: 60px;
+    width: 60px;
   }
 }
 @media (min-width: 1000px) {
@@ -769,12 +991,9 @@ footer {
   .about-text-highlight {
     font-size: 3.5rem;
   }
-  .language-logos-container {
-    margin: 0;
-  }
-  .language-logos-container img {
-    height: 70px;
-    width: 70px;
+  .language-logos-container .tooltip-container img {
+    height: 80px;
+    width: 80px;
   }
 }
 @media (min-width: 1460px) {
@@ -787,9 +1006,9 @@ footer {
   .about-text-highlight {
     font-size: 4.5rem;
   }
-  .language-logos-container img {
-    height: 100px;
-    width: 100px;
+  .language-logos-container .tooltip-container img {
+    height: 110px;
+    width: 110px;
   }
 }
 @media (min-width: 2000px) {
@@ -808,7 +1027,7 @@ footer {
   #about-me-main {
     padding: 350px 30px 350px 150px;
   }
-  .language-logos-container img {
+  .language-logos-container .tooltip-container img {
     height: 130px;
     width: 130px;
   }
@@ -827,6 +1046,7 @@ footer {
   text-underline-offset: 10px;
   margin-top: 0;
   padding-top: 20px;
+  margin-bottom: 100px;
 }
 
 .project-item {
@@ -881,7 +1101,7 @@ footer {
   color: white;
   background-color: #0d0f15;
 }
-.project-item .project-content {
+.project-item .project-on-hover {
   position: absolute;
   top: 0;
   left: 0;
@@ -894,70 +1114,156 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 10px;
-  background-color: rgba(21, 24, 33, 0.7);
+  background-color: #0d0f15;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  width: 100%;
+  height: 100%;
 }
-.project-item .project-content .project-content-flip-text {
+.project-item .project-on-hover .project-content-flip-text {
   font-size: 0.9rem;
 }
-.project-item:hover img {
+.project-item .project-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.project-item:hover .project-image {
   -webkit-filter: brightness(0.1);
           filter: brightness(0.1);
 }
-.project-item:hover .project-content {
+.project-item:hover .project-on-hover {
   opacity: 1;
+}
+.project-item:hover .hover-tag {
+  display: none;
 }
 .project-item h3 {
   color: white;
   font-size: 1.2rem;
   margin: 3px;
   text-decoration: underline;
+  text-decoration-color: #cca463;
+  text-underline-offset: 7px;
 }
 .project-item p {
   color: white;
   font-size: 1rem;
   margin: 3px;
 }
-.project-item a {
-  background-color: #293043;
-  -webkit-box-shadow: inset 0 0 5px #0d0f15;
-          box-shadow: inset 0 0 5px #0d0f15;
-  color: white;
-  font-size: 0.8rem;
-  border: 2px solid #252b3c;
-  border-radius: 5px;
-  padding: 5px 10px;
-  text-decoration: none;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-}
-.project-item a:hover {
-  background-color: #505d82;
-  -webkit-box-shadow: inset 0 0 5px #151821;
-          box-shadow: inset 0 0 5px #151821;
-}
-.project-item a:active, .project-item a.clicked {
-  color: white;
-  background-color: #0d0f15;
-  -webkit-box-shadow: inset 0 0 5px #151821;
-          box-shadow: inset 0 0 5px #151821;
-}
-
-.project-links {
+.project-item .project-languages {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px; /* Adjust this value to control space between buttons */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 80%;
+  gap: 10px;
+}
+.project-item .project-languages .tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+.project-item .project-languages .tooltip-container .tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #293043;
+  color: white;
+  border: 2px #cca463 solid;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  white-space: nowrap;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+.project-item .project-languages .tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.project-item .project-languages .tooltip-container img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.project-item .project-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.project-item .project-links a {
+  border: 3px #cca463 solid;
+  margin-top: 30px;
+  z-index: 10;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  z-index: 1000;
+  cursor: pointer;
+  pointer-events: auto;
+  gap: 5px;
+  margin-top: 0;
+  font-size: 0.8rem;
+}
+.project-item .project-links a, .project-item .project-links a a, .project-item .project-links a p, .project-item .project-links a span {
+  text-decoration: none;
+}
+.project-item .project-links a:hover {
+  background-color: #cca463;
+  color: white;
+  border-color: #977132;
+}
+.project-item .project-links a:hover p {
+  color: #0d0f15;
+}
+.project-item .project-links a:active {
+  background-color: #c69950;
+  border-color: #4b3718;
+}
+.project-item .project-links a:active p {
+  color: white;
+}
+.project-item .project-links a p {
+  margin: 0;
+  color: white;
+  padding: 3px;
+}
+.project-item .project-links a p span {
+  padding: 0 5px;
+}
+.project-item .project-links a p {
+  padding: 5px;
 }
 
 .hidden {
@@ -987,12 +1293,21 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 100px;
 }
 .portfolio-scroll-container .portfolio-scroll-button {
   max-width: 350px;
+  position: relative;
   border: 3px #cca463 solid;
   margin-top: 30px;
   z-index: 10;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  z-index: 1000;
+  cursor: pointer;
+  pointer-events: auto;
+  gap: 5px;
 }
 .portfolio-scroll-container .portfolio-scroll-button a {
   position: relative;
@@ -1010,25 +1325,9 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-decoration: none;
-  color: #cca463;
-  font-size: 1.5rem;
-  z-index: 1000;
-  cursor: pointer;
-  pointer-events: auto;
+  padding: 10px;
 }
-.portfolio-scroll-container .portfolio-scroll-button a:hover {
-  background-color: #cca463;
-  color: #0d0f15;
-  border-color: #977132;
-}
-.portfolio-scroll-container .portfolio-scroll-button a:hover p {
-  color: #0d0f15;
-}
-.portfolio-scroll-container .portfolio-scroll-button a:active {
-  background-color: #977132;
-}
-.portfolio-scroll-container .portfolio-scroll-button a p {
+.portfolio-scroll-container .portfolio-scroll-button p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1036,10 +1335,31 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
-  margin: 0;
-  color: #cca463;
 }
-.portfolio-scroll-container .portfolio-scroll-button a p span {
+.portfolio-scroll-container .portfolio-scroll-button, .portfolio-scroll-container .portfolio-scroll-button a, .portfolio-scroll-container .portfolio-scroll-button p, .portfolio-scroll-container .portfolio-scroll-button span {
+  text-decoration: none;
+}
+.portfolio-scroll-container .portfolio-scroll-button:hover {
+  background-color: #cca463;
+  color: white;
+  border-color: #977132;
+}
+.portfolio-scroll-container .portfolio-scroll-button:hover p {
+  color: #0d0f15;
+}
+.portfolio-scroll-container .portfolio-scroll-button:active {
+  background-color: #c69950;
+  border-color: #4b3718;
+}
+.portfolio-scroll-container .portfolio-scroll-button:active p {
+  color: white;
+}
+.portfolio-scroll-container .portfolio-scroll-button p {
+  margin: 0;
+  color: white;
+  padding: 3px;
+}
+.portfolio-scroll-container .portfolio-scroll-button p span {
   padding: 0 5px;
 }
 
@@ -1058,6 +1378,16 @@ footer {
   #portfolio {
     padding: 100px 0;
   }
+  .project-item .project-on-hover {
+    padding: 20px;
+  }
+  .project-item .project-languages .tooltip-container img {
+    width: 75px;
+    height: 75px;
+  }
+  .project-item .project-languages .tooltip-container .tooltip {
+    background-color: #0d0f15;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .portfolio-grid {
@@ -1069,7 +1399,7 @@ footer {
   .project-item p {
     font-size: 1.2rem;
   }
-  .project-item a {
+  .project-item .project-links a {
     font-size: 0.9rem;
   }
 }
@@ -1092,11 +1422,19 @@ footer {
   .project-item p {
     font-size: 1.2rem;
   }
-  .project-item a {
-    font-size: 0.9rem;
+  .project-item .project-links a {
+    font-size: 1.1rem;
   }
 }
 @media (min-width: 1100px) {
+  .project-item {
+    height: 500px;
+    max-width: 550px;
+  }
+  .project-item .project-languages .tooltip-container img {
+    width: 90px;
+    height: 90px;
+  }
   #portfolio {
     padding: 200px 0;
   }
@@ -1120,8 +1458,8 @@ footer {
   .project-item p {
     font-size: 1.4rem;
   }
-  .project-item a {
-    font-size: 1.2rem;
+  .project-item .project-links a {
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 1660px) {
@@ -1260,7 +1598,7 @@ textarea::placeholder {
   font-size: 16px;
   margin-top: 10px;
   padding: 10px 20px;
-  color: #cca463;
+  color: white;
   background-color: #293043;
   border: 3px #cca463 solid;
   cursor: pointer;
@@ -1292,57 +1630,41 @@ textarea::placeholder {
   margin-top: 75px;
 }
 .contact-scroll-container .contact-scroll-button {
-  max-width: 350px;
   border: 3px #cca463 solid;
   margin-top: 30px;
   z-index: 10;
-}
-.contact-scroll-container .contact-scroll-button a {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   text-decoration: none;
-  color: #cca463;
-  font-size: 1.5rem;
+  color: white;
+  font-size: 1.2rem;
   z-index: 1000;
   cursor: pointer;
   pointer-events: auto;
+  gap: 5px;
 }
-.contact-scroll-container .contact-scroll-button a:hover {
+.contact-scroll-container .contact-scroll-button, .contact-scroll-container .contact-scroll-button a, .contact-scroll-container .contact-scroll-button p, .contact-scroll-container .contact-scroll-button span {
+  text-decoration: none;
+}
+.contact-scroll-container .contact-scroll-button:hover {
   background-color: #cca463;
-  color: #0d0f15;
+  color: white;
   border-color: #977132;
 }
-.contact-scroll-container .contact-scroll-button a:hover p {
+.contact-scroll-container .contact-scroll-button:hover p {
   color: #0d0f15;
 }
-.contact-scroll-container .contact-scroll-button a:active {
-  background-color: #977132;
+.contact-scroll-container .contact-scroll-button:active {
+  background-color: #c69950;
+  border-color: #4b3718;
 }
-.contact-scroll-container .contact-scroll-button a p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
+.contact-scroll-container .contact-scroll-button:active p {
+  color: white;
+}
+.contact-scroll-container .contact-scroll-button p {
   margin: 0;
-  color: #cca463;
+  color: white;
+  padding: 3px;
 }
-.contact-scroll-container .contact-scroll-button a p span {
+.contact-scroll-container .contact-scroll-button p span {
   padding: 0 5px;
 }
 
@@ -1381,6 +1703,74 @@ textarea::placeholder {
     padding: 300px 0;
   }
 }
+.contact-scroll-button {
+  max-width: 350px;
+  position: relative;
+  border: 3px #cca463 solid;
+  margin-top: 30px;
+  z-index: 10;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  z-index: 1000;
+  cursor: pointer;
+  pointer-events: auto;
+  gap: 5px;
+}
+.contact-scroll-button a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+}
+.contact-scroll-button p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+.contact-scroll-button, .contact-scroll-button a, .contact-scroll-button p, .contact-scroll-button span {
+  text-decoration: none;
+}
+.contact-scroll-button:hover {
+  background-color: #cca463;
+  color: white;
+  border-color: #977132;
+}
+.contact-scroll-button:hover p {
+  color: #0d0f15;
+}
+.contact-scroll-button:active {
+  background-color: #c69950;
+  border-color: #4b3718;
+}
+.contact-scroll-button:active p {
+  color: white;
+}
+.contact-scroll-button p {
+  margin: 0;
+  color: white;
+  padding: 3px;
+}
+.contact-scroll-button p span {
+  padding: 0 5px;
+}
+
 .hero-container-about {
   -webkit-box-pack: normal;
       -ms-flex-pack: normal;

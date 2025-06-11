@@ -21,7 +21,7 @@
 
   <body>
 
-    <?php require_once '../includes/nav_about.php'; ?> 
+    <?php require_once '../includes/nav_home.php'; ?> 
 
     <div class="main-container">
       <header>
