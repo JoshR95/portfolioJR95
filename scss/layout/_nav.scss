@@ -141,11 +141,14 @@ nav{
         color: $white;
         text-decoration: none;
     }
+    span{
+        padding: 0 2.5px 0 2.5px;
+    }
 
     // this darkens the background on hover so you can tell your hovering over it
-    &:hover{
-        background-color: $third-color-light;
-    }
+    // &:hover{
+    //     background-color: $third-color-light;
+    // }
 
     // this changes the li's background color when clicked 
     &:active,
@@ -156,18 +159,25 @@ nav{
     }
 }
 
-.pages-links li a {
-    @include page-button;
-    margin-top: 0;
-    font-size: .9rem;
-    border-radius: 5%;
-    padding: 10px;
-    &:hover{
-        color: black;
-    }
-    &:active{
-        color: $white;
-    }
+// .pages-links li a {
+//     // @include page-button;
+//     margin-top: 0;
+//     font-size: .9rem;
+//     border-radius: 5%;
+//     padding: 10px;
+//     &:hover{
+//         color: black;
+//     }
+//     &:active{
+//         color: $white;
+//     }
+// }
+
+.pages-links li a.svg-animated-btn {
+    // settings the values for the mixin to use
+  @include svg-border-animated-btn($border-color: $primary-color, $bg: transparent, $text-color: $white, $hover-bg: transparent);
+  font-size: .9rem;
+  margin-top: 0;
 }
 
 .nav-socials{

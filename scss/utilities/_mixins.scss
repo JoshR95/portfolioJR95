@@ -81,14 +81,10 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-/// GLOW EFFECT FOR IMAGES
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// TOOLTIP MIXIN
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@mixin tooltip($tooltip-color: $primary-color, $tooltip-size: 16px, $tooltip-padding: 5px 10px) {
+@mixin tooltip($tooltip-color: $white, $tooltip-size: 16px, $tooltip-padding: 5px 10px) {
     position: relative;
     display: inline-block;
     
@@ -100,7 +96,7 @@
         transform: translateX(-50%);
         background-color: $third-color;
         color: $tooltip-color;
-        border: 2px $tooltip-color solid;
+        border: 2px $primary-color solid;
         text-align: center;
         padding: $tooltip-padding;
         border-radius: 4px;
@@ -115,5 +111,86 @@
         visibility: visible;
         opacity: 1;
     }
+}
+
+///////////////////////////////////////////////////
+/// ANIMATED BORDER BUTTON
+///////////////////////////////////////////////////
+
+@mixin svg-border-animated-btn(
+  $width: 160px,
+  $height: 45px,
+  $border-color: $primary-color,
+  $bg: darken($primary-color, 1.5%),
+  $text-color: #fff,
+  $hover-bg: transparent
+) {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: $width;
+  height: $height;
+  line-height: $height;
+  color: $white;
+  background: $bg;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.35s, color 0.35s, letter-spacing 0.35s;
+
+  svg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  rect {
+    fill: none;
+    stroke: $border-color;
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+  }
+
+  span, .btn-text {
+    position: relative;
+    z-index: 2;
+    color: inherit;
+    font-weight: inherit;
+    transition: color 0.35s, letter-spacing 0.35s;
+  }
+
+  &:hover {
+    background: $hover-bg;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: $border-color;
+  }
+
+  &:hover rect {
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  &:active {
+    color: #fff;
+    svg rect {
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-dasharray: 422, 0;
+      stroke-dashoffset: 0;
+      transition: none;
+    }
+  }
 }
 

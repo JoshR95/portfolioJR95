@@ -441,8 +441,8 @@ nav {
   color: white;
   text-decoration: none;
 }
-.pages-links li:hover {
-  background-color: #505d82;
+.pages-links li span {
+  padding: 0 2.5px 0 2.5px;
 }
 .pages-links li:active, .pages-links li.clicked {
   color: white;
@@ -451,53 +451,83 @@ nav {
           box-shadow: inset 0 0 5px #151821;
 }
 
-.pages-links li a {
-  border: 3px #cca463 solid;
-  margin-top: 30px;
-  z-index: 10;
-  text-decoration: none;
+.pages-links li a.svg-animated-btn {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 160px;
+  height: 45px;
+  line-height: 45px;
   color: white;
-  font-size: 1.2rem;
-  z-index: 1000;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
   cursor: pointer;
-  pointer-events: auto;
-  gap: 5px;
-  margin-top: 0;
+  -webkit-transition: background 0.35s, color 0.35s, letter-spacing 0.35s;
+  transition: background 0.35s, color 0.35s, letter-spacing 0.35s;
   font-size: 0.9rem;
-  border-radius: 5%;
-  padding: 10px;
+  margin-top: 0;
 }
-.pages-links li a, .pages-links li a a, .pages-links li a p, .pages-links li a span {
-  text-decoration: none;
+.pages-links li a.svg-animated-btn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
 }
-.pages-links li a:hover {
-  background-color: #cca463;
-  color: white;
-  border-color: #977132;
+.pages-links li a.svg-animated-btn rect {
+  fill: none;
+  stroke: #cca463;
+  stroke-width: 2;
+  stroke-dasharray: 422, 0;
+  -webkit-transition: all 0.35s linear;
+  transition: all 0.35s linear;
 }
-.pages-links li a:hover p {
-  color: #0d0f15;
+.pages-links li a.svg-animated-btn span, .pages-links li a.svg-animated-btn .btn-text {
+  position: relative;
+  z-index: 2;
+  color: inherit;
+  font-weight: inherit;
+  -webkit-transition: color 0.35s, letter-spacing 0.35s;
+  transition: color 0.35s, letter-spacing 0.35s;
 }
-.pages-links li a:active {
-  background-color: #c69950;
-  border-color: #4b3718;
+.pages-links li a.svg-animated-btn:hover {
+  background: transparent;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #cca463;
 }
-.pages-links li a:active p {
-  color: white;
+.pages-links li a.svg-animated-btn:hover rect {
+  stroke-width: 5;
+  stroke-dasharray: 15, 310;
+  stroke-dashoffset: 48;
+  -webkit-transition: all 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.8s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.pages-links li a p {
-  margin: 0;
-  color: white;
-  padding: 3px;
+.pages-links li a.svg-animated-btn:active {
+  color: #fff;
 }
-.pages-links li a p span {
-  padding: 0 5px;
-}
-.pages-links li a:hover {
-  color: black;
-}
-.pages-links li a:active {
-  color: white;
+.pages-links li a.svg-animated-btn:active svg rect {
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 422, 0;
+  stroke-dashoffset: 0;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .nav-socials {
@@ -751,7 +781,7 @@ footer {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background-color: #293043;
-  color: #cca463;
+  color: white;
   border: 2px #cca463 solid;
   text-align: center;
   padding: 5px 10px;
@@ -1164,7 +1194,7 @@ footer {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background-color: #293043;
-  color: #cca463;
+  color: white;
   border: 2px #cca463 solid;
   text-align: center;
   padding: 5px 10px;

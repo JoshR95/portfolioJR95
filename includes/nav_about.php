@@ -18,11 +18,11 @@
 
     <div class="links-container">
       <ul class="pages-links"> 
-        <li><a href="../index.php">MAIN PAGE</a></li>    
-        <li><a href="../index.php#portfolio">MY PORTFOLIO</a></li>
-        <li><a href="../pages/codeExamples.php">CODE EXAMPLES</a></li>
-        <li><a href="../pages/scsScheme.php">SCS SCHEME</a></li>
-        <li><a href="../index.php#contact-me">CONTACT ME</a></li>
+        <li><a href="../index.php" class="svg-animated-btn"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg><span>MAIN PAGE</span></a></li>    
+        <li><a href="../index.php#portfolio" class="svg-animated-btn"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg><span>MY PORTFOLIO</span></a></li>
+        <li><a href="../pages/codeExamples.php" class="svg-animated-btn"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg><span>CODE EXAMPLES</span></a></li>
+        <li><a href="../pages/scsScheme.php" class="svg-animated-btn"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg><span>SCS SCHEME</span></a></li>
+        <li><a href="../index.php#contact-me" class="svg-animated-btn"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg><span>CONTACT ME</span></a></li>
       </ul>
       <div class="nav-socials">
         <a href="https://github.com/JoshR95">
