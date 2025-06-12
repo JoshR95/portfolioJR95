@@ -306,6 +306,107 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         });
     }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// PROJECT DETAILS MODAL
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // Project data object containing details for each project
+    const projectDetails = {
+        'netmatters': {
+            title: 'NETMATTERS HOMEPAGE',
+            description: 'This project recreates Netmatters homepage using HTML, CSS, SASS, javaScript and PHP. The project makes use of javaScript to add dynamic animations on the page such as the pop out sidemenu. This project also uses PHP to make use of include partials for things such as the header, footer and nav. I have also implemented a dynamic news section where content is pulled from a MySQL database and rendered using PHP, allowing for easy content management and updates.',
+            technologies: 'HTML5, CSS3, SASS, JavaScript, PHP, MySQL',
+            features: [
+                'Responsive design that works on all devices',
+                'Dynamic news section with database integration',
+                'Interactive side menu with smooth animations',
+                'PHP includes for modular code structure',
+                'Form validation and error handling'
+            ]
+        },
+        'random-picture': {
+            title: 'RANDOM PICTURE GENERATOR',
+            description: 'This project creates a random image generator and adds to collections. It uses HTML, CSS, SASS AND JS. The project makes use of an API to receive the random images. It uses JS to add these images to a collection stored in local storage, it then displays the collection for the associated email address. I also have email validation using regex validation.',
+            technologies: 'HTML5, CSS3, SASS, JavaScript',
+            features: [
+                'Integration with external image API',
+                'Local storage for saving collections',
+                'Email validation using regex',
+                'Responsive design',
+                'User-friendly interface'
+            ]
+        },
+        'admin-system': {
+            title: 'ADMIN MANAGEMENT SYSTEM',
+            description: 'This project is an admin management system that enables companies to manage their organizational structure and employee information through a secure, user-friendly interface. It uses Laravel, PHP, HTML and CSS. It handles user authentication with a secure log in. It allows maintenance of a database of company records with full CRUD operations. It uses a SQLite database for efficient data storage and retrieval. It Implements Blade for dynamic content rendering. It also Utilizes Tailwind CSS for modern, responsive styling.',
+            technologies: 'Laravel, PHP, HTML5, CSS3, JavaScript, SQLite',
+            features: [
+                'Secure user authentication system',
+                'Full CRUD operations for company records',
+                'Responsive design with Tailwind CSS',
+                'Dynamic content rendering with Blade',
+                'Database integration with SQLite'
+            ]
+        }
+    };
+
+    // Get modal elements
+    const modal = document.getElementById('projectDetailsModal');
+    const closeBtn = document.querySelector('.close-modal');
+
+    // Make openProjectDetails function globally available
+    window.openProjectDetails = function(projectId) {
+        console.log('Opening project details for:', projectId); // Debug log
+        const project = projectDetails[projectId];
+        if (!project) {
+            console.error('Project not found:', projectId); // Debug log
+            return;
+        }
+
+        // Set modal content
+        document.getElementById('modalProjectTitle').textContent = project.title;
+        document.getElementById('modalProjectDescription').textContent = project.description;
+        document.getElementById('modalProjectTechnologies').textContent = project.technologies;
+        
+        // Clear and populate features list
+        const featuresList = document.getElementById('modalProjectFeatures');
+        featuresList.innerHTML = '';
+        project.features.forEach(feature => {
+            const li = document.createElement('li');
+            li.textContent = feature;
+            featuresList.appendChild(li);
+        });
+
+        // Show modal
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    };
+
+    // Function to close modal
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable background scrolling
+    }
+
+    // Event listeners
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.style.display === 'block') {
+            closeModal();
+        }
+    });
 });
 
 //////////////////////////////////////////////////////////////////////////

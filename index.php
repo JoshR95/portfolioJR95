@@ -159,7 +159,7 @@
                   <a href="https://github.com/JoshR95/netmatters_website" target="_blank">
                     <p><span>View code</span></p>
                   </a>
-                  <a href="" target="_blank">
+                  <a href="#" onclick="openProjectDetails('netmatters'); return false;">
                     <p><span>Project details</span></p>
                   </a>
                 </div>
@@ -208,7 +208,7 @@
                   <a href="https://github.com/JoshR95/netmatters_website" target="_blank">
                     <p><span>View code</span></p>
                   </a>
-                  <a href="" target="_blank">
+                  <a href="#" onclick="openProjectDetails('random-picture'); return false;">
                     <p><span>Project details</span></p>
                   </a>
                 </div>
@@ -266,7 +266,7 @@
                   <a href="https://github.com/JoshR95/netmatters_website" target="_blank">
                     <p><span>View code</span></p>
                   </a>
-                  <a href="" target="_blank">
+                  <a href="#" onclick="openProjectDetails('admin-system'); return false;">
                     <p><span>Project details</span></p>
                   </a>
                 </div>
@@ -436,6 +436,30 @@
     <?php include_once 'includes/footer.php'; ?>
     <script src="./js/particles.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/projectDetails.js"></script>
+
+    <!-- Project Details Modal -->
+    <div id="projectDetailsModal" class="project-details-modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+          <h2 id="modalProjectTitle"></h2>
+        </div>
+        <div class="modal-body">
+          <div class="project-description">
+            <p id="modalProjectDescription"></p>
+          </div>
+          <div class="project-technologies">
+            <h3>Technologies Used</h3>
+            <p id="modalProjectTechnologies"></p>
+          </div>
+          <div class="project-features">
+            <h3>Key Features</h3>
+            <ul id="modalProjectFeatures"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 
 </html>
