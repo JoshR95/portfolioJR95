@@ -533,12 +533,17 @@ nav {
 .nav-socials {
   text-align: center;
   padding-bottom: 10px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .nav-socials a {
   font-size: 2rem;
   color: white;
   text-decoration: none;
+  padding: 0 5px 0 5px;
+  cursor: pointer;
+}
+.nav-socials a .icon-linkedin {
+  color: #0266c8;
 }
 
 .hamburger {
