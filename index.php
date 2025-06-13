@@ -110,194 +110,240 @@
         </div>
         <!--PORTFOLIO-->
         <div id="portfolio" class="container">
-          <h2>MY PROJECTS</h2>
-          <div class="portfolio-grid">
-            <div class="project-item">
-              <img class="project-image" src="./images/netmatters-homepage.png" alt="Netmatters homepage project image">
-              <div class="hover-tag">hover for details</div>
-              <div class="project-on-hover">
-                <div class="project-title">
-                  <h3>NETMATTERS HOMEPAGE</h3>
-                </div>
-                <!-- <p class="project-content-flip-text">
-                  This project recreates Netmatters homepage using HTML, CSS, SASS, javaScript and PHP.
-                </p>
-                <p class="project-content-flip-text">
-                  The projects makes use of javaScript to add dynamic animations on the page such as the pop out sidemenu. This project also uses PHP to make us of include partials for things such as
-                  the header, footer and nav. I have also implemented a dynamic news section where content is pulled from a MySQL database and rendered using PHP, allowing for easy content management and updates.
-                </p> -->
-                <div class="project-languages">
-                  <div class="tooltip-container">
-                    <img src="./images/htmlLogo.png">
-                    <span class="tooltip">HTML5</span>
+          <div class="portfolio-container">
+            <h2>MY PROJECTS</h2>
+              <div class="project-item-container align-left">
+                <div class="project-item ">
+                  <img class="project-image" src="./images/netmatters-homepage.png" alt="Netmatters homepage project image">
+                  <div class="hover-tag">hover for details</div>
+                  <div class="project-on-hover">
+                    <div class="project-title">
+                      <h3>NETMATTERS HOMEPAGE</h3>
+                    </div>
+                    <!-- <p class="project-content-flip-text">
+                      This project recreates Netmatters homepage using HTML, CSS, SASS, javaScript and PHP.
+                    </p>
+                    <p class="project-content-flip-text">
+                      The projects makes use of javaScript to add dynamic animations on the page such as the pop out sidemenu. This project also uses PHP to make us of include partials for things such as
+                      the header, footer and nav. I have also implemented a dynamic news section where content is pulled from a MySQL database and rendered using PHP, allowing for easy content management and updates.
+                    </p> -->
+                    <div class="project-languages">
+                      <div class="tooltip-container">
+                        <img src="./images/htmlLogo.png">
+                        <span class="tooltip">HTML5</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/cssLogo.png">
+                        <span class="tooltip">CSS3</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/sassLogo.png">
+                        <span class="tooltip">Sass</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/gitLogo2.png">
+                        <span class="tooltip">Git</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/jsLogo.png">
+                        <span class="tooltip">JavaScript</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/phpLogo2.png">
+                        <span class="tooltip">PHP</span>
+                      </div>
+                    </div>
+                    <div class="project-links">
+                      <a href="http://netmatters.joshua-rickards.netmatters-scs.co.uk/" target="_blank">
+                        <p><span>View project</span></p>
+                      </a>
+                      <a href="https://github.com/JoshR95/netmatters_website" target="_blank">
+                        <p><span>View code</span></p>
+                      </a>
+                      <a href="#" onclick="openProjectDetails('netmatters'); return false;">
+                        <p><span>Project details</span></p>
+                      </a>
+                    </div>
                   </div>
-                  <div class="tooltip-container">
-                    <img src="./images/cssLogo.png">
-                    <span class="tooltip">CSS3</span>
-                  </div>
-                  <div class="tooltip-container">
-                    <img src="./images/sassLogo.png">
-                    <span class="tooltip">Sass</span>
-                  </div>
-                  <div class="tooltip-container">
-                    <img src="./images/gitLogo2.png">
-                    <span class="tooltip">Git</span>
-                  </div>
-                  <div class="tooltip-container">
-                    <img src="./images/jsLogo.png">
-                    <span class="tooltip">JavaScript</span>
-                  </div>
-                  <div class="tooltip-container">
-                    <img src="./images/phpLogo2.png">
-                    <span class="tooltip">PHP</span>
-                  </div>
-                </div>
-                <div class="project-links">
-                  <a href="http://netmatters.joshua-rickards.netmatters-scs.co.uk/" target="_blank">
-                    <p><span>View project</span></p>
-                  </a>
-                  <a href="https://github.com/JoshR95/netmatters_website" target="_blank">
-                    <p><span>View code</span></p>
-                  </a>
-                  <a href="#" onclick="openProjectDetails('netmatters'); return false;">
-                    <p><span>Project details</span></p>
-                  </a>
                 </div>
               </div>
-            </div>
-            <div class="project-item">
-              <img src="./images/js-array-project.png" alt="random image generator project image">
-              <div class="hover-tag">hover for details</div>
-              <div class="project-on-hover">
-                <div class="project-title">
+              <div class="project-item-container align-right">
+                <div class="project-details">
                   <h3>RANDOM PICTURE GENERATOR</h3>
-                </div>
-                <!-- <p class="project-content-flip-text">
-                  This project creates a random image and adds to collections. It uses HTML, CSS, SASS AND JS
-                </p>
-                <p class="project-content-flip-text">
-                  The project makes use of an API to recieve the random images. It uses JS to added these images to a collection stored in local storage,
-                  it then displays the collection for the associated email address. I also have email validation using regex validation.
-                </p> -->
-                <div class="project-languages">
-                  <div class="tooltip-container">
-                    <img src="./images/htmlLogo.png">
-                    <span class="tooltip">HTML5</span>
-                  </div>
-                  <div class="tooltip-container">
-                    <img src="./images/cssLogo.png">
-                    <span class="tooltip">CSS3</span>
-                  </div>
-                  <div class="tooltip-container">
-                    <img src="./images/sassLogo.png">
-                    <span class="tooltip">Sass</span>
-                  </div>
-                  <div class="tooltip-container">
-                    <img src="./images/gitLogo2.png">
-                    <span class="tooltip">Git</span>
-                  </div>
-                  <div class="tooltip-container">
-                    <img src="./images/jsLogo.png">
-                    <span class="tooltip">JavaScript</span>
-                  </div>
-                </div>
-                <div class="project-links">
-                  <a href="http://netmatters.joshua-rickards.netmatters-scs.co.uk/" target="_blank">
-                    <p><span>View project</span></p>
-                  </a>
-                  <a href="https://github.com/JoshR95/netmatters_website" target="_blank">
-                    <p><span>View code</span></p>
-                  </a>
-                  <a href="#" onclick="openProjectDetails('random-picture'); return false;">
-                    <p><span>Project details</span></p>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-item">
-              <img src="./images/laravel_admin_assessment.png" alt="laravel admin assessment project image">
-              <div class="hover-tag">hover for details</div>
-              <div class="project-on-hover">
-                <div class="project-title">
-                  <h3>ADMIN MANAGEMENT SYSTEM</h3>
-                </div>
-                <!-- <p class="project-content-flip-text">
-                  This project is an admin management system that enables companies to manage their organizational structure and employee information through a secure, user-friendly interface.
-                </p>
-                <p class="project-content-flip-text">
-                  It uses laravel, PHP, HTML and CSS. It handles user authentication with a secure log in. It allows maintenance of a database of company records with full CRUD operations.
-                  It uses a SQLite database for efficient data storage and retrieval. It Implements Blade for dynamic content rendering. It also Utilizes Tailwind CSS for modern, responsive styling.
-                </p> -->
-                <div class="project-languages">
-                  <div class="tooltip-container">
-                    <img src="./images/htmlLogo.png">
-                    <span class="tooltip">HTML5</span>
-                  </div>
-                  <div class="tooltip-container">
-                    <img src="./images/cssLogo.png">
-                    <span class="tooltip">CSS3</span>
-                  </div>
-                  <div class="tooltip-container">
-                    <img src="./images/sassLogo.png">
-                    <span class="tooltip">Sass</span>
-                  </div>
-                  <div class="tooltip-container">
-                    <img src="./images/gitLogo2.png">
-                    <span class="tooltip">Git</span>
-                  </div>
-                  <div class="tooltip-container">
-                    <img src="./images/jsLogo.png">
-                    <span class="tooltip">JavaScript</span>
-                  </div>
-                  <div class="tooltip-container">
-                    <img src="./images/phpLogo2.png">
-                    <span class="tooltip">PHP</span>
-                  </div>
-                  <div class="tooltip-container">
-                    <img src="./images/laravelLogo.png">
-                    <span class="tooltip">Laravel</span>
+                  <div class="project-details-content">
+                    <div class="project-details-buttons">
+                      <a href="http://netmatters.joshua-rickards.netmatters-scs.co.uk/" target="_blank" class="svg-animated-btn">
+                        <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+                        <span>view project</span>
+                      </a>
+                      <a href="https://github.com/JoshR95/netmatters_website" target="_blank" class="svg-animated-btn">
+                        <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+                        <span>view code</span>
+                      </a>
+                      <a href="#" onclick="openProjectDetails('random-picture'); return false;" class="svg-animated-btn">
+                        <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+                        <p><span>Project details</span></p>
+                      </a>
+                    </div>
+                    <div class="project-languages">
+                      <div class="tooltip-container">
+                        <img src="./images/htmlLogo.png">
+                        <span class="tooltip">HTML5</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/cssLogo.png">
+                        <span class="tooltip">CSS3</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/sassLogo.png">
+                        <span class="tooltip">Sass</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/gitLogo2.png">
+                        <span class="tooltip">Git</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/jsLogo.png">
+                        <span class="tooltip">JavaScript</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="project-links">
-                  <a href="http://netmatters.joshua-rickards.netmatters-scs.co.uk/" target="_blank">
-                    <p><span>View project</span></p>
-                  </a>
-                  <a href="https://github.com/JoshR95/netmatters_website" target="_blank">
-                    <p><span>View code</span></p>
-                  </a>
-                  <a href="#" onclick="openProjectDetails('admin-system'); return false;">
-                    <p><span>Project details</span></p>
-                  </a>
+                <div class="project-item">
+                  <img src="./images/js-array-project.png" alt="random image generator project image">
+                  <div class="hover-tag">hover for details</div>
+                  <div class="project-on-hover">
+                    <div class="project-title">
+                      <h3>RANDOM PICTURE GENERATOR</h3>
+                    </div>
+                    <!-- <p class="project-content-flip-text">
+                      This project creates a random image and adds to collections. It uses HTML, CSS, SASS AND JS
+                    </p>
+                    <p class="project-content-flip-text">
+                      The project makes use of an API to recieve the random images. It uses JS to added these images to a collection stored in local storage,
+                      it then displays the collection for the associated email address. I also have email validation using regex validation.
+                    </p> -->
+                    <div class="project-languages">
+                      <div class="tooltip-container">
+                        <img src="./images/htmlLogo.png">
+                        <span class="tooltip">HTML5</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/cssLogo.png">
+                        <span class="tooltip">CSS3</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/sassLogo.png">
+                        <span class="tooltip">Sass</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/gitLogo2.png">
+                        <span class="tooltip">Git</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/jsLogo.png">
+                        <span class="tooltip">JavaScript</span>
+                      </div>
+                    </div>
+                    <div class="project-links">
+                      <a href="http://netmatters.joshua-rickards.netmatters-scs.co.uk/" target="_blank">
+                        <p><span>View project</span></p>
+                      </a>
+                      <a href="https://github.com/JoshR95/netmatters_website" target="_blank">
+                        <p><span>View code</span></p>
+                      </a>
+                      <a href="#" onclick="openProjectDetails('random-picture'); return false;">
+                        <p><span>Project details</span></p>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="portfolio-scroll-container">
-            <div class="portfolio-scroll-button">
-                <a href="#contact-me" class="hero-scroll">
-                  <p><span class="icon-arrow-down"></span>get in contact<span class="icon-arrow-down"></span></p>
-                </a>
-            </div>
-          </div>
-          <!-- Project Details Modal -->
-          <div id="projectDetailsModal" class="project-details-modal">
-            <div class="modal-content">
-              <span class="close-modal">&times;</span>
-              <div class="modal-header">
-                <h3 id="modalProjectTitle"></h3>
+              <div class="project-item-container align-left">
+                <div class="project-item">
+                  <img src="./images/laravel_admin_assessment.png" alt="laravel admin assessment project image">
+                  <div class="hover-tag">hover for details</div>
+                  <div class="project-on-hover">
+                    <div class="project-title">
+                      <h3>ADMIN MANAGEMENT SYSTEM</h3>
+                    </div>
+                    <!-- <p class="project-content-flip-text">
+                      This project is an admin management system that enables companies to manage their organizational structure and employee information through a secure, user-friendly interface.
+                    </p>
+                    <p class="project-content-flip-text">
+                      It uses laravel, PHP, HTML and CSS. It handles user authentication with a secure log in. It allows maintenance of a database of company records with full CRUD operations.
+                      It uses a SQLite database for efficient data storage and retrieval. It Implements Blade for dynamic content rendering. It also Utilizes Tailwind CSS for modern, responsive styling.
+                    </p> -->
+                    <div class="project-languages">
+                      <div class="tooltip-container">
+                        <img src="./images/htmlLogo.png">
+                        <span class="tooltip">HTML5</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/cssLogo.png">
+                        <span class="tooltip">CSS3</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/sassLogo.png">
+                        <span class="tooltip">Sass</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/gitLogo2.png">
+                        <span class="tooltip">Git</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/jsLogo.png">
+                        <span class="tooltip">JavaScript</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/phpLogo2.png">
+                        <span class="tooltip">PHP</span>
+                      </div>
+                      <div class="tooltip-container">
+                        <img src="./images/laravelLogo.png">
+                        <span class="tooltip">Laravel</span>
+                      </div>
+                    </div>
+                    <div class="project-links">
+                      <a href="http://netmatters.joshua-rickards.netmatters-scs.co.uk/" target="_blank">
+                        <p><span>View project</span></p>
+                      </a>
+                      <a href="https://github.com/JoshR95/netmatters_website" target="_blank">
+                        <p><span>View code</span></p>
+                      </a>
+                      <a href="#" onclick="openProjectDetails('admin-system'); return false;">
+                        <p><span>Project details</span></p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="modal-body">
-                <div class="project-description">
-                  <p id="modalProjectDescription"></p>
+            <div class="portfolio-scroll-container">
+              <div class="portfolio-scroll-button">
+                  <a href="#contact-me" class="hero-scroll">
+                    <p><span class="icon-arrow-down"></span>get in contact<span class="icon-arrow-down"></span></p>
+                  </a>
+              </div>
+            </div>
+            <!-- Project Details Modal -->
+            <div id="projectDetailsModal" class="project-details-modal">
+              <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-header">
+                  <h3 id="modalProjectTitle"></h3>
                 </div>
-                <div class="project-technologies">
-                  <h4>Technologies Used</h4>
-                  <p id="modalProjectTechnologies"></p>
-                </div>
-                <div class="project-features">
-                  <h4>Key Features</h4>
-                  <ul id="modalProjectFeatures"></ul>
+                <div class="modal-body">
+                  <div class="project-description">
+                    <p id="modalProjectDescription"></p>
+                  </div>
+                  <div class="project-technologies">
+                    <h4>Technologies Used</h4>
+                    <p id="modalProjectTechnologies"></p>
+                  </div>
+                  <div class="project-features">
+                    <h4>Key Features</h4>
+                    <ul id="modalProjectFeatures"></ul>
+                  </div>
                 </div>
               </div>
             </div>
