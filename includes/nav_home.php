@@ -25,8 +25,14 @@
         <li><a href="../index.php#contact-me" class="svg-animated-btn"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg><span class="icon-chat"></span><span>CONTACT ME</span></a></li>
       </ul>
       <div class="nav-socials">
-        <a href="https://github.com/JoshR95">
+        <a href="https://github.com/JoshR95" target="_blank">
           <span class="icon-github"></span>
+        </a>
+        <a href="https://www.linkedin.com/in/josh-rickards-1a60b8247/" target="_blank">
+          <span class="icon-linkedin"></span>
+        </a>
+        <a href="https://teamtreehouse.com/profiles/joshrickards" target="_blank">
+          <span class="icon-treehouse"></span>
         </a>
       </div>
     </div>
