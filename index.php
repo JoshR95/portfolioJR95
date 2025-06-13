@@ -65,8 +65,9 @@
             </div>
             <div class="about-me-scroll-container">
               <div class="about-me-scroll-button">
-                  <a href="#portfolio" class="hero-scroll">
-                    <p><span class="icon-arrow-down"></span>explore my projects<span class="icon-arrow-down"></span></p>
+                  <a href="#portfolio" class="svg-animated-btn aboutme-svg-btn">
+                    <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+                    <span><span class="icon-arrow-down"></span> EXPLORE MY PROJECTS <span class="icon-arrow-down"></span></span>
                   </a>
               </div>
             </div>

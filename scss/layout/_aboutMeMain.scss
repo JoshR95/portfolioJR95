@@ -102,38 +102,24 @@
         }
     }
 }
+
 .about-me-scroll-container{
     display: flex;
     justify-content: center;
-    .about-me-scroll-button{
+    .about-me-scroll-button {
+        position: relative;
+        max-width: 350px;
         margin-left: 40px;
-        @include page-button;
-    
+        .aboutme-svg-btn {
+            padding: 5px;
+            max-width: 250px;
+        }
     }
 }
 
-.about-me-scroll-button {
-    max-width: 350px;
-    position: relative;
-    
-    a {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-    }
-    
-    p {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-    }
-    
-    @include page-button;
-}
+
+
+
 
 ///////////////////////////////////////////////////
 /// MEDIA QUERIES
