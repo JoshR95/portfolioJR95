@@ -418,8 +418,9 @@
             </div>
             <div class="portfolio-scroll-container">
               <div class="portfolio-scroll-button">
-                  <a href="#contact-me" class="hero-scroll">
-                    <p><span class="icon-arrow-down"></span>get in contact<span class="icon-arrow-down"></span></p>
+                  <a href="#portfolio" class="svg-animated-btn portfolio-svg-btn">
+                    <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+                    <span><span class="icon-arrow-down"></span> GET IN CONTACT <span class="icon-arrow-down"></span></span>
                   </a>
               </div>
             </div>
@@ -494,8 +495,9 @@
           </form>
           <div class="contact-scroll-container">
             <div class="contact-scroll-button">
-                <a href="#" class="hero-scroll">
-                  <p><span class="icon-arrow-up2"></span>back to the top<span class="icon-arrow-up2"></span></p>
+                <a href="#" class="svg-animated-btn contact-svg-btn">
+                  <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+                  <span><span class="icon-arrow-up2"></span>BACK TO THE TOP<span class="icon-arrow-up2"></span></span>
                 </a>
             </div>
           </div>

@@ -983,7 +983,6 @@ footer {
 }
 
 .project-item-container {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1359,77 +1358,15 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 100px;
 }
 .portfolio-scroll-container .portfolio-scroll-button {
+  position: relative;
   max-width: 350px;
-  position: relative;
-  border: 3px #cca463 solid;
-  margin-top: 30px;
-  z-index: 10;
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  z-index: 1000;
-  cursor: pointer;
-  pointer-events: auto;
-  gap: 5px;
+  margin-left: 20px;
 }
-.portfolio-scroll-container .portfolio-scroll-button a {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10px;
-}
-.portfolio-scroll-container .portfolio-scroll-button p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-}
-.portfolio-scroll-container .portfolio-scroll-button, .portfolio-scroll-container .portfolio-scroll-button a, .portfolio-scroll-container .portfolio-scroll-button p, .portfolio-scroll-container .portfolio-scroll-button span {
-  text-decoration: none;
-}
-.portfolio-scroll-container .portfolio-scroll-button:hover {
-  background-color: #cca463;
-  color: white;
-  border-color: #977132;
-}
-.portfolio-scroll-container .portfolio-scroll-button:hover p {
-  color: #0d0f15;
-}
-.portfolio-scroll-container .portfolio-scroll-button:active {
-  background-color: #c69950;
-  border-color: #4b3718;
-}
-.portfolio-scroll-container .portfolio-scroll-button:active p {
-  color: white;
-}
-.portfolio-scroll-container .portfolio-scroll-button p {
-  margin: 0;
-  color: white;
-  padding: 3px;
-}
-.portfolio-scroll-container .portfolio-scroll-button p span {
-  padding: 0 5px;
+.portfolio-scroll-container .portfolio-scroll-button .portfolio-svg-btn {
+  padding: 10px 20px;
+  max-width: 300px;
 }
 
 .project-details-modal {
@@ -1794,43 +1731,19 @@ textarea::placeholder {
           justify-content: center;
   margin-top: 75px;
 }
-.contact-scroll-container .contact-scroll-button {
-  border: 3px #cca463 solid;
-  margin-top: 30px;
-  z-index: 10;
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  z-index: 1000;
-  cursor: pointer;
-  pointer-events: auto;
-  gap: 5px;
-}
-.contact-scroll-container .contact-scroll-button, .contact-scroll-container .contact-scroll-button a, .contact-scroll-container .contact-scroll-button p, .contact-scroll-container .contact-scroll-button span {
-  text-decoration: none;
-}
-.contact-scroll-container .contact-scroll-button:hover {
-  background-color: #cca463;
-  color: white;
-  border-color: #977132;
-}
-.contact-scroll-container .contact-scroll-button:hover p {
-  color: #0d0f15;
-}
-.contact-scroll-container .contact-scroll-button:active {
-  background-color: #c69950;
-  border-color: #4b3718;
-}
-.contact-scroll-container .contact-scroll-button:active p {
-  color: white;
-}
-.contact-scroll-container .contact-scroll-button p {
-  margin: 0;
-  color: white;
-  padding: 3px;
-}
-.contact-scroll-container .contact-scroll-button p span {
-  padding: 0 5px;
+.contact-scroll-container .contact-scroll-button .contact-svg-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 20px;
+  max-width: 300px;
+  white-space: nowrap;
 }
 
 .success-message {
@@ -1868,74 +1781,6 @@ textarea::placeholder {
     padding: 300px 0;
   }
 }
-.contact-scroll-button {
-  max-width: 350px;
-  position: relative;
-  border: 3px #cca463 solid;
-  margin-top: 30px;
-  z-index: 10;
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  z-index: 1000;
-  cursor: pointer;
-  pointer-events: auto;
-  gap: 5px;
-}
-.contact-scroll-button a {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10px;
-}
-.contact-scroll-button p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-}
-.contact-scroll-button, .contact-scroll-button a, .contact-scroll-button p, .contact-scroll-button span {
-  text-decoration: none;
-}
-.contact-scroll-button:hover {
-  background-color: #cca463;
-  color: white;
-  border-color: #977132;
-}
-.contact-scroll-button:hover p {
-  color: #0d0f15;
-}
-.contact-scroll-button:active {
-  background-color: #c69950;
-  border-color: #4b3718;
-}
-.contact-scroll-button:active p {
-  color: white;
-}
-.contact-scroll-button p {
-  margin: 0;
-  color: white;
-  padding: 3px;
-}
-.contact-scroll-button p span {
-  padding: 0 5px;
-}
-
 .hero-container-about {
   -webkit-box-pack: normal;
       -ms-flex-pack: normal;
