@@ -111,28 +111,6 @@
         <!--PORTFOLIO-->
         <div id="portfolio" class="container">
           <h2>MY PROJECTS</h2>
-          <!-- Project Details Modal -->
-          <div id="projectDetailsModal" class="project-details-modal">
-            <div class="modal-content">
-              <span class="close-modal">&times;</span>
-              <div class="modal-header">
-                <h3 id="modalProjectTitle"></h3>
-              </div>
-              <div class="modal-body">
-                <div class="project-description">
-                  <p id="modalProjectDescription"></p>
-                </div>
-                <div class="project-technologies">
-                  <h4>Technologies Used</h4>
-                  <p id="modalProjectTechnologies"></p>
-                </div>
-                <div class="project-features">
-                  <h4>Key Features</h4>
-                  <ul id="modalProjectFeatures"></ul>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="portfolio-grid">
             <div class="project-item">
               <img class="project-image" src="./images/netmatters-homepage.png" alt="Netmatters homepage project image">
@@ -294,108 +272,34 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="project-item">
-              <img src="./images/coming-3605857_1920.jpg">
-              <div class="hover-tag">hover for details</div>
-              <div class="project-content">
-                <h3>Example Project</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                <div class="project-links">
-                  <a href="#" target="_blank">
-                    <span>View project</span>
-                  </a>
-                  <a href="#" target="_blank">
-                    <span>View code</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="project-item hidden">
-              <img src="./images/coming-3605857_1920.jpg">
-              <div class="hover-tag">hover for details</div>
-              <div class="project-content">
-                <h3>Example Project</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                <div class="project-links">
-                  <a href="#" target="_blank">
-                    <span>View project</span>
-                  </a>
-                  <a href="#" target="_blank">
-                    <span>View code</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="project-item hidden">
-              <img src="./images/coming-3605857_1920.jpg">
-              <div class="hover-tag">hover for details</div>
-              <div class="project-content">
-                <h3>Example Project</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                <div class="project-links">
-                  <a href="#" target="_blank">
-                    <span>View project</span>
-                  </a>
-                  <a href="#" target="_blank">
-                    <span>View code</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="project-item hidden">
-              <img src="./images/coming-3605857_1920.jpg">
-              <div class="hover-tag">hover for details</div>
-              <div class="project-content">
-                <h3>Example Project</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                <div class="project-links">
-                  <a href="#" target="_blank">
-                    <span>View project</span>
-                  </a>
-                  <a href="#" target="_blank">
-                    <span>View code</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="project-item hidden">
-              <img src="./images/coming-3605857_1920.jpg">
-              <div class="hover-tag">hover for details</div>
-              <div class="project-content">
-                <h3>Example Project</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                <div class="project-links">
-                  <a href="#" target="_blank">
-                    <span>View project</span>
-                  </a>
-                  <a href="#" target="_blank">
-                    <span>View code</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="project-item hidden">
-              <img src="./images/coming-3605857_1920.jpg">
-              <div class="hover-tag">hover for details</div>
-              <div class="project-content">
-                <h3>Example Project</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                <div class="project-links">
-                  <a href="#" target="_blank">
-                    <span>View project</span>
-                  </a>
-                  <a href="#" target="_blank">
-                    <span>View code</span>
-                  </a>
-                </div>
-              </div>
-            </div > -->
           </div>
           <div class="portfolio-scroll-container">
             <div class="portfolio-scroll-button">
                 <a href="#contact-me" class="hero-scroll">
                   <p><span class="icon-arrow-down"></span>get in contact<span class="icon-arrow-down"></span></p>
                 </a>
+            </div>
+          </div>
+          <!-- Project Details Modal -->
+          <div id="projectDetailsModal" class="project-details-modal">
+            <div class="modal-content">
+              <span class="close-modal">&times;</span>
+              <div class="modal-header">
+                <h3 id="modalProjectTitle"></h3>
+              </div>
+              <div class="modal-body">
+                <div class="project-description">
+                  <p id="modalProjectDescription"></p>
+                </div>
+                <div class="project-technologies">
+                  <h4>Technologies Used</h4>
+                  <p id="modalProjectTechnologies"></p>
+                </div>
+                <div class="project-features">
+                  <h4>Key Features</h4>
+                  <ul id="modalProjectFeatures"></ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
