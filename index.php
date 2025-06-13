@@ -110,6 +110,7 @@
         </div>
         <!--PORTFOLIO-->
         <div id="portfolio" class="container">
+        <h2>MY PROJECTS</h2>
           <div class="portfolio-container">
             <!-- Project 1 -->
             <div class="project-item-container align-left">
