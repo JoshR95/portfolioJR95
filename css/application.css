@@ -1109,7 +1109,7 @@ footer {
       -ms-flex-align: start;
           align-items: flex-start;
   width: auto;
-  margin: 0 30px 0 30px;
+  margin: 0 30px 0 70px;
 }
 .project-details h3 {
   text-align: center;
@@ -1119,7 +1119,6 @@ footer {
   text-decoration-color: #cca463;
   text-underline-offset: 10px;
   margin-top: 0;
-  padding-top: 20px;
   margin-bottom: 50px;
 }
 
