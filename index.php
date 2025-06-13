@@ -111,6 +111,28 @@
         <!--PORTFOLIO-->
         <div id="portfolio" class="container">
           <h2>MY PROJECTS</h2>
+          <!-- Project Details Modal -->
+          <div id="projectDetailsModal" class="project-details-modal">
+            <div class="modal-content">
+              <span class="close-modal">&times;</span>
+              <div class="modal-header">
+                <h3 id="modalProjectTitle"></h3>
+              </div>
+              <div class="modal-body">
+                <div class="project-description">
+                  <p id="modalProjectDescription"></p>
+                </div>
+                <div class="project-technologies">
+                  <h4>Technologies Used</h4>
+                  <p id="modalProjectTechnologies"></p>
+                </div>
+                <div class="project-features">
+                  <h4>Key Features</h4>
+                  <ul id="modalProjectFeatures"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="portfolio-grid">
             <div class="project-item">
               <img class="project-image" src="./images/netmatters-homepage.png" alt="Netmatters homepage project image">
@@ -438,28 +460,6 @@
     <script src="./js/main.js"></script>
     <script src="./js/projectDetails.js"></script>
 
-    <!-- Project Details Modal -->
-    <div id="projectDetailsModal" class="project-details-modal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <div class="modal-header">
-          <h2 id="modalProjectTitle"></h2>
-        </div>
-        <div class="modal-body">
-          <div class="project-description">
-            <p id="modalProjectDescription"></p>
-          </div>
-          <div class="project-technologies">
-            <h3>Technologies Used</h3>
-            <p id="modalProjectTechnologies"></p>
-          </div>
-          <div class="project-features">
-            <h3>Key Features</h3>
-            <ul id="modalProjectFeatures"></ul>
-          </div>
-        </div>
-      </div>
-    </div>
   </body>
 
 </html>
