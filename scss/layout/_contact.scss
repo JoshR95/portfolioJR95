@@ -1,3 +1,8 @@
+///////////////////////////////////////////
+/// CONTACT FORM
+///////////////////////////////////////////
+
+
 #contact-me {
     display: flex;
     flex-direction: column;
@@ -92,44 +97,21 @@ textarea::placeholder {
     opacity: 1;
 }
 
-.contact-me-submit {
-    font-size: 16px;
-    margin-top: 10px;
-    padding: 10px 20px;
-    color: $white;
-    background-color: $third-color;
-    border: 3px $primary-color solid;
-    cursor: pointer;
-    // stlying for button on hover
-    &:hover{
-    background-color: $primary-color;
-    color: $fifth-color;
-    border-color: darken($primary-color, 20%);;
-    p {
-        color: $fifth-color;
-    }
-    }
-    // styling for button on click
-    &:active{
-        background-color: darken($primary-color, 20%);
-        border-color: $primary-color;
-    }
-}
+// gives styling to the submit button
+.submit-svg-btn {
+    width: 100px;
+    background-color: transparent;
+  }
 
 .large-input {
     height: 150px;
 }
 
-// .bottom-scroll {
-//     text-decoration: none;
-//     color: $white;
-//     font-size: 1.7rem;
-//     margin-bottom: 20px;
-//     margin-top: 100px;
-//     p {
-//         margin-bottom: 0;
-//     }
-// }
+
+//////////////////////////////
+/// SCROLL BUTTON
+//////////////////////////////
+
 .contact-scroll-container{
     display: flex;
     justify-content: center;

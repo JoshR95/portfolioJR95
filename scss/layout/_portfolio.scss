@@ -49,7 +49,7 @@
     h3{
         text-align: center;
         color: $white;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         text-decoration: underline;
         text-decoration-color: $primary-color;
         text-underline-offset: 10px;
@@ -74,6 +74,8 @@
         max-width: 300px;
         height: 200px;
         align-items: normal;
+        // this needs to be the same as the project-details buttons to keep everything inline
+        margin-top: 10px;
         .tooltip-container{
             img {
                 width: 70px;
@@ -224,7 +226,7 @@
             margin-top: 0;
             font-size: .8rem;
             p{
-                padding: 5px;
+                padding: 4px;
             }
         }
     }
@@ -596,6 +598,11 @@
     //     grid-template-columns: repeat(3, 1fr);
     //     grid-auto-rows: 1fr;
     // }
+    .project-details{
+        h3{
+            font-size: 2.2rem;
+        }
+    }
 
 }
 

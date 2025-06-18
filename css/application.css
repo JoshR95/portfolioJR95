@@ -1049,7 +1049,7 @@ footer {
 .project-details h3 {
   text-align: center;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   text-decoration: underline;
   text-decoration-color: #cca463;
   text-underline-offset: 10px;
@@ -1081,6 +1081,7 @@ footer {
   -webkit-box-align: normal;
       -ms-flex-align: normal;
           align-items: normal;
+  margin-top: 10px;
 }
 .project-details-content .project-languages .tooltip-container img {
   width: 70px;
@@ -1383,7 +1384,7 @@ footer {
   padding: 0 5px;
 }
 .project-item .project-links a p {
-  padding: 5px;
+  padding: 4px;
 }
 
 .hidden {
@@ -1623,6 +1624,11 @@ footer {
     filter: none;
   }
 }
+@media (min-width: 1660px) {
+  .project-details h3 {
+    font-size: 2.2rem;
+  }
+}
 @media (min-width: 2000px) {
   #portfolio {
     padding: 300px 0;
@@ -1750,26 +1756,9 @@ textarea::placeholder {
   opacity: 1;
 }
 
-.contact-me-submit {
-  font-size: 16px;
-  margin-top: 10px;
-  padding: 10px 20px;
-  color: white;
-  background-color: #293043;
-  border: 3px #cca463 solid;
-  cursor: pointer;
-}
-.contact-me-submit:hover {
-  background-color: #cca463;
-  color: #0d0f15;
-  border-color: #977132;
-}
-.contact-me-submit:hover p {
-  color: #0d0f15;
-}
-.contact-me-submit:active {
-  background-color: #977132;
-  border-color: #cca463;
+.submit-svg-btn {
+  width: 100px;
+  background-color: transparent;
 }
 
 .large-input {

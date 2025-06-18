@@ -491,9 +491,10 @@
               <div class="error"></div>
             </div>
             <div id="form-message-box" class="form-message-box" style="display:none; margin-top:10px;"></div>
-            <div>
-              <button id="contact-submit-box" class="contact-me-submit" type="submit">Submit</button>
-            </div>
+            <button id="contact-submit-box" class="svg-animated-btn submit-svg-btn" type="submit">
+              <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+              <span>SUBMIT</span>
+            </button>
             
           </form>
           <div class="contact-scroll-container">
