@@ -904,7 +904,7 @@ footer {
 }
 @media (min-width: 1460px) {
   #about-me-main {
-    padding: 250px 30px 250px 100px;
+    padding: 500px 30px 500px 100px;
   }
   #about-text h2 {
     font-size: 3rem;
@@ -931,7 +931,7 @@ footer {
     padding-left: 10px;
   }
   #about-me-main {
-    padding: 350px 30px 350px 150px;
+    padding: 500px 30px 500px 150px;
   }
   .language-logos-container .tooltip-container img {
     height: 130px;
@@ -1627,6 +1627,7 @@ footer {
 
 .contact-form {
   width: 80%;
+  max-width: 1000px;
 }
 
 .contact-form input,
