@@ -380,11 +380,6 @@
 
 }
 
-@media(max-width: 767px){
-    .project-details{
-        display: none;
-    }
-}
 
 @media(min-width: 768px){
 
@@ -545,6 +540,13 @@
     }
 }
 
+@media(max-width: 1399px){
+    // we dont display the portfolio side details under 1400px, instead we have the hover details
+    .project-details{
+        display: none;
+    }
+}
+
 // this media query is mainly for the portfolio display change to have the project at opposite sides of the screen
 @media (min-width: 1400px){
     #portfolio{
@@ -570,6 +572,19 @@
     }
     .portfolio-scroll-container {
         margin-top: 0;
+    }
+
+    // This removes all of the hover stuff on the project items above 1400px, we have the side details instead
+    .project-item {
+        .project-on-hover,
+        .hover-tag {
+          display: none;
+        }
+
+        &:hover .project-image {
+          -webkit-filter: none;
+                  filter: none;
+        }
     }
 }
 

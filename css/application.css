@@ -1477,11 +1477,6 @@ footer {
     font-size: 1.2rem;
   }
 }
-@media (max-width: 767px) {
-  .project-details {
-    display: none;
-  }
-}
 @media (min-width: 768px) {
   #portfolio {
     padding: 100px 0;
@@ -1553,6 +1548,11 @@ footer {
     font-size: 1.5rem;
   }
 }
+@media (max-width: 1399px) {
+  .project-details {
+    display: none;
+  }
+}
 @media (min-width: 1400px) {
   #portfolio h2 {
     margin-bottom: 200px;
@@ -1573,6 +1573,14 @@ footer {
   }
   .portfolio-scroll-container {
     margin-top: 0;
+  }
+  .project-item .project-on-hover,
+  .project-item .hover-tag {
+    display: none;
+  }
+  .project-item:hover .project-image {
+    -webkit-filter: none;
+    filter: none;
   }
 }
 @media (min-width: 2000px) {
