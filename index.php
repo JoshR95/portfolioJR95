@@ -421,7 +421,7 @@
             </div>
             <div class="portfolio-scroll-container">
               <div class="portfolio-scroll-button">
-                  <a href="#portfolio" class="svg-animated-btn portfolio-svg-btn scroll-svg-btn">
+                  <a href="#contact-me" class="svg-animated-btn portfolio-svg-btn scroll-svg-btn">
                     <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
                     <span><span class="icon-arrow-down"></span> GET IN CONTACT <span class="icon-arrow-down"></span></span>
                   </a>
