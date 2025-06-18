@@ -1,0 +1,10 @@
+// this styling is for all the scroll buttons on the page
+// annoyingly have to have the !importants to override the mixin styling
+.svg-animated-btn.scroll-svg-btn  {
+    padding: 15px !important;
+    font-size: 1.3rem !important;
+    height: 60px !important;
+    svg rect{
+        stroke-width: 6 !important;
+    }
+  }

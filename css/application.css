@@ -149,71 +149,99 @@ body {
 }
 
 .hero-scroll-container {
-  max-width: 350px;
-  position: relative;
-  border: 3px #cca463 solid;
-  margin-top: 30px;
-  z-index: 10;
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  z-index: 1000;
-  cursor: pointer;
-  pointer-events: auto;
-  gap: 5px;
-}
-.hero-scroll-container a {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 10;
+  margin-top: 50px;
+}
+.hero-scroll-container .hero-scroll-button {
+  position: relative;
+}
+.hero-scroll-container .hero-scroll-button .hero-svg-btn {
+  padding: 5px;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px;
-}
-.hero-scroll-container p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-}
-.hero-scroll-container, .hero-scroll-container a, .hero-scroll-container p, .hero-scroll-container span {
+  width: 100%;
+  max-width: 350px;
+  height: 45px;
+  max-height: 100px;
+  line-height: 45px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
   text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: background 0.35s, color 0.35s, letter-spacing 0.35s;
+  transition: background 0.35s, color 0.35s, letter-spacing 0.35s;
 }
-.hero-scroll-container:hover {
-  background-color: #cca463;
-  color: white;
-  border-color: #977132;
+.hero-scroll-container .hero-scroll-button .hero-svg-btn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
 }
-.hero-scroll-container:hover p {
-  color: #0d0f15;
+.hero-scroll-container .hero-scroll-button .hero-svg-btn svg rect {
+  x: 1px;
+  y: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
 }
-.hero-scroll-container:active {
-  background-color: #c69950;
-  border-color: #4b3718;
+.hero-scroll-container .hero-scroll-button .hero-svg-btn rect {
+  fill: none;
+  stroke: #cca463;
+  stroke-width: 2;
+  stroke-dasharray: 422, 0;
+  -webkit-transition: all 0.35s linear;
+  transition: all 0.35s linear;
 }
-.hero-scroll-container:active p {
-  color: white;
+.hero-scroll-container .hero-scroll-button .hero-svg-btn span, .hero-scroll-container .hero-scroll-button .hero-svg-btn .btn-text {
+  position: relative;
+  z-index: 2;
+  color: inherit;
+  font-weight: inherit;
+  -webkit-transition: color 0.35s, letter-spacing 0.35s;
+  transition: color 0.35s, letter-spacing 0.35s;
 }
-.hero-scroll-container p {
-  margin: 0;
-  color: white;
-  padding: 3px;
+.hero-scroll-container .hero-scroll-button .hero-svg-btn:hover {
+  background: transparent;
+  color: #cca463;
 }
-.hero-scroll-container p span {
-  padding: 0 5px;
+.hero-scroll-container .hero-scroll-button .hero-svg-btn:hover rect {
+  stroke-width: 5;
+  stroke-dasharray: 15, 310;
+  stroke-dashoffset: 48;
+  -webkit-transition: all 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.hero-scroll-container .hero-scroll-button .hero-svg-btn:active {
+  color: #fff;
+}
+.hero-scroll-container .hero-scroll-button .hero-svg-btn:active svg rect {
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 422, 0;
+  stroke-dashoffset: 0;
+  -webkit-transition: none;
+  transition: none;
 }
 
 @media (min-width: 450px) {
@@ -463,8 +491,9 @@ nav {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  max-width: 160px;
+  max-width: 350px;
   height: 45px;
+  max-height: 100px;
   line-height: 45px;
   color: white;
   font-size: 14px;
@@ -488,6 +517,12 @@ nav {
   z-index: 1;
   pointer-events: none;
 }
+.pages-links li a.svg-animated-btn svg rect {
+  x: 1px;
+  y: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+}
 .pages-links li a.svg-animated-btn rect {
   fill: none;
   stroke: #cca463;
@@ -506,8 +541,6 @@ nav {
 }
 .pages-links li a.svg-animated-btn:hover {
   background: transparent;
-  font-weight: 900;
-  letter-spacing: 1px;
   color: #cca463;
 }
 .pages-links li a.svg-animated-btn:hover rect {
@@ -828,11 +861,9 @@ footer {
 .about-me-scroll-container .about-me-scroll-button {
   position: relative;
   max-width: 350px;
-  margin-left: 40px;
 }
 .about-me-scroll-container .about-me-scroll-button .aboutme-svg-btn {
   padding: 5px;
-  max-width: 250px;
 }
 
 @media (min-width: 450px) {
@@ -876,6 +907,9 @@ footer {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
+  }
+  .about-me-scroll-container .about-me-scroll-button {
+    margin-left: 40px;
   }
   .language-logos-container {
     -webkit-box-flex: 1;
@@ -1065,8 +1099,9 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  max-width: 160px;
+  max-width: 350px;
   height: 45px;
+  max-height: 100px;
   line-height: 45px;
   color: white;
   font-size: 14px;
@@ -1088,6 +1123,12 @@ footer {
   z-index: 1;
   pointer-events: none;
 }
+.svg-animated-btn svg rect {
+  x: 1px;
+  y: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+}
 .svg-animated-btn rect {
   fill: none;
   stroke: #cca463;
@@ -1106,8 +1147,6 @@ footer {
 }
 .svg-animated-btn:hover {
   background: transparent;
-  font-weight: 900;
-  letter-spacing: 1px;
   color: #cca463;
 }
 .svg-animated-btn:hover rect {
@@ -1358,6 +1397,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 50px;
 }
 .portfolio-scroll-container .portfolio-scroll-button {
   position: relative;
@@ -2312,4 +2352,12 @@ textarea::placeholder {
   .carousel .carousel-slide .scss-nm-image {
     margin-right: 75px;
   }
+}
+.svg-animated-btn.scroll-svg-btn {
+  padding: 15px !important;
+  font-size: 1.3rem !important;
+  height: 60px !important;
+}
+.svg-animated-btn.scroll-svg-btn svg rect {
+  stroke-width: 6 !important;
 }/*# sourceMappingURL=application.css.map */

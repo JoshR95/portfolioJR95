@@ -41,9 +41,12 @@
               <h2 id="typewriter">I'm a Web Developer</h2>
           </div>
           <div class="hero-scroll-container">
-            <a href="#about-me-main" class="hero-scroll">
-              <p><span class="icon-arrow-down"></span>learn about me<span class="icon-arrow-down"></span></p>
-            </a>
+            <div class="hero-scroll-button">
+              <a href="#about-me-main" class="svg-animated-btn hero-svg-btn scroll-svg-btn">
+                <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+                <span><span class="icon-arrow-down"></span> LEARN ABOUT ME <span class="icon-arrow-down"></span></span>
+              </a>
+            </div>
           </div>
         </div>
       </header>
@@ -65,9 +68,9 @@
             </div>
             <div class="about-me-scroll-container">
               <div class="about-me-scroll-button">
-                  <a href="#portfolio" class="svg-animated-btn aboutme-svg-btn">
+                  <a href="#portfolio" class="svg-animated-btn aboutme-svg-btn scroll-svg-btn">
                     <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
-                    <span><span class="icon-arrow-down"></span> EXPLORE MY PROJECTS <span class="icon-arrow-down"></span></span>
+                    <span><span class="icon-arrow-down"></span> MY PROJECTS <span class="icon-arrow-down"></span></span>
                   </a>
               </div>
             </div>
@@ -418,7 +421,7 @@
             </div>
             <div class="portfolio-scroll-container">
               <div class="portfolio-scroll-button">
-                  <a href="#portfolio" class="svg-animated-btn portfolio-svg-btn">
+                  <a href="#portfolio" class="svg-animated-btn portfolio-svg-btn scroll-svg-btn">
                     <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
                     <span><span class="icon-arrow-down"></span> GET IN CONTACT <span class="icon-arrow-down"></span></span>
                   </a>
@@ -495,9 +498,9 @@
           </form>
           <div class="contact-scroll-container">
             <div class="contact-scroll-button">
-                <a href="#" class="svg-animated-btn contact-svg-btn">
+                <a href="#" class="svg-animated-btn contact-svg-btn scroll-svg-btn">
                   <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
-                  <span><span class="icon-arrow-up2"></span>BACK TO THE TOP<span class="icon-arrow-up2"></span></span>
+                  <span><span class="icon-arrow-up2"></span> BACK TO THE TOP <span class="icon-arrow-up2"></span></span>
                 </a>
             </div>
           </div>
