@@ -81,11 +81,13 @@
 textarea.colored-input {
     background-color: $white;
     color: $fifth-color;
+    // changes the border color on  focus/when someones typing in the input field
     &:focus {
         outline: none;
-        border-color: $white;
+        border: 3px solid $primary-color;
     }
 }
+
 
 // this makes the placeholder text grey
 // had to add font family because text area was being weird and had a different font.
@@ -105,6 +107,27 @@ textarea::placeholder {
 
 .large-input {
     height: 150px;
+}
+
+
+.success-message {
+    color: #fff;
+    background-color: #28a745;
+    border: 1px solid #28a745;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+  
+  .error-message {
+    color: #fff;
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 
@@ -128,28 +151,6 @@ textarea::placeholder {
         }
     }
 }
-
-
-
-.success-message {
-    color: #fff;
-    background-color: #28a745;
-    border: 1px solid #28a745;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    text-align: center;
-  }
-  
-  .error-message {
-    color: #fff;
-    background-color: #dc3545;
-    border: 1px solid #dc3545;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    text-align: center;
-  }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 /// MEDIA QUERIES 
