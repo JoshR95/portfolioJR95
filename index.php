@@ -58,7 +58,7 @@
             <div id="about-text">
               <div class="about-text-header">
                 <img class="me-icon" src="images/me-coding-looking-right.png">
-                <h2>Im <span class="about-text-highlight">Josh</span></h2>
+                <h2>I'm <span class="about-text-highlight">Josh</span></h2>
               </div>
               <p>I am a trainee web developer with knowledge of HTML, CSS, SASS, javaScript, SQL, PHP, Laravel and Python.</p>
               <p>
