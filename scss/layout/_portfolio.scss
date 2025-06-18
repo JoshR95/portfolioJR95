@@ -380,6 +380,12 @@
 
 }
 
+@media(max-width: 767px){
+    .project-details{
+        display: none;
+    }
+}
+
 @media(min-width: 768px){
 
     #portfolio{

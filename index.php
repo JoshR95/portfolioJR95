@@ -37,7 +37,7 @@
         <div class="container hero-container">
           <div id="particles-js"></div>
           <div class="hero-title main-title">
-              <h1 >HELLO, IM <span class="header-text-highlight">JOSH</span></h1>
+              <h1 >HELLO, I'M <span class="header-text-highlight">JOSH</span></h1>
               <h2 id="typewriter">I'm a Web Developer</h2>
           </div>
           <div class="hero-scroll-container">
