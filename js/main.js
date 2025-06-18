@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Show modal
-        modal.style.display = 'block';
+        modal.style.display = 'flex';
         document.body.style.overflow = 'hidden'; // Prevent background scrolling
     };
 
@@ -403,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close modal with Escape key
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal && modal.style.display === 'block') {
+        if (e.key === 'Escape' && modal && modal.style.display === 'flex') {
             closeModal();
         }
     });
