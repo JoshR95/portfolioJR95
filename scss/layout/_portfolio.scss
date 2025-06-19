@@ -1,26 +1,131 @@
 #portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: $fifth-color;
     padding: 50px;
+    h2 {
+        text-align: center;
+        color: $white;
+        font-size: 2.2rem;
+        text-decoration: underline;
+        text-decoration-color: $primary-color;
+        text-underline-offset: 10px;
+        margin-top: 0;
+        padding-top: 20px;
+        margin-bottom: 100px;
+    }
 }
 
-#portfolio h2 {
-    text-align: center;
-    color: $white;
-    font-size: 2.2rem;
-    text-decoration: underline;
-    text-decoration-color: $primary-color;
-    text-underline-offset: 10px;
-    margin-top: 0;
-    padding-top: 20px;
-    margin-bottom: 100px;
+// this sets the width and layout of the div containing the projects
+.portfolio-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 2000px;
 }
+
+// this makes each projects div take up as much space as it can, i then use another class to set the flex start or end
+.project-item-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // i have this so all the items in this container are at the top, keeps things looking inline
+    align-items: stretch;
+}
+
+///////////////////////////////////////////////////////
+/// PROJECT DETIALS CSS
+///////////////////////////////////////////////////////
+
+.project-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    margin: 0 30px 0 70px;
+    h3{
+        text-align: center;
+        color: $primary-color;
+        font-size: 1.8rem;
+        text-decoration: underline;
+        text-decoration-color: $white;
+        text-underline-offset: 10px;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+}
+.project-details-content{
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    .project-details-buttons{
+        max-width: 250px;
+        .svg-animated-btn {
+            max-width: 200px;
+            margin: 10px 0 10px 0;
+            padding: 10px 24px; 
+        }
+    }
+    //specific sizing for language images in the project-details-content section
+    .project-languages{
+        max-width: 300px;
+        height: 200px;
+        align-items: normal;
+        // this needs to be the same as the project-details buttons to keep everything inline
+        margin-top: 10px;
+        .tooltip-container{
+            img {
+                width: 70px;
+                height: 70px;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+.svg-animated-btn {
+    @include svg-border-animated-btn;
+  }
+
+/////////////////////////////////////////////
+/// LANGUAGE ICONS CSS
+/////////////////////////////////////////////
+
+.project-languages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    gap: 10px;
+    
+    .tooltip-container {
+        @include tooltip;
+        
+        img {
+            width: 50px;
+            height: 50px;
+            // keeps images contained in the size specified
+            object-fit: contain;
+        }
+    }
+}
+
+//////////////////////////////////////////////////
+/// PROJECT ITEM
+//////////////////////////////////////////////////
 
 .project-item {
     position: relative;
     overflow: hidden;
     height: 400px;
     max-width: 450px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     border-radius: 10px;
     box-shadow: 0 5px 12px $white;
     cursor: pointer;
@@ -114,25 +219,6 @@
         font-size: 1rem;
         margin: 3px;
     }
-    .project-languages{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        max-width: 80%;
-        gap: 10px;
-        
-        .tooltip-container {
-            @include tooltip;
-            
-            img {
-                width: 50px;
-                height: 50px;
-                // keeps images contained in the size specified
-                object-fit: contain;
-            }
-        }
-    }
 
     .project-links {
         display: flex;
@@ -143,7 +229,7 @@
             margin-top: 0;
             font-size: .8rem;
             p{
-                padding: 5px;
+                padding: 4px;
             }
         }
     }
@@ -156,46 +242,22 @@
   }
 
 
-// this is setting the grid for item allignment
-.portfolio-grid{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 1fr; //
-    justify-items: center;
-    align-items: stretch; // Change this line
-    gap: 20px;
-    width: 100%;
-    padding: 20px;
-}
-
 .portfolio-scroll-container{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
     .portfolio-scroll-button{
-        max-width: 350px;
         position: relative;
-        
-        a {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
+        max-width: 350px;
+        margin-left: 20px;
+        .portfolio-svg-btn {
+            padding: 10px 20px;
+            max-width: 300px;
         }
-        
-        p {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-        }
-        
-        @include page-button;
     }
 }
+
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 /// PROJECT DETAILS MODAL
@@ -209,30 +271,41 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.95);
     overflow-y: auto;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-content {
-    background-color: $white;
-    margin: 5% auto;
+    background-color: $third-color;
     padding: 20px;
-    border: 1px solid $fifth-color;
+    border: 1px solid $fourth-color;
     width: 80%;
     max-width: 800px;
     border-radius: 5px;
     position: relative;
-    animation: modalFadeIn 0.3s ease-out;
+    // setting the keyframes animation speed
+    animation: modalZoomIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow:
+        0 0 10px 2px $white,
+    
 }
 
-@keyframes modalFadeIn {
+// this is what gives us the pop in effect
+@keyframes modalZoomIn {
     from {
         opacity: 0;
-        transform: translateY(-20px);
+        // start it small
+        transform: scale(0.4);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        // expand to true size
+        transform: scale(1);
     }
 }
 
@@ -243,20 +316,20 @@
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    color: $fifth-color;
+    color: $white;
 
     &:hover {
-        color: darken($fifth-color, 20%);
+        color: $primary-color;
     }
 }
 
 .modal-header {
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid lighten($fifth-color, 60%);
+    border-bottom: 2px solid $primary-color;
 
     h3 {
-        color: $fifth-color;
+        color: $white;
         margin: 0;
     }
 }
@@ -266,6 +339,7 @@
 }
 
 .project-description {
+    color: $white;
     margin-bottom: 20px;
 }
 
@@ -273,8 +347,14 @@
     margin-bottom: 20px;
 
     h4 {
-        color: $fifth-color;
+        display: inline-block;
+        color: $white;
+        border-bottom: 2px solid $primary-color;
         margin-bottom: 10px;
+    }
+
+    p{
+        color: $white;
     }
 }
 
@@ -282,6 +362,7 @@
     ul {
         list-style-type: disc;
         padding-left: 20px;
+        color: $white;
     }
 
     li {
@@ -314,6 +395,7 @@
 
 }
 
+
 @media(min-width: 768px){
 
     #portfolio{
@@ -322,7 +404,6 @@
 
     .modal-content {
         width: 95%;
-        margin: 10% auto;
     }
 
     .project-item{
@@ -348,12 +429,12 @@
 
 @media(min-width: 768px) and (max-width: 991px){
 
-    .portfolio-grid{
-        // can turn this back on when more projects are added to make the layout look nicer, at the minute 
-        // with three projects it looks weird with 2 columns
-        // grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 1fr;
-    }
+    // .portfolio-grid{
+    //     // can turn this back on when more projects are added to make the layout look nicer, at the minute 
+    //     // with three projects it looks weird with 2 columns
+    //     // grid-template-columns: repeat(2, 1fr);
+    //     grid-auto-rows: 1fr;
+    // }
     
     .project-item{
 
@@ -385,14 +466,14 @@
 
     // this shows the 5th and 6th child in portfolio-grid. i have set these unshown items 
     // to dislay none with the .hidden class to allow this to work
-    .portfolio-grid .project-item:nth-child(n+5):nth-child(-n+6) {
-      display: flex; 
-    }
+    // .portfolio-grid .project-item:nth-child(n+5):nth-child(-n+6) {
+    //   display: flex; 
+    // }
 
-    .portfolio-grid{
-        grid-template-columns: repeat(1, 1fr);
-        grid-auto-rows: 1fr;
-    }
+    // .portfolio-grid{
+    //     grid-template-columns: repeat(1, 1fr);
+    //     grid-auto-rows: 1fr;
+    // }
 
     .project-item{
 
@@ -447,16 +528,14 @@
 @media (min-width: 1200px) {
 
     // this shows the children elements from the 5th to the 9th
-    .portfolio-grid .project-item.hidden:nth-child(n+5):nth-child(-n+9) {
-        display: flex; 
-    }
+    // .portfolio-grid .project-item.hidden:nth-child(n+5):nth-child(-n+9) {
+    //     display: flex; 
+    // }
 
-    .portfolio-grid{
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 1fr;
-    }
-
-
+    // .portfolio-grid{
+    //     grid-template-columns: repeat(2, 1fr);
+    //     grid-auto-rows: 1fr;
+    // }
     .project-item{
 
         h3 {
@@ -475,10 +554,65 @@
     }
 }
 
+@media(max-width: 1399px){
+    // we dont display the portfolio side details under 1400px, instead we have the hover details
+    .project-details{
+        display: none;
+    }
+}
+
+// this media query is mainly for the portfolio display change to have the project at opposite sides of the screen
+@media (min-width: 1400px){
+    #portfolio{
+        h2{
+            margin-bottom: 200px;
+        }
+    }
+   
+    // this aligns the set projects to the left of its container
+    .project-item-container.align-left{
+        justify-content: flex-start;
+        margin-right: auto;
+    }
+    // this aligns the set projects to the right of its container
+    .project-item-container.align-right{
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+
+    .project-item-container{
+        // we add some padding so the projects arent right up against the sides
+        padding: 0 50px 0 50px;
+        // added margin to space projects out a bit
+        margin-bottom: 200px;
+    }
+    .portfolio-scroll-container {
+        margin-top: 0;
+    }
+
+    // This removes all of the hover stuff on the project items above 1400px, we have the side details instead
+    .project-item {
+        .project-on-hover,
+        .hover-tag {
+          display: none;
+        }
+
+        &:hover .project-image {
+          -webkit-filter: none;
+                  filter: none;
+        }
+    }
+}
+
 @media (min-width: 1660px){
-    .portfolio-grid{
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 1fr;
+    // .portfolio-grid{
+    //     grid-template-columns: repeat(3, 1fr);
+    //     grid-auto-rows: 1fr;
+    // }
+    .project-details{
+        h3{
+            font-size: 2.2rem;
+        }
     }
 
 }

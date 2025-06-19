@@ -1,3 +1,8 @@
+///////////////////////////////////////////
+/// CONTACT FORM
+///////////////////////////////////////////
+
+
 #contact-me {
     display: flex;
     flex-direction: column;
@@ -33,6 +38,7 @@
 
 .contact-form {
     width: 80%;
+    max-width: 1000px;
 }
 
 // this makes the inputs the full width of its container
@@ -75,11 +81,13 @@
 textarea.colored-input {
     background-color: $white;
     color: $fifth-color;
+    // changes the border color on  focus/when someones typing in the input field
     &:focus {
         outline: none;
-        border-color: $white;
+        border: 3px solid $primary-color;
     }
 }
+
 
 // this makes the placeholder text grey
 // had to add font family because text area was being weird and had a different font.
@@ -91,53 +99,16 @@ textarea::placeholder {
     opacity: 1;
 }
 
-.contact-me-submit {
-    font-size: 16px;
-    margin-top: 10px;
-    padding: 10px 20px;
-    color: $white;
-    background-color: $third-color;
-    border: 3px $primary-color solid;
-    cursor: pointer;
-    // stlying for button on hover
-    &:hover{
-    background-color: $primary-color;
-    color: $fifth-color;
-    border-color: darken($primary-color, 20%);;
-    p {
-        color: $fifth-color;
-    }
-    }
-    // styling for button on click
-    &:active{
-        background-color: darken($primary-color, 20%);
-        border-color: $primary-color;
-    }
-}
+// gives styling to the submit button
+.submit-svg-btn {
+    width: 100px;
+    background-color: transparent;
+  }
 
 .large-input {
     height: 150px;
 }
 
-// .bottom-scroll {
-//     text-decoration: none;
-//     color: $white;
-//     font-size: 1.7rem;
-//     margin-bottom: 20px;
-//     margin-top: 100px;
-//     p {
-//         margin-bottom: 0;
-//     }
-// }
-.contact-scroll-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 75px;
-    .contact-scroll-button{
-        @include page-button;
-    
-    }
-}
 
 .success-message {
     color: #fff;
@@ -147,7 +118,7 @@ textarea::placeholder {
     border-radius: 5px;
     margin-top: 10px;
     text-align: center;
-  }
+}
   
   .error-message {
     color: #fff;
@@ -157,7 +128,29 @@ textarea::placeholder {
     border-radius: 5px;
     margin-top: 10px;
     text-align: center;
-  }
+}
+
+
+//////////////////////////////
+/// SCROLL BUTTON
+//////////////////////////////
+
+.contact-scroll-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+    .contact-scroll-button{
+        // Context-specific style for contact section SVG button
+        .contact-svg-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            max-width: 300px;
+            white-space: nowrap;
+        }
+    }
+}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 /// MEDIA QUERIES 
@@ -181,25 +174,3 @@ textarea::placeholder {
     }
   }
 
-.contact-scroll-button {
-    max-width: 350px;
-    position: relative;
-    
-    a {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-    }
-    
-    p {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-    }
-    
-    @include page-button;
-}

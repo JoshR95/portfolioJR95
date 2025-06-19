@@ -62,29 +62,19 @@
 // }
 
 .hero-scroll-container {
-    max-width: 350px;
+    display: flex;
+    justify-content: center;
     position: relative;
-    
-    a {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
+    z-index: 10;
+    margin-top: 50px;
+    .hero-scroll-button {
+      position: relative;
+      .hero-svg-btn {
+        padding: 5px;
+        @include svg-border-animated-btn;
+      }
     }
-    
-    p {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-    }
-    
-    @include page-button;
-}
-
-
+  }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /// MEDIA QUERIES

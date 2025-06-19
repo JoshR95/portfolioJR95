@@ -1,0 +1,67 @@
+////////////////////////////////////////////////////////////////////
+// REUSABLE SCROLL ANIMATION CLASSES FOR GSAP SCROLL TRIGGER 
+////////////////////////////////////////////////////////////////////
+
+.scroll-in-from-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease-out;
+    
+    &.animate-in {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.scroll-in-from-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s ease-out;
+    
+    &.animate-in {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.scroll-in-from-top {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 1s ease-out;
+    
+    &.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-in-from-bottom {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.2s ease-out;
+    
+    &.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    
+    &.animate-in {
+        opacity: 1;
+    }
+}
+
+.scroll-scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 1 ease-out;
+    
+    &.animate-in {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

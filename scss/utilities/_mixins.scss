@@ -118,7 +118,7 @@
 ///////////////////////////////////////////////////
 
 @mixin svg-border-animated-btn(
-  $width: 160px,
+  $width: 350px,
   $height: 45px,
   $border-color: $primary-color,
   $bg: darken($primary-color, 1.5%),
@@ -132,9 +132,10 @@
   width: 100%;
   max-width: $width;
   height: $height;
+  max-height: 100px;
   line-height: $height;
   color: $white;
-  background: $bg;
+  // background: $bg;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -150,6 +151,14 @@
     width: 100%; height: 100%;
     z-index: 1;
     pointer-events: none;
+    // this insets the rect by 1px on all side, this prevents the box border from being cut off as the 
+    // border stroke is centered on the edge of the rectangle
+    rect {
+      x: 1px;
+      y: 1px;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+    }
   }
 
   rect {
@@ -170,8 +179,6 @@
 
   &:hover {
     background: $hover-bg;
-    font-weight: 900;
-    letter-spacing: 1px;
     color: $border-color;
   }
 

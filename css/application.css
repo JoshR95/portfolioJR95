@@ -36,6 +36,10 @@ body {
           flex-direction: column;
 }
 
+body, .main-container {
+  overflow-x: hidden;
+}
+
 #moving-background {
   background-image: url("https://joshr95.github.io/myPortfolio/images/network-4851119_1920.jpg"), url("../../images/network-4851119_1920.jpg");
   background-size: cover;
@@ -78,6 +82,80 @@ body {
     font-size: 1.3rem;
   }
 }
+.scroll-in-from-left {
+  opacity: 0;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.scroll-in-from-left.animate-in {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.scroll-in-from-right {
+  opacity: 0;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.scroll-in-from-right.animate-in {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.scroll-in-from-top {
+  opacity: 0;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.scroll-in-from-top.animate-in {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.scroll-in-from-bottom {
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: all 1.2s ease-out;
+  transition: all 1.2s ease-out;
+}
+.scroll-in-from-bottom.animate-in {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.scroll-fade-in {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+.scroll-fade-in.animate-in {
+  opacity: 1;
+}
+
+.scroll-scale-in {
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: all 1 ease-out;
+  transition: all 1 ease-out;
+}
+.scroll-scale-in.animate-in {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 #particles-js {
   position: absolute;
   width: 100%;
@@ -149,71 +227,99 @@ body {
 }
 
 .hero-scroll-container {
-  max-width: 350px;
-  position: relative;
-  border: 3px #cca463 solid;
-  margin-top: 30px;
-  z-index: 10;
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  z-index: 1000;
-  cursor: pointer;
-  pointer-events: auto;
-  gap: 5px;
-}
-.hero-scroll-container a {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 10;
+  margin-top: 50px;
+}
+.hero-scroll-container .hero-scroll-button {
+  position: relative;
+}
+.hero-scroll-container .hero-scroll-button .hero-svg-btn {
+  padding: 5px;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px;
-}
-.hero-scroll-container p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-}
-.hero-scroll-container, .hero-scroll-container a, .hero-scroll-container p, .hero-scroll-container span {
+  width: 100%;
+  max-width: 350px;
+  height: 45px;
+  max-height: 100px;
+  line-height: 45px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
   text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: background 0.35s, color 0.35s, letter-spacing 0.35s;
+  transition: background 0.35s, color 0.35s, letter-spacing 0.35s;
 }
-.hero-scroll-container:hover {
-  background-color: #cca463;
-  color: white;
-  border-color: #977132;
+.hero-scroll-container .hero-scroll-button .hero-svg-btn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
 }
-.hero-scroll-container:hover p {
-  color: #0d0f15;
+.hero-scroll-container .hero-scroll-button .hero-svg-btn svg rect {
+  x: 1px;
+  y: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
 }
-.hero-scroll-container:active {
-  background-color: #c69950;
-  border-color: #4b3718;
+.hero-scroll-container .hero-scroll-button .hero-svg-btn rect {
+  fill: none;
+  stroke: #cca463;
+  stroke-width: 2;
+  stroke-dasharray: 422, 0;
+  -webkit-transition: all 0.35s linear;
+  transition: all 0.35s linear;
 }
-.hero-scroll-container:active p {
-  color: white;
+.hero-scroll-container .hero-scroll-button .hero-svg-btn span, .hero-scroll-container .hero-scroll-button .hero-svg-btn .btn-text {
+  position: relative;
+  z-index: 2;
+  color: inherit;
+  font-weight: inherit;
+  -webkit-transition: color 0.35s, letter-spacing 0.35s;
+  transition: color 0.35s, letter-spacing 0.35s;
 }
-.hero-scroll-container p {
-  margin: 0;
-  color: white;
-  padding: 3px;
+.hero-scroll-container .hero-scroll-button .hero-svg-btn:hover {
+  background: transparent;
+  color: #cca463;
 }
-.hero-scroll-container p span {
-  padding: 0 5px;
+.hero-scroll-container .hero-scroll-button .hero-svg-btn:hover rect {
+  stroke-width: 5;
+  stroke-dasharray: 15, 310;
+  stroke-dashoffset: 48;
+  -webkit-transition: all 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.hero-scroll-container .hero-scroll-button .hero-svg-btn:active {
+  color: #fff;
+}
+.hero-scroll-container .hero-scroll-button .hero-svg-btn:active svg rect {
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 422, 0;
+  stroke-dashoffset: 0;
+  -webkit-transition: none;
+  transition: none;
 }
 
 @media (min-width: 450px) {
@@ -463,11 +569,11 @@ nav {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  max-width: 160px;
+  max-width: 350px;
   height: 45px;
+  max-height: 100px;
   line-height: 45px;
   color: white;
-  background: transparent;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -489,6 +595,12 @@ nav {
   z-index: 1;
   pointer-events: none;
 }
+.pages-links li a.svg-animated-btn svg rect {
+  x: 1px;
+  y: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+}
 .pages-links li a.svg-animated-btn rect {
   fill: none;
   stroke: #cca463;
@@ -507,8 +619,6 @@ nav {
 }
 .pages-links li a.svg-animated-btn:hover {
   background: transparent;
-  font-weight: 900;
-  letter-spacing: 1px;
   color: #cca463;
 }
 .pages-links li a.svg-animated-btn:hover rect {
@@ -827,111 +937,11 @@ footer {
           justify-content: center;
 }
 .about-me-scroll-container .about-me-scroll-button {
-  margin-left: 40px;
-  border: 3px #cca463 solid;
-  margin-top: 30px;
-  z-index: 10;
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  z-index: 1000;
-  cursor: pointer;
-  pointer-events: auto;
-  gap: 5px;
-}
-.about-me-scroll-container .about-me-scroll-button, .about-me-scroll-container .about-me-scroll-button a, .about-me-scroll-container .about-me-scroll-button p, .about-me-scroll-container .about-me-scroll-button span {
-  text-decoration: none;
-}
-.about-me-scroll-container .about-me-scroll-button:hover {
-  background-color: #cca463;
-  color: white;
-  border-color: #977132;
-}
-.about-me-scroll-container .about-me-scroll-button:hover p {
-  color: #0d0f15;
-}
-.about-me-scroll-container .about-me-scroll-button:active {
-  background-color: #c69950;
-  border-color: #4b3718;
-}
-.about-me-scroll-container .about-me-scroll-button:active p {
-  color: white;
-}
-.about-me-scroll-container .about-me-scroll-button p {
-  margin: 0;
-  color: white;
-  padding: 3px;
-}
-.about-me-scroll-container .about-me-scroll-button p span {
-  padding: 0 5px;
-}
-
-.about-me-scroll-button {
+  position: relative;
   max-width: 350px;
-  position: relative;
-  border: 3px #cca463 solid;
-  margin-top: 30px;
-  z-index: 10;
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  z-index: 1000;
-  cursor: pointer;
-  pointer-events: auto;
-  gap: 5px;
 }
-.about-me-scroll-button a {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10px;
-}
-.about-me-scroll-button p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-}
-.about-me-scroll-button, .about-me-scroll-button a, .about-me-scroll-button p, .about-me-scroll-button span {
-  text-decoration: none;
-}
-.about-me-scroll-button:hover {
-  background-color: #cca463;
-  color: white;
-  border-color: #977132;
-}
-.about-me-scroll-button:hover p {
-  color: #0d0f15;
-}
-.about-me-scroll-button:active {
-  background-color: #c69950;
-  border-color: #4b3718;
-}
-.about-me-scroll-button:active p {
-  color: white;
-}
-.about-me-scroll-button p {
-  margin: 0;
-  color: white;
-  padding: 3px;
-}
-.about-me-scroll-button p span {
-  padding: 0 5px;
+.about-me-scroll-container .about-me-scroll-button .aboutme-svg-btn {
+  padding: 5px;
 }
 
 @media (min-width: 450px) {
@@ -976,6 +986,9 @@ footer {
         -ms-flex-pack: left;
             justify-content: left;
   }
+  .about-me-scroll-container .about-me-scroll-button {
+    margin-left: 40px;
+  }
   .language-logos-container {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -1003,7 +1016,7 @@ footer {
 }
 @media (min-width: 1460px) {
   #about-me-main {
-    padding: 250px 30px 250px 100px;
+    padding: 400px 30px 400px 100px;
   }
   #about-text h2 {
     font-size: 3rem;
@@ -1030,7 +1043,7 @@ footer {
     padding-left: 10px;
   }
   #about-me-main {
-    padding: 350px 30px 350px 150px;
+    padding: 400px 30px 400px 150px;
   }
   .language-logos-container .tooltip-container img {
     height: 130px;
@@ -1038,10 +1051,19 @@ footer {
   }
 }
 #portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #0d0f15;
   padding: 50px;
 }
-
 #portfolio h2 {
   text-align: center;
   color: white;
@@ -1054,12 +1076,237 @@ footer {
   margin-bottom: 100px;
 }
 
+.portfolio-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 2000px;
+}
+
+.project-item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.project-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: auto;
+  margin: 0 30px 0 70px;
+}
+.project-details h3 {
+  text-align: center;
+  color: #cca463;
+  font-size: 1.8rem;
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-underline-offset: 10px;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.project-details-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 400px;
+}
+.project-details-content .project-details-buttons {
+  max-width: 250px;
+}
+.project-details-content .project-details-buttons .svg-animated-btn {
+  max-width: 200px;
+  margin: 10px 0 10px 0;
+  padding: 10px 24px;
+}
+.project-details-content .project-languages {
+  max-width: 300px;
+  height: 200px;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  margin-top: 10px;
+}
+.project-details-content .project-languages .tooltip-container img {
+  width: 70px;
+  height: 70px;
+}
+.project-details-content .project-languages .tooltip-container img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.svg-animated-btn {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 350px;
+  height: 45px;
+  max-height: 100px;
+  line-height: 45px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: background 0.35s, color 0.35s, letter-spacing 0.35s;
+  transition: background 0.35s, color 0.35s, letter-spacing 0.35s;
+}
+.svg-animated-btn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.svg-animated-btn svg rect {
+  x: 1px;
+  y: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+}
+.svg-animated-btn rect {
+  fill: none;
+  stroke: #cca463;
+  stroke-width: 2;
+  stroke-dasharray: 422, 0;
+  -webkit-transition: all 0.35s linear;
+  transition: all 0.35s linear;
+}
+.svg-animated-btn span, .svg-animated-btn .btn-text {
+  position: relative;
+  z-index: 2;
+  color: inherit;
+  font-weight: inherit;
+  -webkit-transition: color 0.35s, letter-spacing 0.35s;
+  transition: color 0.35s, letter-spacing 0.35s;
+}
+.svg-animated-btn:hover {
+  background: transparent;
+  color: #cca463;
+}
+.svg-animated-btn:hover rect {
+  stroke-width: 5;
+  stroke-dasharray: 15, 310;
+  stroke-dashoffset: 48;
+  -webkit-transition: all 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.svg-animated-btn:active {
+  color: #fff;
+}
+.svg-animated-btn:active svg rect {
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 422, 0;
+  stroke-dashoffset: 0;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.project-languages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 80%;
+  gap: 10px;
+}
+.project-languages .tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+.project-languages .tooltip-container .tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #293043;
+  color: white;
+  border: 2px #cca463 solid;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  white-space: nowrap;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+.project-languages .tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.project-languages .tooltip-container img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .project-item {
   position: relative;
   overflow: hidden;
   height: 400px;
   max-width: 450px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   border-radius: 10px;
   -webkit-box-shadow: 0 5px 12px white;
           box-shadow: 0 5px 12px white;
@@ -1172,55 +1419,6 @@ footer {
   font-size: 1rem;
   margin: 3px;
 }
-.project-item .project-languages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: 80%;
-  gap: 10px;
-}
-.project-item .project-languages .tooltip-container {
-  position: relative;
-  display: inline-block;
-}
-.project-item .project-languages .tooltip-container .tooltip {
-  visibility: hidden;
-  position: absolute;
-  bottom: -40px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: #293043;
-  color: white;
-  border: 2px #cca463 solid;
-  text-align: center;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 16px;
-  white-space: nowrap;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-}
-.project-item .project-languages .tooltip-container:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
-}
-.project-item .project-languages .tooltip-container img {
-  width: 50px;
-  height: 50px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
 .project-item .project-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1268,24 +1466,11 @@ footer {
   padding: 0 5px;
 }
 .project-item .project-links a p {
-  padding: 5px;
+  padding: 4px;
 }
 
 .hidden {
   display: none;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-auto-rows: 1fr;
-  justify-items: center;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  gap: 20px;
-  width: 100%;
-  padding: 20px;
 }
 
 .portfolio-scroll-container {
@@ -1295,77 +1480,130 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .portfolio-scroll-container .portfolio-scroll-button {
+  position: relative;
   max-width: 350px;
-  position: relative;
-  border: 3px #cca463 solid;
-  margin-top: 30px;
-  z-index: 10;
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  z-index: 1000;
-  cursor: pointer;
-  pointer-events: auto;
-  gap: 5px;
+  margin-left: 20px;
 }
-.portfolio-scroll-container .portfolio-scroll-button a {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
+.portfolio-scroll-container .portfolio-scroll-button .portfolio-svg-btn {
+  padding: 10px 20px;
+  max-width: 300px;
+}
+
+.project-details-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  overflow-y: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px;
 }
-.portfolio-scroll-container .portfolio-scroll-button p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
+
+.modal-content {
+  background-color: #293043;
+  padding: 20px;
+  border: 1px solid #151821;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 5px;
+  position: relative;
+  -webkit-animation: modalZoomIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+          animation: modalZoomIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 20px;
+  max-height: 90vh;
+  overflow-y: auto;
+  -webkit-box-shadow: 0 0 10px 2px white;
+          box-shadow: 0 0 10px 2px white;
 }
-.portfolio-scroll-container .portfolio-scroll-button, .portfolio-scroll-container .portfolio-scroll-button a, .portfolio-scroll-container .portfolio-scroll-button p, .portfolio-scroll-container .portfolio-scroll-button span {
-  text-decoration: none;
+
+@-webkit-keyframes modalZoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
-.portfolio-scroll-container .portfolio-scroll-button:hover {
-  background-color: #cca463;
+
+@keyframes modalZoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.close-modal {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
   color: white;
-  border-color: #977132;
 }
-.portfolio-scroll-container .portfolio-scroll-button:hover p {
-  color: #0d0f15;
+.close-modal:hover {
+  color: #cca463;
 }
-.portfolio-scroll-container .portfolio-scroll-button:active {
-  background-color: #c69950;
-  border-color: #4b3718;
+
+.modal-header {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #cca463;
 }
-.portfolio-scroll-container .portfolio-scroll-button:active p {
+.modal-header h3 {
   color: white;
-}
-.portfolio-scroll-container .portfolio-scroll-button p {
   margin: 0;
-  color: white;
-  padding: 3px;
 }
-.portfolio-scroll-container .portfolio-scroll-button p span {
-  padding: 0 5px;
+
+.modal-body {
+  color: black;
+}
+
+.project-description {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.project-technologies, .project-features {
+  margin-bottom: 20px;
+}
+.project-technologies h4, .project-features h4 {
+  display: inline-block;
+  color: white;
+  border-bottom: 2px solid #cca463;
+  margin-bottom: 10px;
+}
+.project-technologies p, .project-features p {
+  color: white;
+}
+
+.project-features ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: white;
+}
+.project-features li {
+  margin-bottom: 5px;
 }
 
 @media (min-width: 500px) and (max-width: 767px) {
@@ -1383,6 +1621,9 @@ footer {
   #portfolio {
     padding: 100px 0;
   }
+  .modal-content {
+    width: 95%;
+  }
   .project-item .project-on-hover {
     padding: 20px;
   }
@@ -1395,9 +1636,6 @@ footer {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .portfolio-grid {
-    grid-auto-rows: 1fr;
-  }
   .project-item h3 {
     font-size: 1.8rem;
   }
@@ -1411,15 +1649,6 @@ footer {
 @media (min-width: 992px) and (max-width: 1199px) {
   #portfolio h2 {
     font-size: 2.6rem;
-  }
-  .portfolio-grid .project-item:nth-child(n+5):nth-child(-n+6) {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .portfolio-grid {
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 1fr;
   }
   .project-item h3 {
     font-size: 1.8rem;
@@ -1448,15 +1677,6 @@ footer {
   }
 }
 @media (min-width: 1200px) {
-  .portfolio-grid .project-item.hidden:nth-child(n+5):nth-child(-n+9) {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 1fr;
-  }
   .project-item h3 {
     font-size: 2rem;
   }
@@ -1467,118 +1687,51 @@ footer {
     font-size: 1.5rem;
   }
 }
+@media (max-width: 1399px) {
+  .project-details {
+    display: none;
+  }
+}
+@media (min-width: 1400px) {
+  #portfolio h2 {
+    margin-bottom: 200px;
+  }
+  .project-item-container.align-left {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-right: auto;
+  }
+  .project-item-container.align-right {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-left: auto;
+  }
+  .project-item-container {
+    padding: 0 50px 0 50px;
+    margin-bottom: 200px;
+  }
+  .portfolio-scroll-container {
+    margin-top: 0;
+  }
+  .project-item .project-on-hover,
+  .project-item .hover-tag {
+    display: none;
+  }
+  .project-item:hover .project-image {
+    -webkit-filter: none;
+    filter: none;
+  }
+}
 @media (min-width: 1660px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 1fr;
+  .project-details h3 {
+    font-size: 2.2rem;
   }
 }
 @media (min-width: 2000px) {
   #portfolio {
     padding: 300px 0;
-  }
-}
-.project-details-modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  overflow-y: auto;
-}
-
-.modal-content {
-  background-color: white;
-  margin: 5% auto;
-  padding: 20px;
-  border: 1px solid #0d0f15;
-  width: 80%;
-  max-width: 800px;
-  border-radius: 5px;
-  position: relative;
-  -webkit-animation: modalFadeIn 0.3s ease-out;
-          animation: modalFadeIn 0.3s ease-out;
-}
-
-@-webkit-keyframes modalFadeIn {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes modalFadeIn {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-.close-modal {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #0d0f15;
-}
-.close-modal:hover {
-  color: black;
-}
-
-.modal-header {
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #96a0be;
-}
-.modal-header h2 {
-  color: #0d0f15;
-  margin: 0;
-}
-
-.modal-body {
-  color: black;
-}
-
-.project-description {
-  margin-bottom: 20px;
-}
-
-.project-technologies, .project-features {
-  margin-bottom: 20px;
-}
-.project-technologies h3, .project-features h3 {
-  color: #0d0f15;
-  margin-bottom: 10px;
-}
-
-.project-features ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-.project-features li {
-  margin-bottom: 5px;
-}
-
-@media screen and (max-width: 768px) {
-  .modal-content {
-    width: 95%;
-    margin: 10% auto;
   }
 }
 #contact-me {
@@ -1620,6 +1773,7 @@ footer {
 
 .contact-form {
   width: 80%;
+  max-width: 1000px;
 }
 
 .contact-form input,
@@ -1663,7 +1817,7 @@ textarea.colored-input {
 .colored-input:focus,
 textarea.colored-input:focus {
   outline: none;
-  border-color: white;
+  border: 3px solid #cca463;
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
@@ -1702,78 +1856,13 @@ textarea::placeholder {
   opacity: 1;
 }
 
-.contact-me-submit {
-  font-size: 16px;
-  margin-top: 10px;
-  padding: 10px 20px;
-  color: white;
-  background-color: #293043;
-  border: 3px #cca463 solid;
-  cursor: pointer;
-}
-.contact-me-submit:hover {
-  background-color: #cca463;
-  color: #0d0f15;
-  border-color: #977132;
-}
-.contact-me-submit:hover p {
-  color: #0d0f15;
-}
-.contact-me-submit:active {
-  background-color: #977132;
-  border-color: #cca463;
+.submit-svg-btn {
+  width: 100px;
+  background-color: transparent;
 }
 
 .large-input {
   height: 150px;
-}
-
-.contact-scroll-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 75px;
-}
-.contact-scroll-container .contact-scroll-button {
-  border: 3px #cca463 solid;
-  margin-top: 30px;
-  z-index: 10;
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  z-index: 1000;
-  cursor: pointer;
-  pointer-events: auto;
-  gap: 5px;
-}
-.contact-scroll-container .contact-scroll-button, .contact-scroll-container .contact-scroll-button a, .contact-scroll-container .contact-scroll-button p, .contact-scroll-container .contact-scroll-button span {
-  text-decoration: none;
-}
-.contact-scroll-container .contact-scroll-button:hover {
-  background-color: #cca463;
-  color: white;
-  border-color: #977132;
-}
-.contact-scroll-container .contact-scroll-button:hover p {
-  color: #0d0f15;
-}
-.contact-scroll-container .contact-scroll-button:active {
-  background-color: #c69950;
-  border-color: #4b3718;
-}
-.contact-scroll-container .contact-scroll-button:active p {
-  color: white;
-}
-.contact-scroll-container .contact-scroll-button p {
-  margin: 0;
-  color: white;
-  padding: 3px;
-}
-.contact-scroll-container .contact-scroll-button p span {
-  padding: 0 5px;
 }
 
 .success-message {
@@ -1796,6 +1885,30 @@ textarea::placeholder {
   text-align: center;
 }
 
+.contact-scroll-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 75px;
+}
+.contact-scroll-container .contact-scroll-button .contact-svg-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 20px;
+  max-width: 300px;
+  white-space: nowrap;
+}
+
 @media (min-width: 1100px) {
   #contact-me h2 {
     font-size: 2.6rem;
@@ -1811,74 +1924,6 @@ textarea::placeholder {
     padding: 300px 0;
   }
 }
-.contact-scroll-button {
-  max-width: 350px;
-  position: relative;
-  border: 3px #cca463 solid;
-  margin-top: 30px;
-  z-index: 10;
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  z-index: 1000;
-  cursor: pointer;
-  pointer-events: auto;
-  gap: 5px;
-}
-.contact-scroll-button a {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10px;
-}
-.contact-scroll-button p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-}
-.contact-scroll-button, .contact-scroll-button a, .contact-scroll-button p, .contact-scroll-button span {
-  text-decoration: none;
-}
-.contact-scroll-button:hover {
-  background-color: #cca463;
-  color: white;
-  border-color: #977132;
-}
-.contact-scroll-button:hover p {
-  color: #0d0f15;
-}
-.contact-scroll-button:active {
-  background-color: #c69950;
-  border-color: #4b3718;
-}
-.contact-scroll-button:active p {
-  color: white;
-}
-.contact-scroll-button p {
-  margin: 0;
-  color: white;
-  padding: 3px;
-}
-.contact-scroll-button p span {
-  padding: 0 5px;
-}
-
 .hero-container-about {
   -webkit-box-pack: normal;
       -ms-flex-pack: normal;
@@ -2028,6 +2073,7 @@ textarea::placeholder {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 30px;
+  margin-bottom: 50px;
   border-radius: 5%;
   -webkit-box-shadow: 0 5px 20px white;
           box-shadow: 0 5px 20px white;
@@ -2396,4 +2442,12 @@ textarea::placeholder {
   .carousel .carousel-slide .scss-nm-image {
     margin-right: 75px;
   }
+}
+.svg-animated-btn.scroll-svg-btn {
+  padding: 15px !important;
+  font-size: 1.3rem !important;
+  height: 60px !important;
+}
+.svg-animated-btn.scroll-svg-btn svg rect {
+  stroke-width: 6 !important;
 }/*# sourceMappingURL=application.css.map */

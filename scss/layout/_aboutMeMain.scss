@@ -102,38 +102,27 @@
         }
     }
 }
+
+///////////////////////////////////////////////////
+/// SCROLL BUTTON STYLING 
+///////////////////////////////////////////////////
+
+
 .about-me-scroll-container{
     display: flex;
     justify-content: center;
-    .about-me-scroll-button{
-        margin-left: 40px;
-        @include page-button;
-    
+    .about-me-scroll-button {
+        position: relative;
+        max-width: 350px;
+        .aboutme-svg-btn {
+            padding: 5px;
+        }
     }
 }
 
-.about-me-scroll-button {
-    max-width: 350px;
-    position: relative;
-    
-    a {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-    }
-    
-    p {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-    }
-    
-    @include page-button;
-}
+
+
+
 
 ///////////////////////////////////////////////////
 /// MEDIA QUERIES
@@ -181,7 +170,10 @@
     // i have this so the content will be stuck to the left and not center alligned to match how the text changes 
     .about-me-scroll-container{
         justify-content: left;
-    }
+        .about-me-scroll-button {
+            margin-left: 40px;
+        }
+     }
 
     .language-logos-container {
         flex: 1; 
@@ -226,7 +218,7 @@
 @media(min-width: 1460px){
     #about-me-main{
         // ive added more padding on the left side to push the text over more to look more centered
-        padding: 250px 30px 250px 100px;
+        padding: 400px 30px 400px 100px;
     }
 
     #about-text{
@@ -267,7 +259,7 @@
 
     #about-me-main{
         // ive added more padding on the left side to push the text over more to look more centered
-        padding: 350px 30px 350px 150px;
+        padding: 400px 30px 400px 150px;
     }
 
     .language-logos-container{

@@ -38,6 +38,12 @@ body{
     flex-direction: column;
 }
 
+// this stops any overflowing elements being shown or creating horizontal scroll
+// i.e the elements that come in on scroll 
+body, .main-container {
+    overflow-x: hidden;
+  }
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 ///  MOVING BACKGROUND GLOBAL STYLE FOR HEADERS WITH ID OF MOVING-BACKGROUND
 ////////////////////////////////////////////////////////////////////////////////////////////
