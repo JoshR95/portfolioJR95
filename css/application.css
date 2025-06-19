@@ -36,6 +36,10 @@ body {
           flex-direction: column;
 }
 
+body, .main-container {
+  overflow-x: hidden;
+}
+
 #moving-background {
   background-image: url("https://joshr95.github.io/myPortfolio/images/network-4851119_1920.jpg"), url("../../images/network-4851119_1920.jpg");
   background-size: cover;
@@ -78,6 +82,80 @@ body {
     font-size: 1.3rem;
   }
 }
+.scroll-in-from-left {
+  opacity: 0;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.scroll-in-from-left.animate-in {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.scroll-in-from-right {
+  opacity: 0;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.scroll-in-from-right.animate-in {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.scroll-in-from-top {
+  opacity: 0;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.scroll-in-from-top.animate-in {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.scroll-in-from-bottom {
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: all 1.2s ease-out;
+  transition: all 1.2s ease-out;
+}
+.scroll-in-from-bottom.animate-in {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.scroll-fade-in {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+.scroll-fade-in.animate-in {
+  opacity: 1;
+}
+
+.scroll-scale-in {
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: all 1 ease-out;
+  transition: all 1 ease-out;
+}
+.scroll-scale-in.animate-in {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 #particles-js {
   position: absolute;
   width: 100%;
@@ -938,7 +1016,7 @@ footer {
 }
 @media (min-width: 1460px) {
   #about-me-main {
-    padding: 600px 30px 600px 100px;
+    padding: 400px 30px 400px 100px;
   }
   #about-text h2 {
     font-size: 3rem;
@@ -965,7 +1043,7 @@ footer {
     padding-left: 10px;
   }
   #about-me-main {
-    padding: 600px 30px 600px 150px;
+    padding: 400px 30px 400px 150px;
   }
   .language-logos-container .tooltip-container img {
     height: 130px;
@@ -1013,7 +1091,7 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  max-width: 1400px;
+  max-width: 2000px;
 }
 
 .project-item-container {
@@ -1228,7 +1306,7 @@ footer {
   overflow: hidden;
   height: 400px;
   max-width: 450px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   border-radius: 10px;
   -webkit-box-shadow: 0 5px 12px white;
           box-shadow: 0 5px 12px white;
@@ -1618,19 +1696,21 @@ footer {
   #portfolio h2 {
     margin-bottom: 200px;
   }
-  .project-item-container {
-    padding: 0 50px 0 50px;
-    margin-bottom: 200px;
-  }
   .project-item-container.align-left {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    margin-right: auto;
   }
   .project-item-container.align-right {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    margin-left: auto;
+  }
+  .project-item-container {
+    padding: 0 50px 0 50px;
+    margin-bottom: 200px;
   }
   .portfolio-scroll-container {
     margin-top: 0;
@@ -1993,6 +2073,7 @@ textarea::placeholder {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 30px;
+  margin-bottom: 50px;
   border-radius: 5%;
   -webkit-box-shadow: 0 5px 20px white;
           box-shadow: 0 5px 20px white;

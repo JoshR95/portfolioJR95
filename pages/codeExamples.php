@@ -28,7 +28,8 @@
         </div>
         <div class="container code-example-container">
           <div class="code-example-background"></div>
-            <div class="code-example-content">
+            <!-- Example 1 -->
+            <div class="code-example-content scroll-in-from-left">
               <div class="ce-image-container">
                 <img src="../images/php_using_database_example.png" class="code-example-pic" onclick="showLargeImage(this.src)" alt="php code example">
                 <div class="CE-click-tag">click to zoom</div>
@@ -47,7 +48,8 @@
                 The script serves as a bridge between a MySQL database and the frontend display, ensuring consistent article presentation while maintaining security through proper data escaping.
               </p>
             </div>
-            <div class="code-example-content">
+            <!-- Example 2 -->
+            <div class="code-example-content scroll-in-from-right">
               <div class="ce-image-container">
                 <!-- the onClick will call the showLargeImage function passing its own source (this.src) as an argument -->
                 <img src="../images/email_validation_example.png" class="code-example-pic" onclick="showLargeImage(this.src)" alt="javaScript email validation code example">
@@ -63,7 +65,8 @@
                 <li class="ce-secondary-text">validateEmail(): Main validation function that checks if an email is provided and valid, showing appropriate error messages to the user.</li>
               </ul>
             </div>
-            <div class="code-example-content">
+            <!-- Example 3 -->
+            <div class="code-example-content scroll-in-from-left">
               <div class="ce-image-container">
                 <img src="../images/contact_form_submission_code.png" class="code-example-pic" onclick="showLargeImage(this.src)" alt="php contact form handling code example">
                 <div class="CE-click-tag">click to zoom</div>
@@ -89,7 +92,8 @@
                 ensuring data validation and safe storage of user submissions.
               </p>
             </div>
-            <div class="code-example-content">
+            <!-- Example 4 -->
+            <div class="code-example-content scroll-in-from-right">
               <div class="ce-image-container">
                 <img src="../images/mixin_example.png" class="code-example-pic" onclick="showLargeImage(this.src)" alt="Mixin code Example">
                 <div class="CE-click-tag">click to zoom</div>
@@ -111,6 +115,9 @@
   
 
     <?php include_once '../includes/footer.php'; ?>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="./js/particles.min.js"></script>
     <script src="../js/main.js"></script>

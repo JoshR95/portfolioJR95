@@ -24,7 +24,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 1400px;
+    max-width: 2000px;
 }
 
 // this makes each projects div take up as much space as it can, i then use another class to set the flex start or end
@@ -125,7 +125,7 @@
     overflow: hidden;
     height: 400px;
     max-width: 450px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     border-radius: 10px;
     box-shadow: 0 5px 12px $white;
     cursor: pointer;
@@ -241,18 +241,6 @@
     display: none;
   }
 
-
-// // this is setting the grid for item allignment
-// .portfolio-grid{
-//     display: grid;
-//     grid-template-columns: repeat(1, 1fr);
-//     grid-auto-rows: 1fr; //
-//     justify-items: center;
-//     align-items: stretch; // Change this line
-//     gap: 20px;
-//     width: 100%;
-//     padding: 20px;
-// }
 
 .portfolio-scroll-container{
     display: flex;
@@ -580,21 +568,23 @@
             margin-bottom: 200px;
         }
     }
+   
+    // this aligns the set projects to the left of its container
+    .project-item-container.align-left{
+        justify-content: flex-start;
+        margin-right: auto;
+    }
+    // this aligns the set projects to the right of its container
+    .project-item-container.align-right{
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+
     .project-item-container{
         // we add some padding so the projects arent right up against the sides
         padding: 0 50px 0 50px;
         // added margin to space projects out a bit
         margin-bottom: 200px;
-
-        // align project items to the left
-        &.align-left{
-            justify-content: flex-start;
-        }
-        // align project items to the right
-        &.align-right {
-            justify-content: flex-end;
-        }
-
     }
     .portfolio-scroll-container {
         margin-top: 0;

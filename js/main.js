@@ -407,6 +407,60 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModal();
         }
     });
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// SCROLL ANIMATIONS WITH GSAP
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // Check if GSAP and ScrollTrigger are available
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Generic function to create scroll animations
+        function createScrollAnimation(element, direction = 'left', delay = 0) {
+            const xOffset = direction === 'left' ? -100 : direction === 'right' ? 100 : 0;
+            const yOffset = direction === 'top' ? -50 : direction === 'bottom' ? 50 : 0;
+            
+            gsap.fromTo(element, 
+                {
+                    opacity: 0,
+                    x: xOffset,
+                    y: yOffset,
+                    duration: 0
+                },
+                {
+                    opacity: 1,
+                    x: 0,
+                    y: 0,
+                    duration: 1,
+                    delay: delay,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top bottom",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        }
+
+        // We have these bewlow so every element has its on set point for where the animation starts otherwise they all fire at once 
+
+        // Animate each .scroll-in-from-left individually
+        document.querySelectorAll('.scroll-in-from-left').forEach((el) => {
+            createScrollAnimation(el, 'left');
+        });
+        // Animate each .scroll-in-from-right individually
+        document.querySelectorAll('.scroll-in-from-right').forEach((el) => {
+            createScrollAnimation(el, 'right', 0.2);
+        });
+        // Animate each .scroll-in-from-bottom individually
+        document.querySelectorAll('.scroll-in-from-bottom').forEach((el) => {
+            createScrollAnimation(el, 'bottom', 0.2);
+        });
+
+    }
 });
 
 //////////////////////////////////////////////////////////////////////////

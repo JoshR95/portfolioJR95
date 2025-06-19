@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="./css/application.css">
     <link rel="stylesheet" href="./images/icomoon-main/style.css">
 
-
   </head>
 
   <body>
@@ -54,7 +53,7 @@
       <main>
         
         <div id="about-me-main">
-          <div class="about-me-main-text">
+          <div class="about-me-main-text scroll-in-from-left">
             <div id="about-text">
               <div class="about-text-header">
                 <img class="me-icon" src="images/me-coding-looking-right.png">
@@ -75,7 +74,7 @@
               </div>
             </div>
           </div>
-          <div class="language-logos-container">
+          <div class="language-logos-container scroll-in-from-right">
             <div class="about-me-lang-rows">
               <div class="tooltip-container">
                 <img src="./images/jsLogo.png">
@@ -117,7 +116,7 @@
         <h2>MY PROJECTS</h2>
           <div class="portfolio-container">
             <!-- Project 1 -->
-            <div class="project-item-container align-left">
+            <div class="project-item-container align-left scroll-in-from-left">
               <div class="project-item ">
                 <img class="project-image" src="./images/netmatters-homepage.png" alt="Netmatters homepage project image">
                 <div class="hover-tag">hover for details</div>
@@ -125,13 +124,6 @@
                   <div class="project-title">
                     <h3>NETMATTERS HOMEPAGE</h3>
                   </div>
-                  <!-- <p class="project-content-flip-text">
-                    This project recreates Netmatters homepage using HTML, CSS, SASS, javaScript and PHP.
-                  </p>
-                  <p class="project-content-flip-text">
-                    The projects makes use of javaScript to add dynamic animations on the page such as the pop out sidemenu. This project also uses PHP to make us of include partials for things such as
-                    the header, footer and nav. I have also implemented a dynamic news section where content is pulled from a MySQL database and rendered using PHP, allowing for easy content management and updates.
-                  </p> -->
                   <div class="project-languages">
                     <div class="tooltip-container">
                       <img src="./images/htmlLogo.png">
@@ -218,7 +210,7 @@
               </div>
             </div>
             <!-- Project 2 -->
-            <div class="project-item-container align-right">
+            <div class="project-item-container align-right scroll-in-from-right">
               <div class="project-details">
                 <h3>RANDOM PICTURE GENERATOR</h3>
                 <div class="project-details-content">
@@ -267,13 +259,6 @@
                   <div class="project-title">
                     <h3>RANDOM PICTURE GENERATOR</h3>
                   </div>
-                  <!-- <p class="project-content-flip-text">
-                    This project creates a random image and adds to collections. It uses HTML, CSS, SASS AND JS
-                  </p>
-                  <p class="project-content-flip-text">
-                    The project makes use of an API to recieve the random images. It uses JS to added these images to a collection stored in local storage,
-                    it then displays the collection for the associated email address. I also have email validation using regex validation.
-                  </p> -->
                   <div class="project-languages">
                     <div class="tooltip-container">
                       <img src="./images/htmlLogo.png">
@@ -311,7 +296,7 @@
               </div>
             </div>
             <!-- Project 3 -->
-            <div class="project-item-container align-left">
+            <div class="project-item-container align-left scroll-in-from-left">
               <div class="project-item">
                 <img src="./images/laravel_admin_assessment.png" alt="laravel admin assessment project image">
                 <div class="hover-tag">hover for details</div>
@@ -319,13 +304,6 @@
                   <div class="project-title">
                     <h3>ADMIN MANAGEMENT SYSTEM</h3>
                   </div>
-                  <!-- <p class="project-content-flip-text">
-                    This project is an admin management system that enables companies to manage their organizational structure and employee information through a secure, user-friendly interface.
-                  </p>
-                  <p class="project-content-flip-text">
-                    It uses laravel, PHP, HTML and CSS. It handles user authentication with a secure log in. It allows maintenance of a database of company records with full CRUD operations.
-                    It uses a SQLite database for efficient data storage and retrieval. It Implements Blade for dynamic content rendering. It also Utilizes Tailwind CSS for modern, responsive styling.
-                  </p> -->
                   <div class="project-languages">
                     <div class="tooltip-container">
                       <img src="./images/htmlLogo.png">
@@ -457,9 +435,8 @@
         <div id="contact-me" class="container">
           <h2>GET IN CONTACT</h2>
           <p class="contact-me-sub-heading">If you'd like to contact me please use the form below </p>
-          <!-- <span class="icon-arrow-down"></span> -->
 
-          <form id= "contact-form" class="contact-form" method="POST" action="/submit-form">
+          <form id= "contact-form" class="contact-form scroll-in-from-bottom" method="POST" action="/submit-form">
             <div class="input-control">
               <label for="fname"></label>
               <input type="text" id="fname" name="fname"  class="colored-input" placeholder="First Name">
@@ -511,6 +488,10 @@
     
 
     <?php include_once 'includes/footer.php'; ?>
+    
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="./js/particles.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/projectDetails.js"></script>
