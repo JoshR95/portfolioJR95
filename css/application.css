@@ -1048,10 +1048,10 @@ footer {
 }
 .project-details h3 {
   text-align: center;
-  color: white;
+  color: #cca463;
   font-size: 1.8rem;
   text-decoration: underline;
-  text-decoration-color: #cca463;
+  text-decoration-color: white;
   text-underline-offset: 10px;
   margin-top: 0;
   margin-bottom: 50px;
@@ -1086,6 +1086,10 @@ footer {
 .project-details-content .project-languages .tooltip-container img {
   width: 70px;
   height: 70px;
+}
+.project-details-content .project-languages .tooltip-container img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .svg-animated-btn {

@@ -48,10 +48,10 @@
     margin: 0 30px 0 70px;
     h3{
         text-align: center;
-        color: $white;
+        color: $primary-color;
         font-size: 1.8rem;
         text-decoration: underline;
-        text-decoration-color: $primary-color;
+        text-decoration-color: $white;
         text-underline-offset: 10px;
         margin-top: 0;
         margin-bottom: 50px;
@@ -80,6 +80,9 @@
             img {
                 width: 70px;
                 height: 70px;
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
     }
