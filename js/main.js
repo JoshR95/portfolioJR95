@@ -412,16 +412,21 @@ document.addEventListener('DOMContentLoaded', function() {
     /// SCROLL ANIMATIONS WITH GSAP
     ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    // Check if GSAP and ScrollTrigger are available
+    // this checks if the GSAP library and ScrollTrigger plugin are loaded and available; if either are missing the code wont run
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-        // Register ScrollTrigger plugin
+        // this registers the ScrollTrigger plugin with GSAP
         gsap.registerPlugin(ScrollTrigger);
 
-        // Generic function to create scroll animations
+        // generic function that creates a scroll-triggered animation for a given element
         function createScrollAnimation(element, direction = 'left', delay = 0) {
-            const xOffset = direction === 'left' ? -100 : direction === 'right' ? 100 : 0;
+            // two lines below are setting how far our animations move
+            // this is for direction, if direction is 'left' xOffset is -100, so move left 100px. Same for right
+            const xOffset = direction === 'left' ? -300 : direction === 'right' ? 300 : 0;
+            // same as above but for up and down
             const yOffset = direction === 'top' ? -50 : direction === 'bottom' ? 50 : 0;
             
+            // this sets the from-to, so starting finishing states
+            // i.e from 0 opacity to 1 opacity, invisible to visible
             gsap.fromTo(element, 
                 {
                     opacity: 0,
@@ -435,7 +440,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     y: 0,
                     duration: 1,
                     delay: delay,
-                    ease: "power2.out",
+                    ease: "power3.out",
                     scrollTrigger: {
                         trigger: element,
                         start: "top bottom",
@@ -446,7 +451,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // We have these bewlow so every element has its on set point for where the animation starts otherwise they all fire at once 
-
         // Animate each .scroll-in-from-left individually
         document.querySelectorAll('.scroll-in-from-left').forEach((el) => {
             createScrollAnimation(el, 'left');

@@ -43,7 +43,7 @@
             <div class="hero-scroll-button">
               <a href="#about-me-main" class="svg-animated-btn hero-svg-btn scroll-svg-btn">
                 <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
-                <span><span class="icon-arrow-down"></span> LEARN ABOUT ME <span class="icon-arrow-down"></span></span>
+                <span><span class="icon-arrow-down"></span> ABOUT ME <span class="icon-arrow-down"></span></span>
               </a>
             </div>
           </div>
@@ -492,6 +492,7 @@
     <!-- GSAP for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
     <script src="./js/particles.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/projectDetails.js"></script>

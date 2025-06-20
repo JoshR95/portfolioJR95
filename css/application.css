@@ -86,8 +86,8 @@ body, .main-container {
   opacity: 0;
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .scroll-in-from-left.animate-in {
   opacity: 1;
@@ -99,8 +99,8 @@ body, .main-container {
   opacity: 0;
   -webkit-transform: translateX(100px);
           transform: translateX(100px);
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .scroll-in-from-right.animate-in {
   opacity: 1;
@@ -112,8 +112,8 @@ body, .main-container {
   opacity: 0;
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .scroll-in-from-top.animate-in {
   opacity: 1;
@@ -125,8 +125,8 @@ body, .main-container {
   opacity: 0;
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
-  -webkit-transition: all 1.2s ease-out;
-  transition: all 1.2s ease-out;
+  -webkit-transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .scroll-in-from-bottom.animate-in {
   opacity: 1;
@@ -136,8 +136,8 @@ body, .main-container {
 
 .scroll-fade-in {
   opacity: 0;
-  -webkit-transition: opacity 1s ease-out;
-  transition: opacity 1s ease-out;
+  -webkit-transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .scroll-fade-in.animate-in {
   opacity: 1;
@@ -147,8 +147,8 @@ body, .main-container {
   opacity: 0;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
-  -webkit-transition: all 1 ease-out;
-  transition: all 1 ease-out;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .scroll-scale-in.animate-in {
   opacity: 1;
